@@ -116,6 +116,20 @@ add_custom_target(
           ${CMAKE_CURRENT_BINARY_DIR}/quadrotor/quadrotor.xml
           <${CMAKE_CURRENT_SOURCE_DIR}/quadrotor/quadrotor.xml.patch
 
+
+  # add the PINCHER stuff here: 
+  # 1. We need all assets available
+  # 2- We need the xml files
+  # -----------------------------------------------------------------------------------------------
+  COMMAND ${CMAKE_COMMAND} -E copy_directory
+          ${CMAKE_CURRENT_SOURCE_DIR}/pincher/assets
+          ${CMAKE_CURRENT_BINARY_DIR}/pincher/assets
+  COMMAND ${CMAKE_COMMAND} -E copy
+          ${CMAKE_CURRENT_SOURCE_DIR}/pincher/Mesh_model_sensors.xml
+          ${CMAKE_CURRENT_BINARY_DIR}/pincher/Mesh_model_sensors.xml
+# -----------------------------------------------------------------------------------------------
+
+
   ## Cube reorientation
   # patch cube from common assets
   COMMAND patch -o ${CMAKE_CURRENT_BINARY_DIR}/common_assets/cube_modified_shadow_reorient.xml

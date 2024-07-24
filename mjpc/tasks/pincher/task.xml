@@ -1,0 +1,46 @@
+<mujoco model="Pincher">
+    <include file="../common.xml" />
+    <include file="Mesh_model_sensors.xml"/>
+
+    <custom>
+     <!-- agent -->
+        <numeric name="agent_planner" data="2" />
+        <numeric name="agent_horizon" data="2" />
+        <numeric name="agent_timestep" data="0.01" />
+        <numeric name="agent_integrator" data="2" />
+        <numeric name="agent_policy_width" data="0.0015" />
+        <numeric name="sampling_spline_points" data="10" />
+        <numeric name="sampling_exploration" data="0.05" />
+        <numeric name="gradient_spline_points" data="10" />
+
+    <!-- estimator -->
+        <numeric name="estimator" data="0" />
+        <numeric name="estimator_sensor_start" data="2" />
+        <numeric name="estimator_number_sensor" data="8" />
+        <numeric name="estimator_timestep" data="0.0075" />
+        <numeric name="batch_configuration_length" data="3" />
+        <numeric name="batch_scale_prior" data="1.0e-3" />
+    </custom>
+    
+    <sensor>
+    <!-- cost -->
+      <user name="Control" dim="8" user="0 0.1 0 1" />
+      <user name="Distance" dim="3" user="2 10 0 10 0.04" />
+
+      <!-- estimator -->
+      <jointpos name="TDP_angle_1" joint="joint_TDP"/>
+      <jointpos name="TIP_angle_1" joint="joint_TIP"/>
+      <jointpos name="TPP_angle_1" joint="joint_TPP"/>
+      <jointpos name="IDP_angle_1" joint="joint_IDP"/>
+      <jointpos name="IIP_angle_1" joint="joint_IIP"/>
+      <jointpos name="IPP_angle_1" joint="joint_IPP"/>
+
+    <!-- trace -->
+      <framepos name="index_pos_trace" objtype="geom" objname="fingertip_index"/>
+      <framepos name="thumb_pos_trace" objtype="geom" objname="fingertip_thumb"/>
+
+    <!-- residual -->
+      <framepos name="index_pos" objtype="geom" objname="fingertip_index"/>
+      <framepos name="thumb_pos" objtype="geom" objname="fingertip_thumb"/>
+    </sensor>
+</mujoco>
