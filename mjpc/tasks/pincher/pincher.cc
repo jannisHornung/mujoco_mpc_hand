@@ -12,7 +12,7 @@ std::string Pincher::XmlPath() const {
 }
 std::string Pincher::Name() const { return "Pincher"; }
 // ----------------- Residuals for swimmer task ----------------
-//   Number of residuals: 7
+//   Number of residuals: 11
 //     Residual (0-7): control
 //     Residual (8-10): XYz displacement between index and thumb
 // -------------------------------------------------------------
