@@ -1,6 +1,6 @@
 <mujoco model="Pincher">
     <include file="../common.xml" />
-    <include file="Mesh_model_sensors.xml"/>
+   
 
     <custom>
     <numeric name="task_risk" data="1" />
@@ -33,4 +33,5 @@
       <framepos name="index_pos" objtype="geom" objname="fingertip_index"/>
       <framepos name="thumb_pos" objtype="geom" objname="fingertip_thumb"/>
     </sensor>
+    <include file="Mesh_model_sensors.xml"/>
 </mujoco>
