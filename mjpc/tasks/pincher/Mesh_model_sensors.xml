@@ -292,13 +292,13 @@
   </sensor>
 
   <actuator>
-    <motor name="FDP" joint="FDP_slide" gear="10" ctrllimited="true" ctrlrange="-1 0"/>
-    <motor name="FDS" joint="FDS_slide" gear="10" ctrllimited="true" ctrlrange="-1 0"/>
-    <motor name="EI" joint="EI_slide" gear="5" ctrllimited="true" ctrlrange="-1 0"/>
-    <motor name="ED" joint="ED_slide" gear="5" ctrllimited="true" ctrlrange="-1 0"/>
-    <motor name="EPB" joint="EPB_slide" gear="5" ctrllimited="true" ctrlrange="-1 0"/>
-    <motor name="FPS" joint="FPS_slide" gear="10" ctrllimited="true" ctrlrange="-2 0"/>
-    <motor name="FPL" joint="FPL_slide" gear="10" ctrllimited="true" ctrlrange="-1 0"/>
-    <motor name="EPL" joint="EPL_slide" gear="5" ctrllimited="true" ctrlrange="-1 0"/>
+    <motor name="FDP" joint="FDP_slide" gear="30" ctrllimited="true" ctrlrange="-2 0"/>
+    <motor name="FDS" joint="FDS_slide" gear="30" ctrllimited="true" ctrlrange="-2 0"/>
+    <motor name="EI" joint="EI_slide" gear="10" ctrllimited="true" ctrlrange="-2 0"/>
+    <motor name="ED" joint="ED_slide" gear="10" ctrllimited="true" ctrlrange="-2 0"/>
+    <motor name="EPB" joint="EPB_slide" gear="5" ctrllimited="true" ctrlrange="-2 0"/>
+    <motor name="FPS" joint="FPS_slide" gear="50" ctrllimited="true" ctrlrange="-5 0"/>
+    <motor name="FPL" joint="FPL_slide" gear="30" ctrllimited="true" ctrlrange="-2 0"/>
+    <motor name="EPL" joint="EPL_slide" gear="10" ctrllimited="true" ctrlrange="-2 0"/>
   </actuator>
 </mujoco>

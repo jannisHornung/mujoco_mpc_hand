@@ -29,7 +29,10 @@ void Pincher::ResidualFn::Residual(const mjModel* model,
   // "Distance between thumb_tip and index_tip"
   double* thumb_tip = mjpc::SensorByName(model, data, "thumb_pos");
   double* index_tip = mjpc::SensorByName(model, data, "index_pos");
-  mju_sub(residual + counter, thumb_tip, index_tip, 3); // Assuming 3D positions
+  double* target = SensorByName(model, data, "target");
+  mju_sub(residual + counter, index_tip, target, 3); // Assuming 3D positions
+  counter += 3;
+  mju_sub(residual + counter, thumb_tip, target, 3); // Assuming 3D positions
   counter += 3;
 
   // test residual counter (recommended, optional)

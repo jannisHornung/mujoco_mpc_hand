@@ -12,19 +12,19 @@
     <numeric name="sampling_exploration" data="0.01" />
     <numeric name="gradient_spline_points" data="5" />
   </custom>
+
+  <worldbody>
+    <body name="target" mocap="true" pos="-0.04893478181070757 0.1399462331042795 0.463620666103109585">
+      <geom name="target" type="sphere" size="0.005" material="target"/>
+      <light name="target_light" diffuse=".7 .7 .7" pos="0 0 0.5"/>
+    </body>
+  </worldbody>
     
     <sensor>
     <!-- cost -->
       <user name="Control" dim="8" user="0 0.1 0 1" />
-      <user name="Distance" dim="3" user="2 10 0 10 0.04" />
-      
-      <!-- estimator -->
-     <!-- <jointpos name="TDP_angle_1" joint="joint_TDP"/>
-      <jointpos name="TIP_angle_1" joint="joint_TIP"/>
-      <jointpos name="TPP_angle_1" joint="joint_TPP"/>
-      <jointpos name="IDP_angle_1" joint="joint_IDP"/>
-      <jointpos name="IIP_angle_1" joint="joint_IIP"/>
-      <jointpos name="IPP_angle_1" joint="joint_IPP"/>-->
+      <user name="Distance_index" dim="3" user="2 10 0 10 0.04" />
+      <user name="Distance_thumb" dim="3" user="2 10 0 10 0.04" />
 
     <!-- trace -->
       <framepos name="index_pos_trace" objtype="geom" objname="fingertip_index"/>
@@ -32,6 +32,7 @@
       <!-- residual -->
       <framepos name="index_pos" objtype="geom" objname="fingertip_index"/>
       <framepos name="thumb_pos" objtype="geom" objname="fingertip_thumb"/>
+      <framepos name="target" objtype="body" objname="target"/>
     </sensor>
     <include file="Mesh_model_sensors.xml"/>
 </mujoco>
