@@ -1,0 +1,1670 @@
+<?xml version="1.0" ?>
+<mujoco model="Sensor_hand">
+  
+  
+  <compiler angle="radian" autolimits="true" meshdir="./assets" texturedir="assets"/>
+  
+    
+  <option integrator="implicit"/>
+  
+  
+  <asset>
+    
+    
+    <mesh name="base_mesh" file="base_mesh.stl"/>
+    
+    
+    <mesh name="IPP_mesh" file="IPP_mesh.stl"/>
+    
+    
+    <mesh name="IIP_mesh" file="IIP_mesh.stl"/>
+    
+    
+    <mesh name="IDP_mesh" file="IDP_mesh.stl"/>
+    
+    
+    <mesh name="TPP_mesh" file="TPP_mesh.stl"/>
+    
+    
+    <mesh name="TIP_mesh" file="TIP_mesh.stl"/>
+    
+    
+    <mesh name="TDP_mesh" file="TDP_mesh.stl"/>
+    
+  
+    <mesh name="base_mesh_0" file="./Convex_meshes/base_mesh_0.stl"/>
+    <mesh name="base_mesh_1" file="./Convex_meshes/base_mesh_1.stl"/>
+    <mesh name="base_mesh_2" file="./Convex_meshes/base_mesh_2.stl"/>
+    <mesh name="base_mesh_3" file="./Convex_meshes/base_mesh_3.stl"/>
+    <mesh name="base_mesh_4" file="./Convex_meshes/base_mesh_4.stl"/>
+    <mesh name="base_mesh_5" file="./Convex_meshes/base_mesh_5.stl"/>
+    <mesh name="base_mesh_6" file="./Convex_meshes/base_mesh_6.stl"/>
+    <mesh name="base_mesh_7" file="./Convex_meshes/base_mesh_7.stl"/>
+    <mesh name="base_mesh_8" file="./Convex_meshes/base_mesh_8.stl"/>
+    <mesh name="base_mesh_9" file="./Convex_meshes/base_mesh_9.stl"/>
+    <mesh name="base_mesh_10" file="./Convex_meshes/base_mesh_10.stl"/>
+    <mesh name="base_mesh_11" file="./Convex_meshes/base_mesh_11.stl"/>
+    <mesh name="base_mesh_12" file="./Convex_meshes/base_mesh_12.stl"/>
+    <mesh name="base_mesh_13" file="./Convex_meshes/base_mesh_13.stl"/>
+    <mesh name="base_mesh_14" file="./Convex_meshes/base_mesh_14.stl"/>
+    <mesh name="base_mesh_15" file="./Convex_meshes/base_mesh_15.stl"/>
+    <mesh name="base_mesh_16" file="./Convex_meshes/base_mesh_16.stl"/>
+    <mesh name="base_mesh_17" file="./Convex_meshes/base_mesh_17.stl"/>
+    <mesh name="base_mesh_18" file="./Convex_meshes/base_mesh_18.stl"/>
+    <mesh name="base_mesh_19" file="./Convex_meshes/base_mesh_19.stl"/>
+    <mesh name="base_mesh_20" file="./Convex_meshes/base_mesh_20.stl"/>
+    <mesh name="base_mesh_21" file="./Convex_meshes/base_mesh_21.stl"/>
+    <mesh name="base_mesh_22" file="./Convex_meshes/base_mesh_22.stl"/>
+    <mesh name="base_mesh_23" file="./Convex_meshes/base_mesh_23.stl"/>
+    <mesh name="base_mesh_24" file="./Convex_meshes/base_mesh_24.stl"/>
+    <mesh name="base_mesh_25" file="./Convex_meshes/base_mesh_25.stl"/>
+    <mesh name="base_mesh_26" file="./Convex_meshes/base_mesh_26.stl"/>
+    <mesh name="base_mesh_27" file="./Convex_meshes/base_mesh_27.stl"/>
+    <mesh name="base_mesh_28" file="./Convex_meshes/base_mesh_28.stl"/>
+    <mesh name="base_mesh_29" file="./Convex_meshes/base_mesh_29.stl"/>
+    <mesh name="base_mesh_30" file="./Convex_meshes/base_mesh_30.stl"/>
+    <mesh name="base_mesh_31" file="./Convex_meshes/base_mesh_31.stl"/>
+    <mesh name="base_mesh_32" file="./Convex_meshes/base_mesh_32.stl"/>
+    <mesh name="base_mesh_33" file="./Convex_meshes/base_mesh_33.stl"/>
+    <mesh name="base_mesh_34" file="./Convex_meshes/base_mesh_34.stl"/>
+    <mesh name="base_mesh_35" file="./Convex_meshes/base_mesh_35.stl"/>
+    <mesh name="base_mesh_36" file="./Convex_meshes/base_mesh_36.stl"/>
+    <mesh name="base_mesh_37" file="./Convex_meshes/base_mesh_37.stl"/>
+    <mesh name="base_mesh_38" file="./Convex_meshes/base_mesh_38.stl"/>
+    <mesh name="base_mesh_39" file="./Convex_meshes/base_mesh_39.stl"/>
+    <mesh name="base_mesh_40" file="./Convex_meshes/base_mesh_40.stl"/>
+    <mesh name="base_mesh_41" file="./Convex_meshes/base_mesh_41.stl"/>
+    <mesh name="base_mesh_42" file="./Convex_meshes/base_mesh_42.stl"/>
+    <mesh name="base_mesh_43" file="./Convex_meshes/base_mesh_43.stl"/>
+    <mesh name="base_mesh_44" file="./Convex_meshes/base_mesh_44.stl"/>
+    <mesh name="base_mesh_45" file="./Convex_meshes/base_mesh_45.stl"/>
+    <mesh name="base_mesh_46" file="./Convex_meshes/base_mesh_46.stl"/>
+    <mesh name="base_mesh_47" file="./Convex_meshes/base_mesh_47.stl"/>
+    <mesh name="base_mesh_48" file="./Convex_meshes/base_mesh_48.stl"/>
+    <mesh name="base_mesh_49" file="./Convex_meshes/base_mesh_49.stl"/>
+    <mesh name="base_mesh_50" file="./Convex_meshes/base_mesh_50.stl"/>
+    <mesh name="base_mesh_51" file="./Convex_meshes/base_mesh_51.stl"/>
+    <mesh name="base_mesh_52" file="./Convex_meshes/base_mesh_52.stl"/>
+    <mesh name="base_mesh_53" file="./Convex_meshes/base_mesh_53.stl"/>
+    <mesh name="base_mesh_54" file="./Convex_meshes/base_mesh_54.stl"/>
+    <mesh name="base_mesh_55" file="./Convex_meshes/base_mesh_55.stl"/>
+    <mesh name="base_mesh_56" file="./Convex_meshes/base_mesh_56.stl"/>
+    <mesh name="base_mesh_57" file="./Convex_meshes/base_mesh_57.stl"/>
+    <mesh name="base_mesh_58" file="./Convex_meshes/base_mesh_58.stl"/>
+    <mesh name="base_mesh_59" file="./Convex_meshes/base_mesh_59.stl"/>
+    <mesh name="base_mesh_60" file="./Convex_meshes/base_mesh_60.stl"/>
+    <mesh name="base_mesh_61" file="./Convex_meshes/base_mesh_61.stl"/>
+    <mesh name="base_mesh_62" file="./Convex_meshes/base_mesh_62.stl"/>
+    <mesh name="base_mesh_63" file="./Convex_meshes/base_mesh_63.stl"/>
+    <mesh name="IPP_mesh_0" file="./Convex_meshes/IPP_mesh_0.stl"/>
+    <mesh name="IPP_mesh_1" file="./Convex_meshes/IPP_mesh_1.stl"/>
+    <mesh name="IPP_mesh_2" file="./Convex_meshes/IPP_mesh_2.stl"/>
+    <mesh name="IPP_mesh_3" file="./Convex_meshes/IPP_mesh_3.stl"/>
+    <mesh name="IPP_mesh_4" file="./Convex_meshes/IPP_mesh_4.stl"/>
+    <mesh name="IPP_mesh_5" file="./Convex_meshes/IPP_mesh_5.stl"/>
+    <mesh name="IPP_mesh_6" file="./Convex_meshes/IPP_mesh_6.stl"/>
+    <mesh name="IPP_mesh_7" file="./Convex_meshes/IPP_mesh_7.stl"/>
+    <mesh name="IPP_mesh_8" file="./Convex_meshes/IPP_mesh_8.stl"/>
+    <mesh name="IPP_mesh_9" file="./Convex_meshes/IPP_mesh_9.stl"/>
+    <mesh name="IPP_mesh_10" file="./Convex_meshes/IPP_mesh_10.stl"/>
+    <mesh name="IPP_mesh_11" file="./Convex_meshes/IPP_mesh_11.stl"/>
+    <mesh name="IPP_mesh_12" file="./Convex_meshes/IPP_mesh_12.stl"/>
+    <mesh name="IPP_mesh_13" file="./Convex_meshes/IPP_mesh_13.stl"/>
+    <mesh name="IPP_mesh_14" file="./Convex_meshes/IPP_mesh_14.stl"/>
+    <mesh name="IPP_mesh_15" file="./Convex_meshes/IPP_mesh_15.stl"/>
+    <mesh name="IPP_mesh_16" file="./Convex_meshes/IPP_mesh_16.stl"/>
+    <mesh name="IPP_mesh_17" file="./Convex_meshes/IPP_mesh_17.stl"/>
+    <mesh name="IPP_mesh_18" file="./Convex_meshes/IPP_mesh_18.stl"/>
+    <mesh name="IPP_mesh_19" file="./Convex_meshes/IPP_mesh_19.stl"/>
+    <mesh name="IPP_mesh_20" file="./Convex_meshes/IPP_mesh_20.stl"/>
+    <mesh name="IPP_mesh_21" file="./Convex_meshes/IPP_mesh_21.stl"/>
+    <mesh name="IPP_mesh_22" file="./Convex_meshes/IPP_mesh_22.stl"/>
+    <mesh name="IPP_mesh_23" file="./Convex_meshes/IPP_mesh_23.stl"/>
+    <mesh name="IPP_mesh_24" file="./Convex_meshes/IPP_mesh_24.stl"/>
+    <mesh name="IPP_mesh_25" file="./Convex_meshes/IPP_mesh_25.stl"/>
+    <mesh name="IPP_mesh_26" file="./Convex_meshes/IPP_mesh_26.stl"/>
+    <mesh name="IPP_mesh_27" file="./Convex_meshes/IPP_mesh_27.stl"/>
+    <mesh name="IPP_mesh_28" file="./Convex_meshes/IPP_mesh_28.stl"/>
+    <mesh name="IPP_mesh_29" file="./Convex_meshes/IPP_mesh_29.stl"/>
+    <mesh name="IPP_mesh_30" file="./Convex_meshes/IPP_mesh_30.stl"/>
+    <mesh name="IPP_mesh_31" file="./Convex_meshes/IPP_mesh_31.stl"/>
+    <mesh name="IPP_mesh_32" file="./Convex_meshes/IPP_mesh_32.stl"/>
+    <mesh name="IPP_mesh_33" file="./Convex_meshes/IPP_mesh_33.stl"/>
+    <mesh name="IPP_mesh_34" file="./Convex_meshes/IPP_mesh_34.stl"/>
+    <mesh name="IPP_mesh_35" file="./Convex_meshes/IPP_mesh_35.stl"/>
+    <mesh name="IPP_mesh_36" file="./Convex_meshes/IPP_mesh_36.stl"/>
+    <mesh name="IPP_mesh_37" file="./Convex_meshes/IPP_mesh_37.stl"/>
+    <mesh name="IPP_mesh_38" file="./Convex_meshes/IPP_mesh_38.stl"/>
+    <mesh name="IPP_mesh_39" file="./Convex_meshes/IPP_mesh_39.stl"/>
+    <mesh name="IPP_mesh_40" file="./Convex_meshes/IPP_mesh_40.stl"/>
+    <mesh name="IPP_mesh_41" file="./Convex_meshes/IPP_mesh_41.stl"/>
+    <mesh name="IPP_mesh_42" file="./Convex_meshes/IPP_mesh_42.stl"/>
+    <mesh name="IPP_mesh_43" file="./Convex_meshes/IPP_mesh_43.stl"/>
+    <mesh name="IPP_mesh_44" file="./Convex_meshes/IPP_mesh_44.stl"/>
+    <mesh name="IPP_mesh_45" file="./Convex_meshes/IPP_mesh_45.stl"/>
+    <mesh name="IPP_mesh_46" file="./Convex_meshes/IPP_mesh_46.stl"/>
+    <mesh name="IPP_mesh_47" file="./Convex_meshes/IPP_mesh_47.stl"/>
+    <mesh name="IPP_mesh_48" file="./Convex_meshes/IPP_mesh_48.stl"/>
+    <mesh name="IPP_mesh_49" file="./Convex_meshes/IPP_mesh_49.stl"/>
+    <mesh name="IPP_mesh_50" file="./Convex_meshes/IPP_mesh_50.stl"/>
+    <mesh name="IPP_mesh_51" file="./Convex_meshes/IPP_mesh_51.stl"/>
+    <mesh name="IPP_mesh_52" file="./Convex_meshes/IPP_mesh_52.stl"/>
+    <mesh name="IPP_mesh_53" file="./Convex_meshes/IPP_mesh_53.stl"/>
+    <mesh name="IPP_mesh_54" file="./Convex_meshes/IPP_mesh_54.stl"/>
+    <mesh name="IPP_mesh_55" file="./Convex_meshes/IPP_mesh_55.stl"/>
+    <mesh name="IPP_mesh_56" file="./Convex_meshes/IPP_mesh_56.stl"/>
+    <mesh name="IPP_mesh_57" file="./Convex_meshes/IPP_mesh_57.stl"/>
+    <mesh name="IPP_mesh_58" file="./Convex_meshes/IPP_mesh_58.stl"/>
+    <mesh name="IPP_mesh_59" file="./Convex_meshes/IPP_mesh_59.stl"/>
+    <mesh name="IPP_mesh_60" file="./Convex_meshes/IPP_mesh_60.stl"/>
+    <mesh name="IPP_mesh_61" file="./Convex_meshes/IPP_mesh_61.stl"/>
+    <mesh name="IPP_mesh_62" file="./Convex_meshes/IPP_mesh_62.stl"/>
+    <mesh name="IPP_mesh_63" file="./Convex_meshes/IPP_mesh_63.stl"/>
+    <mesh name="IIP_mesh_0" file="./Convex_meshes/IIP_mesh_0.stl"/>
+    <mesh name="IIP_mesh_1" file="./Convex_meshes/IIP_mesh_1.stl"/>
+    <mesh name="IIP_mesh_2" file="./Convex_meshes/IIP_mesh_2.stl"/>
+    <mesh name="IIP_mesh_3" file="./Convex_meshes/IIP_mesh_3.stl"/>
+    <mesh name="IIP_mesh_4" file="./Convex_meshes/IIP_mesh_4.stl"/>
+    <mesh name="IIP_mesh_5" file="./Convex_meshes/IIP_mesh_5.stl"/>
+    <mesh name="IIP_mesh_6" file="./Convex_meshes/IIP_mesh_6.stl"/>
+    <mesh name="IIP_mesh_7" file="./Convex_meshes/IIP_mesh_7.stl"/>
+    <mesh name="IIP_mesh_8" file="./Convex_meshes/IIP_mesh_8.stl"/>
+    <mesh name="IIP_mesh_9" file="./Convex_meshes/IIP_mesh_9.stl"/>
+    <mesh name="IIP_mesh_10" file="./Convex_meshes/IIP_mesh_10.stl"/>
+    <mesh name="IIP_mesh_11" file="./Convex_meshes/IIP_mesh_11.stl"/>
+    <mesh name="IIP_mesh_12" file="./Convex_meshes/IIP_mesh_12.stl"/>
+    <mesh name="IIP_mesh_13" file="./Convex_meshes/IIP_mesh_13.stl"/>
+    <mesh name="IIP_mesh_14" file="./Convex_meshes/IIP_mesh_14.stl"/>
+    <mesh name="IIP_mesh_15" file="./Convex_meshes/IIP_mesh_15.stl"/>
+    <mesh name="IIP_mesh_16" file="./Convex_meshes/IIP_mesh_16.stl"/>
+    <mesh name="IIP_mesh_17" file="./Convex_meshes/IIP_mesh_17.stl"/>
+    <mesh name="IIP_mesh_18" file="./Convex_meshes/IIP_mesh_18.stl"/>
+    <mesh name="IIP_mesh_19" file="./Convex_meshes/IIP_mesh_19.stl"/>
+    <mesh name="IIP_mesh_20" file="./Convex_meshes/IIP_mesh_20.stl"/>
+    <mesh name="IIP_mesh_21" file="./Convex_meshes/IIP_mesh_21.stl"/>
+    <mesh name="IIP_mesh_22" file="./Convex_meshes/IIP_mesh_22.stl"/>
+    <mesh name="IIP_mesh_23" file="./Convex_meshes/IIP_mesh_23.stl"/>
+    <mesh name="IIP_mesh_24" file="./Convex_meshes/IIP_mesh_24.stl"/>
+    <mesh name="IIP_mesh_25" file="./Convex_meshes/IIP_mesh_25.stl"/>
+    <mesh name="IIP_mesh_26" file="./Convex_meshes/IIP_mesh_26.stl"/>
+    <mesh name="IIP_mesh_27" file="./Convex_meshes/IIP_mesh_27.stl"/>
+    <mesh name="IIP_mesh_28" file="./Convex_meshes/IIP_mesh_28.stl"/>
+    <mesh name="IIP_mesh_29" file="./Convex_meshes/IIP_mesh_29.stl"/>
+    <mesh name="IIP_mesh_30" file="./Convex_meshes/IIP_mesh_30.stl"/>
+    <mesh name="IIP_mesh_31" file="./Convex_meshes/IIP_mesh_31.stl"/>
+    <mesh name="IIP_mesh_32" file="./Convex_meshes/IIP_mesh_32.stl"/>
+    <mesh name="IIP_mesh_33" file="./Convex_meshes/IIP_mesh_33.stl"/>
+    <mesh name="IIP_mesh_34" file="./Convex_meshes/IIP_mesh_34.stl"/>
+    <mesh name="IIP_mesh_35" file="./Convex_meshes/IIP_mesh_35.stl"/>
+    <mesh name="IIP_mesh_36" file="./Convex_meshes/IIP_mesh_36.stl"/>
+    <mesh name="IIP_mesh_37" file="./Convex_meshes/IIP_mesh_37.stl"/>
+    <mesh name="IIP_mesh_38" file="./Convex_meshes/IIP_mesh_38.stl"/>
+    <mesh name="IIP_mesh_39" file="./Convex_meshes/IIP_mesh_39.stl"/>
+    <mesh name="IIP_mesh_40" file="./Convex_meshes/IIP_mesh_40.stl"/>
+    <mesh name="IIP_mesh_41" file="./Convex_meshes/IIP_mesh_41.stl"/>
+    <mesh name="IIP_mesh_42" file="./Convex_meshes/IIP_mesh_42.stl"/>
+    <mesh name="IIP_mesh_43" file="./Convex_meshes/IIP_mesh_43.stl"/>
+    <mesh name="IIP_mesh_44" file="./Convex_meshes/IIP_mesh_44.stl"/>
+    <mesh name="IIP_mesh_45" file="./Convex_meshes/IIP_mesh_45.stl"/>
+    <mesh name="IIP_mesh_46" file="./Convex_meshes/IIP_mesh_46.stl"/>
+    <mesh name="IIP_mesh_47" file="./Convex_meshes/IIP_mesh_47.stl"/>
+    <mesh name="IIP_mesh_48" file="./Convex_meshes/IIP_mesh_48.stl"/>
+    <mesh name="IIP_mesh_49" file="./Convex_meshes/IIP_mesh_49.stl"/>
+    <mesh name="IIP_mesh_50" file="./Convex_meshes/IIP_mesh_50.stl"/>
+    <mesh name="IIP_mesh_51" file="./Convex_meshes/IIP_mesh_51.stl"/>
+    <mesh name="IIP_mesh_52" file="./Convex_meshes/IIP_mesh_52.stl"/>
+    <mesh name="IIP_mesh_53" file="./Convex_meshes/IIP_mesh_53.stl"/>
+    <mesh name="IIP_mesh_54" file="./Convex_meshes/IIP_mesh_54.stl"/>
+    <mesh name="IIP_mesh_55" file="./Convex_meshes/IIP_mesh_55.stl"/>
+    <mesh name="IIP_mesh_56" file="./Convex_meshes/IIP_mesh_56.stl"/>
+    <mesh name="IIP_mesh_57" file="./Convex_meshes/IIP_mesh_57.stl"/>
+    <mesh name="IIP_mesh_58" file="./Convex_meshes/IIP_mesh_58.stl"/>
+    <mesh name="IIP_mesh_59" file="./Convex_meshes/IIP_mesh_59.stl"/>
+    <mesh name="IIP_mesh_60" file="./Convex_meshes/IIP_mesh_60.stl"/>
+    <mesh name="IIP_mesh_61" file="./Convex_meshes/IIP_mesh_61.stl"/>
+    <mesh name="IIP_mesh_62" file="./Convex_meshes/IIP_mesh_62.stl"/>
+    <mesh name="IIP_mesh_63" file="./Convex_meshes/IIP_mesh_63.stl"/>
+    <mesh name="IDP_mesh_0" file="./Convex_meshes/IDP_mesh_0.stl"/>
+    <mesh name="IDP_mesh_1" file="./Convex_meshes/IDP_mesh_1.stl"/>
+    <mesh name="IDP_mesh_2" file="./Convex_meshes/IDP_mesh_2.stl"/>
+    <mesh name="IDP_mesh_3" file="./Convex_meshes/IDP_mesh_3.stl"/>
+    <mesh name="IDP_mesh_4" file="./Convex_meshes/IDP_mesh_4.stl"/>
+    <mesh name="IDP_mesh_5" file="./Convex_meshes/IDP_mesh_5.stl"/>
+    <mesh name="IDP_mesh_6" file="./Convex_meshes/IDP_mesh_6.stl"/>
+    <mesh name="IDP_mesh_7" file="./Convex_meshes/IDP_mesh_7.stl"/>
+    <mesh name="IDP_mesh_8" file="./Convex_meshes/IDP_mesh_8.stl"/>
+    <mesh name="IDP_mesh_9" file="./Convex_meshes/IDP_mesh_9.stl"/>
+    <mesh name="IDP_mesh_10" file="./Convex_meshes/IDP_mesh_10.stl"/>
+    <mesh name="IDP_mesh_11" file="./Convex_meshes/IDP_mesh_11.stl"/>
+    <mesh name="IDP_mesh_12" file="./Convex_meshes/IDP_mesh_12.stl"/>
+    <mesh name="IDP_mesh_13" file="./Convex_meshes/IDP_mesh_13.stl"/>
+    <mesh name="IDP_mesh_14" file="./Convex_meshes/IDP_mesh_14.stl"/>
+    <mesh name="IDP_mesh_15" file="./Convex_meshes/IDP_mesh_15.stl"/>
+    <mesh name="IDP_mesh_16" file="./Convex_meshes/IDP_mesh_16.stl"/>
+    <mesh name="IDP_mesh_17" file="./Convex_meshes/IDP_mesh_17.stl"/>
+    <mesh name="IDP_mesh_18" file="./Convex_meshes/IDP_mesh_18.stl"/>
+    <mesh name="IDP_mesh_19" file="./Convex_meshes/IDP_mesh_19.stl"/>
+    <mesh name="IDP_mesh_20" file="./Convex_meshes/IDP_mesh_20.stl"/>
+    <mesh name="IDP_mesh_21" file="./Convex_meshes/IDP_mesh_21.stl"/>
+    <mesh name="IDP_mesh_22" file="./Convex_meshes/IDP_mesh_22.stl"/>
+    <mesh name="IDP_mesh_23" file="./Convex_meshes/IDP_mesh_23.stl"/>
+    <mesh name="IDP_mesh_24" file="./Convex_meshes/IDP_mesh_24.stl"/>
+    <mesh name="IDP_mesh_25" file="./Convex_meshes/IDP_mesh_25.stl"/>
+    <mesh name="IDP_mesh_26" file="./Convex_meshes/IDP_mesh_26.stl"/>
+    <mesh name="IDP_mesh_27" file="./Convex_meshes/IDP_mesh_27.stl"/>
+    <mesh name="IDP_mesh_28" file="./Convex_meshes/IDP_mesh_28.stl"/>
+    <mesh name="IDP_mesh_29" file="./Convex_meshes/IDP_mesh_29.stl"/>
+    <mesh name="IDP_mesh_30" file="./Convex_meshes/IDP_mesh_30.stl"/>
+    <mesh name="IDP_mesh_31" file="./Convex_meshes/IDP_mesh_31.stl"/>
+    <mesh name="IDP_mesh_32" file="./Convex_meshes/IDP_mesh_32.stl"/>
+    <mesh name="IDP_mesh_33" file="./Convex_meshes/IDP_mesh_33.stl"/>
+    <mesh name="IDP_mesh_34" file="./Convex_meshes/IDP_mesh_34.stl"/>
+    <mesh name="IDP_mesh_35" file="./Convex_meshes/IDP_mesh_35.stl"/>
+    <mesh name="IDP_mesh_36" file="./Convex_meshes/IDP_mesh_36.stl"/>
+    <mesh name="IDP_mesh_37" file="./Convex_meshes/IDP_mesh_37.stl"/>
+    <mesh name="IDP_mesh_38" file="./Convex_meshes/IDP_mesh_38.stl"/>
+    <mesh name="IDP_mesh_39" file="./Convex_meshes/IDP_mesh_39.stl"/>
+    <mesh name="IDP_mesh_40" file="./Convex_meshes/IDP_mesh_40.stl"/>
+    <mesh name="IDP_mesh_41" file="./Convex_meshes/IDP_mesh_41.stl"/>
+    <mesh name="IDP_mesh_42" file="./Convex_meshes/IDP_mesh_42.stl"/>
+    <mesh name="IDP_mesh_43" file="./Convex_meshes/IDP_mesh_43.stl"/>
+    <mesh name="IDP_mesh_44" file="./Convex_meshes/IDP_mesh_44.stl"/>
+    <mesh name="IDP_mesh_45" file="./Convex_meshes/IDP_mesh_45.stl"/>
+    <mesh name="IDP_mesh_46" file="./Convex_meshes/IDP_mesh_46.stl"/>
+    <mesh name="IDP_mesh_47" file="./Convex_meshes/IDP_mesh_47.stl"/>
+    <mesh name="IDP_mesh_48" file="./Convex_meshes/IDP_mesh_48.stl"/>
+    <mesh name="IDP_mesh_49" file="./Convex_meshes/IDP_mesh_49.stl"/>
+    <mesh name="IDP_mesh_50" file="./Convex_meshes/IDP_mesh_50.stl"/>
+    <mesh name="IDP_mesh_51" file="./Convex_meshes/IDP_mesh_51.stl"/>
+    <mesh name="IDP_mesh_52" file="./Convex_meshes/IDP_mesh_52.stl"/>
+    <mesh name="IDP_mesh_53" file="./Convex_meshes/IDP_mesh_53.stl"/>
+    <mesh name="IDP_mesh_54" file="./Convex_meshes/IDP_mesh_54.stl"/>
+    <mesh name="IDP_mesh_55" file="./Convex_meshes/IDP_mesh_55.stl"/>
+    <mesh name="IDP_mesh_56" file="./Convex_meshes/IDP_mesh_56.stl"/>
+    <mesh name="IDP_mesh_57" file="./Convex_meshes/IDP_mesh_57.stl"/>
+    <mesh name="IDP_mesh_58" file="./Convex_meshes/IDP_mesh_58.stl"/>
+    <mesh name="IDP_mesh_59" file="./Convex_meshes/IDP_mesh_59.stl"/>
+    <mesh name="IDP_mesh_60" file="./Convex_meshes/IDP_mesh_60.stl"/>
+    <mesh name="IDP_mesh_61" file="./Convex_meshes/IDP_mesh_61.stl"/>
+    <mesh name="IDP_mesh_62" file="./Convex_meshes/IDP_mesh_62.stl"/>
+    <mesh name="IDP_mesh_63" file="./Convex_meshes/IDP_mesh_63.stl"/>
+    <mesh name="TPP_mesh_0" file="./Convex_meshes/TPP_mesh_0.stl"/>
+    <mesh name="TPP_mesh_1" file="./Convex_meshes/TPP_mesh_1.stl"/>
+    <mesh name="TPP_mesh_2" file="./Convex_meshes/TPP_mesh_2.stl"/>
+    <mesh name="TPP_mesh_3" file="./Convex_meshes/TPP_mesh_3.stl"/>
+    <mesh name="TPP_mesh_4" file="./Convex_meshes/TPP_mesh_4.stl"/>
+    <mesh name="TPP_mesh_5" file="./Convex_meshes/TPP_mesh_5.stl"/>
+    <mesh name="TPP_mesh_6" file="./Convex_meshes/TPP_mesh_6.stl"/>
+    <mesh name="TPP_mesh_7" file="./Convex_meshes/TPP_mesh_7.stl"/>
+    <mesh name="TPP_mesh_8" file="./Convex_meshes/TPP_mesh_8.stl"/>
+    <mesh name="TPP_mesh_9" file="./Convex_meshes/TPP_mesh_9.stl"/>
+    <mesh name="TPP_mesh_10" file="./Convex_meshes/TPP_mesh_10.stl"/>
+    <mesh name="TPP_mesh_11" file="./Convex_meshes/TPP_mesh_11.stl"/>
+    <mesh name="TPP_mesh_12" file="./Convex_meshes/TPP_mesh_12.stl"/>
+    <mesh name="TPP_mesh_13" file="./Convex_meshes/TPP_mesh_13.stl"/>
+    <mesh name="TPP_mesh_14" file="./Convex_meshes/TPP_mesh_14.stl"/>
+    <mesh name="TPP_mesh_15" file="./Convex_meshes/TPP_mesh_15.stl"/>
+    <mesh name="TPP_mesh_16" file="./Convex_meshes/TPP_mesh_16.stl"/>
+    <mesh name="TPP_mesh_17" file="./Convex_meshes/TPP_mesh_17.stl"/>
+    <mesh name="TPP_mesh_18" file="./Convex_meshes/TPP_mesh_18.stl"/>
+    <mesh name="TPP_mesh_19" file="./Convex_meshes/TPP_mesh_19.stl"/>
+    <mesh name="TPP_mesh_20" file="./Convex_meshes/TPP_mesh_20.stl"/>
+    <mesh name="TPP_mesh_21" file="./Convex_meshes/TPP_mesh_21.stl"/>
+    <mesh name="TPP_mesh_22" file="./Convex_meshes/TPP_mesh_22.stl"/>
+    <mesh name="TPP_mesh_23" file="./Convex_meshes/TPP_mesh_23.stl"/>
+    <mesh name="TPP_mesh_24" file="./Convex_meshes/TPP_mesh_24.stl"/>
+    <mesh name="TPP_mesh_25" file="./Convex_meshes/TPP_mesh_25.stl"/>
+    <mesh name="TPP_mesh_26" file="./Convex_meshes/TPP_mesh_26.stl"/>
+    <mesh name="TPP_mesh_27" file="./Convex_meshes/TPP_mesh_27.stl"/>
+    <mesh name="TPP_mesh_28" file="./Convex_meshes/TPP_mesh_28.stl"/>
+    <mesh name="TPP_mesh_29" file="./Convex_meshes/TPP_mesh_29.stl"/>
+    <mesh name="TPP_mesh_30" file="./Convex_meshes/TPP_mesh_30.stl"/>
+    <mesh name="TPP_mesh_31" file="./Convex_meshes/TPP_mesh_31.stl"/>
+    <mesh name="TPP_mesh_32" file="./Convex_meshes/TPP_mesh_32.stl"/>
+    <mesh name="TPP_mesh_33" file="./Convex_meshes/TPP_mesh_33.stl"/>
+    <mesh name="TPP_mesh_34" file="./Convex_meshes/TPP_mesh_34.stl"/>
+    <mesh name="TPP_mesh_35" file="./Convex_meshes/TPP_mesh_35.stl"/>
+    <mesh name="TPP_mesh_36" file="./Convex_meshes/TPP_mesh_36.stl"/>
+    <mesh name="TPP_mesh_37" file="./Convex_meshes/TPP_mesh_37.stl"/>
+    <mesh name="TPP_mesh_38" file="./Convex_meshes/TPP_mesh_38.stl"/>
+    <mesh name="TPP_mesh_39" file="./Convex_meshes/TPP_mesh_39.stl"/>
+    <mesh name="TPP_mesh_40" file="./Convex_meshes/TPP_mesh_40.stl"/>
+    <mesh name="TPP_mesh_41" file="./Convex_meshes/TPP_mesh_41.stl"/>
+    <mesh name="TPP_mesh_42" file="./Convex_meshes/TPP_mesh_42.stl"/>
+    <mesh name="TPP_mesh_43" file="./Convex_meshes/TPP_mesh_43.stl"/>
+    <mesh name="TPP_mesh_44" file="./Convex_meshes/TPP_mesh_44.stl"/>
+    <mesh name="TPP_mesh_45" file="./Convex_meshes/TPP_mesh_45.stl"/>
+    <mesh name="TPP_mesh_46" file="./Convex_meshes/TPP_mesh_46.stl"/>
+    <mesh name="TPP_mesh_47" file="./Convex_meshes/TPP_mesh_47.stl"/>
+    <mesh name="TPP_mesh_48" file="./Convex_meshes/TPP_mesh_48.stl"/>
+    <mesh name="TPP_mesh_49" file="./Convex_meshes/TPP_mesh_49.stl"/>
+    <mesh name="TPP_mesh_50" file="./Convex_meshes/TPP_mesh_50.stl"/>
+    <mesh name="TPP_mesh_51" file="./Convex_meshes/TPP_mesh_51.stl"/>
+    <mesh name="TPP_mesh_52" file="./Convex_meshes/TPP_mesh_52.stl"/>
+    <mesh name="TPP_mesh_53" file="./Convex_meshes/TPP_mesh_53.stl"/>
+    <mesh name="TPP_mesh_54" file="./Convex_meshes/TPP_mesh_54.stl"/>
+    <mesh name="TPP_mesh_55" file="./Convex_meshes/TPP_mesh_55.stl"/>
+    <mesh name="TPP_mesh_56" file="./Convex_meshes/TPP_mesh_56.stl"/>
+    <mesh name="TPP_mesh_57" file="./Convex_meshes/TPP_mesh_57.stl"/>
+    <mesh name="TPP_mesh_58" file="./Convex_meshes/TPP_mesh_58.stl"/>
+    <mesh name="TPP_mesh_59" file="./Convex_meshes/TPP_mesh_59.stl"/>
+    <mesh name="TPP_mesh_60" file="./Convex_meshes/TPP_mesh_60.stl"/>
+    <mesh name="TPP_mesh_61" file="./Convex_meshes/TPP_mesh_61.stl"/>
+    <mesh name="TPP_mesh_62" file="./Convex_meshes/TPP_mesh_62.stl"/>
+    <mesh name="TPP_mesh_63" file="./Convex_meshes/TPP_mesh_63.stl"/>
+    <mesh name="TIP_mesh_0" file="./Convex_meshes/TIP_mesh_0.stl"/>
+    <mesh name="TIP_mesh_1" file="./Convex_meshes/TIP_mesh_1.stl"/>
+    <mesh name="TIP_mesh_2" file="./Convex_meshes/TIP_mesh_2.stl"/>
+    <mesh name="TIP_mesh_3" file="./Convex_meshes/TIP_mesh_3.stl"/>
+    <mesh name="TIP_mesh_4" file="./Convex_meshes/TIP_mesh_4.stl"/>
+    <mesh name="TIP_mesh_5" file="./Convex_meshes/TIP_mesh_5.stl"/>
+    <mesh name="TIP_mesh_6" file="./Convex_meshes/TIP_mesh_6.stl"/>
+    <mesh name="TIP_mesh_7" file="./Convex_meshes/TIP_mesh_7.stl"/>
+    <mesh name="TIP_mesh_8" file="./Convex_meshes/TIP_mesh_8.stl"/>
+    <mesh name="TIP_mesh_9" file="./Convex_meshes/TIP_mesh_9.stl"/>
+    <mesh name="TIP_mesh_10" file="./Convex_meshes/TIP_mesh_10.stl"/>
+    <mesh name="TIP_mesh_11" file="./Convex_meshes/TIP_mesh_11.stl"/>
+    <mesh name="TIP_mesh_12" file="./Convex_meshes/TIP_mesh_12.stl"/>
+    <mesh name="TIP_mesh_13" file="./Convex_meshes/TIP_mesh_13.stl"/>
+    <mesh name="TIP_mesh_14" file="./Convex_meshes/TIP_mesh_14.stl"/>
+    <mesh name="TIP_mesh_15" file="./Convex_meshes/TIP_mesh_15.stl"/>
+    <mesh name="TIP_mesh_16" file="./Convex_meshes/TIP_mesh_16.stl"/>
+    <mesh name="TIP_mesh_17" file="./Convex_meshes/TIP_mesh_17.stl"/>
+    <mesh name="TIP_mesh_18" file="./Convex_meshes/TIP_mesh_18.stl"/>
+    <mesh name="TIP_mesh_19" file="./Convex_meshes/TIP_mesh_19.stl"/>
+    <mesh name="TIP_mesh_20" file="./Convex_meshes/TIP_mesh_20.stl"/>
+    <mesh name="TIP_mesh_21" file="./Convex_meshes/TIP_mesh_21.stl"/>
+    <mesh name="TIP_mesh_22" file="./Convex_meshes/TIP_mesh_22.stl"/>
+    <mesh name="TIP_mesh_23" file="./Convex_meshes/TIP_mesh_23.stl"/>
+    <mesh name="TIP_mesh_24" file="./Convex_meshes/TIP_mesh_24.stl"/>
+    <mesh name="TIP_mesh_25" file="./Convex_meshes/TIP_mesh_25.stl"/>
+    <mesh name="TIP_mesh_26" file="./Convex_meshes/TIP_mesh_26.stl"/>
+    <mesh name="TIP_mesh_27" file="./Convex_meshes/TIP_mesh_27.stl"/>
+    <mesh name="TIP_mesh_28" file="./Convex_meshes/TIP_mesh_28.stl"/>
+    <mesh name="TIP_mesh_29" file="./Convex_meshes/TIP_mesh_29.stl"/>
+    <mesh name="TIP_mesh_30" file="./Convex_meshes/TIP_mesh_30.stl"/>
+    <mesh name="TIP_mesh_31" file="./Convex_meshes/TIP_mesh_31.stl"/>
+    <mesh name="TIP_mesh_32" file="./Convex_meshes/TIP_mesh_32.stl"/>
+    <mesh name="TIP_mesh_33" file="./Convex_meshes/TIP_mesh_33.stl"/>
+    <mesh name="TIP_mesh_34" file="./Convex_meshes/TIP_mesh_34.stl"/>
+    <mesh name="TIP_mesh_35" file="./Convex_meshes/TIP_mesh_35.stl"/>
+    <mesh name="TIP_mesh_36" file="./Convex_meshes/TIP_mesh_36.stl"/>
+    <mesh name="TIP_mesh_37" file="./Convex_meshes/TIP_mesh_37.stl"/>
+    <mesh name="TIP_mesh_38" file="./Convex_meshes/TIP_mesh_38.stl"/>
+    <mesh name="TIP_mesh_39" file="./Convex_meshes/TIP_mesh_39.stl"/>
+    <mesh name="TIP_mesh_40" file="./Convex_meshes/TIP_mesh_40.stl"/>
+    <mesh name="TIP_mesh_41" file="./Convex_meshes/TIP_mesh_41.stl"/>
+    <mesh name="TIP_mesh_42" file="./Convex_meshes/TIP_mesh_42.stl"/>
+    <mesh name="TIP_mesh_43" file="./Convex_meshes/TIP_mesh_43.stl"/>
+    <mesh name="TIP_mesh_44" file="./Convex_meshes/TIP_mesh_44.stl"/>
+    <mesh name="TIP_mesh_45" file="./Convex_meshes/TIP_mesh_45.stl"/>
+    <mesh name="TIP_mesh_46" file="./Convex_meshes/TIP_mesh_46.stl"/>
+    <mesh name="TIP_mesh_47" file="./Convex_meshes/TIP_mesh_47.stl"/>
+    <mesh name="TIP_mesh_48" file="./Convex_meshes/TIP_mesh_48.stl"/>
+    <mesh name="TIP_mesh_49" file="./Convex_meshes/TIP_mesh_49.stl"/>
+    <mesh name="TIP_mesh_50" file="./Convex_meshes/TIP_mesh_50.stl"/>
+    <mesh name="TIP_mesh_51" file="./Convex_meshes/TIP_mesh_51.stl"/>
+    <mesh name="TIP_mesh_52" file="./Convex_meshes/TIP_mesh_52.stl"/>
+    <mesh name="TIP_mesh_53" file="./Convex_meshes/TIP_mesh_53.stl"/>
+    <mesh name="TIP_mesh_54" file="./Convex_meshes/TIP_mesh_54.stl"/>
+    <mesh name="TIP_mesh_55" file="./Convex_meshes/TIP_mesh_55.stl"/>
+    <mesh name="TIP_mesh_56" file="./Convex_meshes/TIP_mesh_56.stl"/>
+    <mesh name="TIP_mesh_57" file="./Convex_meshes/TIP_mesh_57.stl"/>
+    <mesh name="TIP_mesh_58" file="./Convex_meshes/TIP_mesh_58.stl"/>
+    <mesh name="TIP_mesh_59" file="./Convex_meshes/TIP_mesh_59.stl"/>
+    <mesh name="TIP_mesh_60" file="./Convex_meshes/TIP_mesh_60.stl"/>
+    <mesh name="TIP_mesh_61" file="./Convex_meshes/TIP_mesh_61.stl"/>
+    <mesh name="TIP_mesh_62" file="./Convex_meshes/TIP_mesh_62.stl"/>
+    <mesh name="TIP_mesh_63" file="./Convex_meshes/TIP_mesh_63.stl"/>
+    <mesh name="TDP_mesh_0" file="./Convex_meshes/TDP_mesh_0.stl"/>
+    <mesh name="TDP_mesh_1" file="./Convex_meshes/TDP_mesh_1.stl"/>
+    <mesh name="TDP_mesh_2" file="./Convex_meshes/TDP_mesh_2.stl"/>
+    <mesh name="TDP_mesh_3" file="./Convex_meshes/TDP_mesh_3.stl"/>
+    <mesh name="TDP_mesh_4" file="./Convex_meshes/TDP_mesh_4.stl"/>
+    <mesh name="TDP_mesh_5" file="./Convex_meshes/TDP_mesh_5.stl"/>
+    <mesh name="TDP_mesh_6" file="./Convex_meshes/TDP_mesh_6.stl"/>
+    <mesh name="TDP_mesh_7" file="./Convex_meshes/TDP_mesh_7.stl"/>
+    <mesh name="TDP_mesh_8" file="./Convex_meshes/TDP_mesh_8.stl"/>
+    <mesh name="TDP_mesh_9" file="./Convex_meshes/TDP_mesh_9.stl"/>
+    <mesh name="TDP_mesh_10" file="./Convex_meshes/TDP_mesh_10.stl"/>
+    <mesh name="TDP_mesh_11" file="./Convex_meshes/TDP_mesh_11.stl"/>
+    <mesh name="TDP_mesh_12" file="./Convex_meshes/TDP_mesh_12.stl"/>
+    <mesh name="TDP_mesh_13" file="./Convex_meshes/TDP_mesh_13.stl"/>
+    <mesh name="TDP_mesh_14" file="./Convex_meshes/TDP_mesh_14.stl"/>
+    <mesh name="TDP_mesh_15" file="./Convex_meshes/TDP_mesh_15.stl"/>
+    <mesh name="TDP_mesh_16" file="./Convex_meshes/TDP_mesh_16.stl"/>
+    <mesh name="TDP_mesh_17" file="./Convex_meshes/TDP_mesh_17.stl"/>
+    <mesh name="TDP_mesh_18" file="./Convex_meshes/TDP_mesh_18.stl"/>
+    <mesh name="TDP_mesh_19" file="./Convex_meshes/TDP_mesh_19.stl"/>
+    <mesh name="TDP_mesh_20" file="./Convex_meshes/TDP_mesh_20.stl"/>
+    <mesh name="TDP_mesh_21" file="./Convex_meshes/TDP_mesh_21.stl"/>
+    <mesh name="TDP_mesh_22" file="./Convex_meshes/TDP_mesh_22.stl"/>
+    <mesh name="TDP_mesh_23" file="./Convex_meshes/TDP_mesh_23.stl"/>
+    <mesh name="TDP_mesh_24" file="./Convex_meshes/TDP_mesh_24.stl"/>
+    <mesh name="TDP_mesh_25" file="./Convex_meshes/TDP_mesh_25.stl"/>
+    <mesh name="TDP_mesh_26" file="./Convex_meshes/TDP_mesh_26.stl"/>
+    <mesh name="TDP_mesh_27" file="./Convex_meshes/TDP_mesh_27.stl"/>
+    <mesh name="TDP_mesh_28" file="./Convex_meshes/TDP_mesh_28.stl"/>
+    <mesh name="TDP_mesh_29" file="./Convex_meshes/TDP_mesh_29.stl"/>
+    <mesh name="TDP_mesh_30" file="./Convex_meshes/TDP_mesh_30.stl"/>
+    <mesh name="TDP_mesh_31" file="./Convex_meshes/TDP_mesh_31.stl"/>
+    <mesh name="TDP_mesh_32" file="./Convex_meshes/TDP_mesh_32.stl"/>
+    <mesh name="TDP_mesh_33" file="./Convex_meshes/TDP_mesh_33.stl"/>
+    <mesh name="TDP_mesh_34" file="./Convex_meshes/TDP_mesh_34.stl"/>
+    <mesh name="TDP_mesh_35" file="./Convex_meshes/TDP_mesh_35.stl"/>
+    <mesh name="TDP_mesh_36" file="./Convex_meshes/TDP_mesh_36.stl"/>
+    <mesh name="TDP_mesh_37" file="./Convex_meshes/TDP_mesh_37.stl"/>
+    <mesh name="TDP_mesh_38" file="./Convex_meshes/TDP_mesh_38.stl"/>
+    <mesh name="TDP_mesh_39" file="./Convex_meshes/TDP_mesh_39.stl"/>
+    <mesh name="TDP_mesh_40" file="./Convex_meshes/TDP_mesh_40.stl"/>
+    <mesh name="TDP_mesh_41" file="./Convex_meshes/TDP_mesh_41.stl"/>
+    <mesh name="TDP_mesh_42" file="./Convex_meshes/TDP_mesh_42.stl"/>
+    <mesh name="TDP_mesh_43" file="./Convex_meshes/TDP_mesh_43.stl"/>
+    <mesh name="TDP_mesh_44" file="./Convex_meshes/TDP_mesh_44.stl"/>
+    <mesh name="TDP_mesh_45" file="./Convex_meshes/TDP_mesh_45.stl"/>
+    <mesh name="TDP_mesh_46" file="./Convex_meshes/TDP_mesh_46.stl"/>
+    <mesh name="TDP_mesh_47" file="./Convex_meshes/TDP_mesh_47.stl"/>
+    <mesh name="TDP_mesh_48" file="./Convex_meshes/TDP_mesh_48.stl"/>
+    <mesh name="TDP_mesh_49" file="./Convex_meshes/TDP_mesh_49.stl"/>
+    <mesh name="TDP_mesh_50" file="./Convex_meshes/TDP_mesh_50.stl"/>
+    <mesh name="TDP_mesh_51" file="./Convex_meshes/TDP_mesh_51.stl"/>
+    <mesh name="TDP_mesh_52" file="./Convex_meshes/TDP_mesh_52.stl"/>
+    <mesh name="TDP_mesh_53" file="./Convex_meshes/TDP_mesh_53.stl"/>
+    <mesh name="TDP_mesh_54" file="./Convex_meshes/TDP_mesh_54.stl"/>
+    <mesh name="TDP_mesh_55" file="./Convex_meshes/TDP_mesh_55.stl"/>
+    <mesh name="TDP_mesh_56" file="./Convex_meshes/TDP_mesh_56.stl"/>
+    <mesh name="TDP_mesh_57" file="./Convex_meshes/TDP_mesh_57.stl"/>
+    <mesh name="TDP_mesh_58" file="./Convex_meshes/TDP_mesh_58.stl"/>
+    <mesh name="TDP_mesh_59" file="./Convex_meshes/TDP_mesh_59.stl"/>
+    <mesh name="TDP_mesh_60" file="./Convex_meshes/TDP_mesh_60.stl"/>
+    <mesh name="TDP_mesh_61" file="./Convex_meshes/TDP_mesh_61.stl"/>
+    <mesh name="TDP_mesh_62" file="./Convex_meshes/TDP_mesh_62.stl"/>
+    <mesh name="TDP_mesh_63" file="./Convex_meshes/TDP_mesh_63.stl"/>
+  </asset>
+  
+  
+  <default>
+    
+    
+    <default class="collision">
+      
+      
+      <geom type="mesh" contype="3" conaffinity="2" group="0" friction="0.7" solref="0.015 1" solimp="0.95 0.99 0.003" rgba="0.68 0 0.5 0.0"/>
+      
+    
+    </default>
+    
+    
+    <default class="visual">
+      
+      
+      <geom type="mesh" contype="0" conaffinity="0" group="2" density="950" rgba="0.68 0.64 0.57 1"/>
+      
+    
+    </default>
+    
+    
+    <default class="tracker">
+      
+      
+      <geom type="mesh" contype="0" conaffinity="0" group="2" rgba="0.2 0.2 1 0.2"/>
+      
+    
+    </default>
+    
+    
+    <joint type="hinge" range="-1.57 1.57" limited="true" damping=".01" armature="0.01"/>
+    
+  
+  </default>
+  
+
+  
+  <worldbody>
+    
+    
+    <body name="base" pos="0 0 0.5">
+      
+    
+      <camera pos="-0.408 -0.383 0.519" xyaxes="0.836 -0.548 0.000 0.223 0.340 0.914"/>
+      
+      
+      <geom type="mesh" mesh="base_mesh" class="visual"/>
+      
+      
+      <site name="Flexor_thumb_base1" pos="-0.01953272247314453 0.1326535186767578 -0.17175511169433594" type="sphere" size="0.0005"/>
+      
+      
+      <site name="Flexor_thumb_base2" pos="-0.01118699413797304 0.12570317420130434 -0.17558567810058594" type="sphere" size="0.0005"/>
+      
+      
+      <site name="Extensor_thumb_base" pos="-0.020411767959594727 0.1342262725830078 -0.1787030029296875" type="sphere" size="0.0005"/>
+      
+      
+      <site name="Extensor_thumb_out1" pos="-0.009359641056578738 0.12433836445337664 -0.18411668395996097" type="sphere" size="0.0005"/>
+      
+      
+      <site name="Extensor_thumb_out2" pos="-0.008064311107477051 0.1231337334231751 -0.1900025177001953" type="sphere" size="0.0005"/>
+      
+      
+      <site name="Extensor_index_base" pos="-0.002675753116607666 0.11770211791992188 -0.14267440795898438" type="sphere" size="0.0005"/>
+      
+      
+      <site name="Extensor_index_out" pos="0.002151352882385254 0.12060615539550781 -0.1885814971923828" type="sphere" size="0.0005"/>
+      
+      
+      <site name="Flexor_index_base" pos="-0.01050746219297886 0.11981917314247276 -0.11999977111816406" type="sphere" size="0.0005"/>
+      
+      
+      
+      
+      
+      <site name="EPB_0" pos="-0.015750487010199398 0.12991865569897496 -0.19362800242587468" size="0.0002" rgba="0 .7 0 1" group="1"/>
+      
+      
+      <site name="FPL_0" pos="-0.010688121380673678 0.12603273010253906 -0.1749982643869641" size="0.0002" rgba="0 .7 0 1" group="1"/>
+      
+      
+      
+      <geom name="EPB_wrap" type="cylinder" fromto="-0.01955013084411621 0.12461840057373047 -0.191707763671875 -0.0104220609664917 0.13563729858398438 -0.1897043914794922" size="0.00055" mass="0" contype="0" conaffinity="0" group="1" rgba=".2 .2 .5 0.4"/>
+      
+      
+      <geom name="FPL_wrap" type="cylinder" fromto="-0.015836318969726563 0.12099922943115234 -0.1759466552734375 -0.006439327716827393 0.1311479034423828 -0.1753843536376953" size="0.00055" mass="0" contype="0" conaffinity="0" group="1" rgba=".2 .2 .5 0.4"/>
+      
+
+      
+      
+      <body name="IPP">
+        
+        
+        <joint name="joint_IPP" type="hinge" range="-1.5 1.5" pos="0.03690825  0.17228729 -0.10448989" axis="0.65445045 0.74797042 0.11061134"/>
+        
+        
+        <geom type="mesh" mesh="IPP_mesh" class="visual"/>
+        
+        
+        <site name="ED" pos="-0.019615415474614377 0.1236814766237149 -0.09610853576660156" type="sphere" size="0.0005"/>
+        
+        
+        <site name="Extensor_index_proximal" pos="-0.01293978500366211 0.11801618957519531 -0.09315138244628906" type="sphere" size="0.0005"/>
+        
+        
+        <site name="Flexor_index_proximal1" pos="-0.02567017936706543 0.12685173034667969 -0.08342852020263672" type="sphere" size="0.0005"/>
+        
+        
+        <site name="Flexor_index_proximal2" pos="-0.015590902328491211 0.12197801208496094 -0.10793041229248047" type="sphere" size="0.0005"/>
+        
+        
+        <site name="p_prox" pos="-0.00811351490020752 0.11561492156982422 -0.10514363861083984" type="sphere" size="0.0005"/>
+        
+        
+        
+        <site name="EI-2" pos="-0.0037509675028893934 0.11336666608783929 -0.11020912170410156" size="0.0002" rgba="0 .7 0 1" group="1"/>
+        
+        
+        <site name="FDS-2" pos="-0.01614958732791196 0.12338359208685213 -0.1121661605834961" size="0.0002" rgba="0 .7 0 1" group="1"/>
+        
+        
+        
+        
+        <geom name="Index_MCP_wrap" type="cylinder" fromto="-0.006029259832741612 0.12321408022748616 -0.11174693849717667 -0.013525988743431606 0.11464608022748644 -0.11301399127081442" size="0.00625" mass="0" contype="0" conaffinity="0" group="1" rgba=".2 .2 .5 0.4"/>
+        
+
+        
+        
+        <body name="IIP">
+          
+          
+          <joint name="joint_IIP" type="hinge" pos="0.01165748  0.16581775 -0.06877538" axis="0.65445045 0.74797042 0.11061134"/>
+          
+          
+          <geom type="mesh" mesh="IIP_mesh" class="visual"/>
+          
+          
+          <site name="FDS" pos="-0.0325097706944169 0.13081934462452134 -0.0700429458618164" type="sphere" size="0.0005"/>
+          
+          
+          <site name="Extensor_index_intermediate" pos="-0.027173934936523438 0.12496036529541016 -0.06410199737548828" type="sphere" size="0.0005"/>
+          
+          
+          <site name="Flexor_index_intermediate1" pos="-0.037033897399902344 0.1328582305908203 -0.06544223022460938" type="sphere" size="0.0005"/>
+          
+          
+          <site name="Flexor_index_intermediate2" pos="-0.029775508880615234 0.1280175323486328 -0.07449313354492188" type="sphere" size="0.0005"/>
+          
+          
+          <site name="p_in" pos="-0.02371881866455078 0.1225927734375 -0.06820399475097656" type="sphere" size="0.0005"/>
+          
+          
+          
+          <site name="EI-1" pos="-0.019848216683736304 0.11980682270549498 -0.07168889617919922" size="0.0002" rgba="0 .7 0 1" group="1"/>
+          
+          
+          <site name="FDS-1" pos="-0.027666865943608375 0.12728383028063428 -0.0791739501953125" size="0.0002" rgba="0 .7 0 1" group="1"/>
+          
+          
+          <site name="EI-0" pos="-0.03305243200021995 0.12833204731720048 -0.052566864013671875" size="0.0002" rgba="0 .7 0 1" group="1"/>
+          
+          
+          
+          
+          <geom name="Index_PIP_wrap" type="cylinder" fromto="-0.020328801807107194 0.12811000000000072 -0.0755921288000312 -0.02673153078930279 0.12056200000000096 -0.07695664481263026" size="0.00625" mass="0" contype="0" conaffinity="0" group="1" rgba=".2 .2 .5 0.4"/>
+          
+
+
+          
+          <body name="IDP">
+            
+            
+            <joint name="joint_IDP" type="hinge" pos="-0.00841005  0.16697155 -0.05220216" axis="0.65445045 0.74797042 0.11061134"/>
+            
+            
+            <geom type="mesh" mesh="IDP_mesh" class="visual"/>
+            
+            
+            <geom name="fingertip_index" pos="-0.04893478181070757 0.1399462331042795 -0.043620666103109585" type="sphere" size="0.0005" rgba="1 0 0 1"/>
+            
+            
+            <site name="EI" pos="-0.04210184549909193 0.13473148293508586 -0.04610820770263672" type="sphere" size="0.0005"/>
+            
+            
+            <site name="FDP" pos="-0.0450288032269603 0.1386049556486426 -0.0538052864074707" type="sphere" size="0.0005"/>
+            
+            
+            <site name="Flexor_index_distal2" pos="-0.043157772064208984 0.1364062957763672 -0.05653251647949219" type="sphere" size="0.0005"/>
+            
+            
+            
+            
+            <site name="FDP-0" pos="-0.04113202105844812 0.13633017542564338 -0.06252509689331055" size="0.0002" rgba="0 .7 0 1" group="1"/>
+            
+            
+            
+            <geom name="Index_DIP_wrap" type="cylinder" fromto="-0.0340310980086452 0.1356580802274863 -0.05717340564997859 -0.03970621289975354 0.12872208022748603 -0.05827454734526826" size="0.00625" mass="0" contype="0" conaffinity="0" group="1" rgba=".2 .2 .5 0.4"/>
+            
+          
+            <geom name="IDP_mesh_0" mesh="IDP_mesh_0" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_1" mesh="IDP_mesh_1" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_2" mesh="IDP_mesh_2" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_3" mesh="IDP_mesh_3" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_4" mesh="IDP_mesh_4" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_5" mesh="IDP_mesh_5" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_6" mesh="IDP_mesh_6" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_7" mesh="IDP_mesh_7" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_8" mesh="IDP_mesh_8" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_9" mesh="IDP_mesh_9" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_10" mesh="IDP_mesh_10" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_11" mesh="IDP_mesh_11" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_12" mesh="IDP_mesh_12" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_13" mesh="IDP_mesh_13" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_14" mesh="IDP_mesh_14" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_15" mesh="IDP_mesh_15" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_16" mesh="IDP_mesh_16" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_17" mesh="IDP_mesh_17" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_18" mesh="IDP_mesh_18" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_19" mesh="IDP_mesh_19" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_20" mesh="IDP_mesh_20" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_21" mesh="IDP_mesh_21" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_22" mesh="IDP_mesh_22" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_23" mesh="IDP_mesh_23" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_24" mesh="IDP_mesh_24" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_25" mesh="IDP_mesh_25" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_26" mesh="IDP_mesh_26" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_27" mesh="IDP_mesh_27" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_28" mesh="IDP_mesh_28" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_29" mesh="IDP_mesh_29" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_30" mesh="IDP_mesh_30" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_31" mesh="IDP_mesh_31" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_32" mesh="IDP_mesh_32" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_33" mesh="IDP_mesh_33" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_34" mesh="IDP_mesh_34" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_35" mesh="IDP_mesh_35" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_36" mesh="IDP_mesh_36" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_37" mesh="IDP_mesh_37" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_38" mesh="IDP_mesh_38" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_39" mesh="IDP_mesh_39" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_40" mesh="IDP_mesh_40" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_41" mesh="IDP_mesh_41" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_42" mesh="IDP_mesh_42" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_43" mesh="IDP_mesh_43" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_44" mesh="IDP_mesh_44" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_45" mesh="IDP_mesh_45" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_46" mesh="IDP_mesh_46" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_47" mesh="IDP_mesh_47" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_48" mesh="IDP_mesh_48" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_49" mesh="IDP_mesh_49" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_50" mesh="IDP_mesh_50" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_51" mesh="IDP_mesh_51" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_52" mesh="IDP_mesh_52" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_53" mesh="IDP_mesh_53" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_54" mesh="IDP_mesh_54" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_55" mesh="IDP_mesh_55" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_56" mesh="IDP_mesh_56" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_57" mesh="IDP_mesh_57" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_58" mesh="IDP_mesh_58" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_59" mesh="IDP_mesh_59" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_60" mesh="IDP_mesh_60" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_61" mesh="IDP_mesh_61" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_62" mesh="IDP_mesh_62" type="mesh" class="collision"/>
+            <geom name="IDP_mesh_63" mesh="IDP_mesh_63" type="mesh" class="collision"/>
+          </body>
+          
+        
+          <geom name="IIP_mesh_0" mesh="IIP_mesh_0" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_1" mesh="IIP_mesh_1" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_2" mesh="IIP_mesh_2" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_3" mesh="IIP_mesh_3" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_4" mesh="IIP_mesh_4" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_5" mesh="IIP_mesh_5" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_6" mesh="IIP_mesh_6" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_7" mesh="IIP_mesh_7" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_8" mesh="IIP_mesh_8" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_9" mesh="IIP_mesh_9" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_10" mesh="IIP_mesh_10" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_11" mesh="IIP_mesh_11" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_12" mesh="IIP_mesh_12" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_13" mesh="IIP_mesh_13" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_14" mesh="IIP_mesh_14" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_15" mesh="IIP_mesh_15" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_16" mesh="IIP_mesh_16" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_17" mesh="IIP_mesh_17" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_18" mesh="IIP_mesh_18" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_19" mesh="IIP_mesh_19" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_20" mesh="IIP_mesh_20" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_21" mesh="IIP_mesh_21" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_22" mesh="IIP_mesh_22" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_23" mesh="IIP_mesh_23" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_24" mesh="IIP_mesh_24" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_25" mesh="IIP_mesh_25" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_26" mesh="IIP_mesh_26" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_27" mesh="IIP_mesh_27" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_28" mesh="IIP_mesh_28" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_29" mesh="IIP_mesh_29" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_30" mesh="IIP_mesh_30" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_31" mesh="IIP_mesh_31" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_32" mesh="IIP_mesh_32" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_33" mesh="IIP_mesh_33" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_34" mesh="IIP_mesh_34" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_35" mesh="IIP_mesh_35" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_36" mesh="IIP_mesh_36" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_37" mesh="IIP_mesh_37" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_38" mesh="IIP_mesh_38" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_39" mesh="IIP_mesh_39" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_40" mesh="IIP_mesh_40" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_41" mesh="IIP_mesh_41" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_42" mesh="IIP_mesh_42" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_43" mesh="IIP_mesh_43" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_44" mesh="IIP_mesh_44" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_45" mesh="IIP_mesh_45" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_46" mesh="IIP_mesh_46" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_47" mesh="IIP_mesh_47" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_48" mesh="IIP_mesh_48" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_49" mesh="IIP_mesh_49" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_50" mesh="IIP_mesh_50" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_51" mesh="IIP_mesh_51" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_52" mesh="IIP_mesh_52" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_53" mesh="IIP_mesh_53" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_54" mesh="IIP_mesh_54" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_55" mesh="IIP_mesh_55" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_56" mesh="IIP_mesh_56" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_57" mesh="IIP_mesh_57" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_58" mesh="IIP_mesh_58" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_59" mesh="IIP_mesh_59" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_60" mesh="IIP_mesh_60" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_61" mesh="IIP_mesh_61" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_62" mesh="IIP_mesh_62" type="mesh" class="collision"/>
+          <geom name="IIP_mesh_63" mesh="IIP_mesh_63" type="mesh" class="collision"/>
+        </body>
+        
+      
+        <geom name="IPP_mesh_0" mesh="IPP_mesh_0" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_1" mesh="IPP_mesh_1" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_2" mesh="IPP_mesh_2" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_3" mesh="IPP_mesh_3" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_4" mesh="IPP_mesh_4" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_5" mesh="IPP_mesh_5" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_6" mesh="IPP_mesh_6" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_7" mesh="IPP_mesh_7" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_8" mesh="IPP_mesh_8" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_9" mesh="IPP_mesh_9" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_10" mesh="IPP_mesh_10" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_11" mesh="IPP_mesh_11" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_12" mesh="IPP_mesh_12" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_13" mesh="IPP_mesh_13" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_14" mesh="IPP_mesh_14" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_15" mesh="IPP_mesh_15" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_16" mesh="IPP_mesh_16" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_17" mesh="IPP_mesh_17" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_18" mesh="IPP_mesh_18" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_19" mesh="IPP_mesh_19" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_20" mesh="IPP_mesh_20" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_21" mesh="IPP_mesh_21" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_22" mesh="IPP_mesh_22" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_23" mesh="IPP_mesh_23" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_24" mesh="IPP_mesh_24" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_25" mesh="IPP_mesh_25" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_26" mesh="IPP_mesh_26" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_27" mesh="IPP_mesh_27" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_28" mesh="IPP_mesh_28" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_29" mesh="IPP_mesh_29" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_30" mesh="IPP_mesh_30" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_31" mesh="IPP_mesh_31" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_32" mesh="IPP_mesh_32" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_33" mesh="IPP_mesh_33" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_34" mesh="IPP_mesh_34" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_35" mesh="IPP_mesh_35" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_36" mesh="IPP_mesh_36" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_37" mesh="IPP_mesh_37" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_38" mesh="IPP_mesh_38" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_39" mesh="IPP_mesh_39" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_40" mesh="IPP_mesh_40" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_41" mesh="IPP_mesh_41" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_42" mesh="IPP_mesh_42" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_43" mesh="IPP_mesh_43" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_44" mesh="IPP_mesh_44" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_45" mesh="IPP_mesh_45" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_46" mesh="IPP_mesh_46" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_47" mesh="IPP_mesh_47" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_48" mesh="IPP_mesh_48" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_49" mesh="IPP_mesh_49" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_50" mesh="IPP_mesh_50" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_51" mesh="IPP_mesh_51" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_52" mesh="IPP_mesh_52" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_53" mesh="IPP_mesh_53" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_54" mesh="IPP_mesh_54" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_55" mesh="IPP_mesh_55" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_56" mesh="IPP_mesh_56" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_57" mesh="IPP_mesh_57" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_58" mesh="IPP_mesh_58" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_59" mesh="IPP_mesh_59" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_60" mesh="IPP_mesh_60" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_61" mesh="IPP_mesh_61" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_62" mesh="IPP_mesh_62" type="mesh" class="collision"/>
+        <geom name="IPP_mesh_63" mesh="IPP_mesh_63" type="mesh" class="collision"/>
+      </body>
+      
+      
+      
+      <body name="TPP">
+        
+        
+        <joint name="joint_TPP" type="hinge" range="-1.57 0.1" pos="-0.05524655  0.10199596 -0.17690822" axis="-0.65072097 -0.75579585 -0.07304011"/>
+        
+        
+        <geom type="mesh" mesh="TPP_mesh" class="visual"/>
+        
+        
+        <site name="EPB" pos="-0.042071990966796875 0.15160645238661272 -0.1692675777209418" type="sphere" size="0.0005"/>
+        
+        
+        <site name="Extensor_thumb_proximal" pos="-0.03994853973388672 0.1503596954345703 -0.1781409912109375" type="sphere" size="0.0005"/>
+        
+        
+        <site name="Extensor_thumb_EPB" pos="-0.02871442222595215 0.1405221710205078 -0.17890908813476563" type="sphere" size="0.0005"/>
+        
+        
+        <site name="Flexor_thumb_proximal1" pos="-0.05338634780557302 0.16127474322987027 -0.17228787231445313" type="sphere" size="0.0005"/>
+        
+        
+        <site name="Flexor_thumb_proximal2" pos="-0.028564048051745736 0.14046089674876134 -0.1730217742919922" type="sphere" size="0.0005"/>
+        
+        
+        
+        <site name="TPP-2" pos="-0.024829129368714284 0.13863591558090894 -0.17948516845703125" size="0.0002" rgba="0 .7 0 1" group="1"/>
+        
+        
+        
+        <geom name="thumb_MCP_wrap" type="cylinder" fromto="-0.027845069918923908 0.13382208022748623 -0.17383254825708502 -0.02187335062834834 0.1407580802274865 -0.1731622532346735" size="0.00625" mass="0" contype="0" conaffinity="0" group="1" rgba=".2 .2 .5 0.4"/>
+        
+
+        
+        <body name="TIP">
+          
+          
+          <joint name="joint_TIP" type="hinge" pos="-0.01951047  0.21012874 -0.16909285" axis="0.65445045 0.74797042 0.11061134"/>
+          
+          
+          <geom type="mesh" mesh="TIP_mesh" class="visual"/>
+          
+          
+          <site name="FPS" pos="-0.06572069342835644 0.17036551585668192 -0.1601370391845703" type="sphere" size="0.0005"/>
+          
+          
+          <site name="Extensor_thumb_intermediate" pos="-0.06876429748535156 0.1740214080810547 -0.16873934936523438" type="sphere" size="0.0005"/>
+          
+          
+          <site name="Flexor_thumb_intermediate1" pos="-0.06915295453090206 0.17305201068592496 -0.1585038299560547" type="sphere" size="0.0005"/>
+          
+          
+          <site name="Flexor_thumb_intermediate2" pos="-0.06106464609673072 0.16722549729569894 -0.16699307250976563" type="sphere" size="0.0005"/>
+          
+          
+          
+          <site name="TIP-1" pos="-0.06086188592613106 0.16834374021090835 -0.18038232421875" size="0.0002" rgba="0 .7 0 1" group="1"/>
+          
+          
+          
+          <geom name="thumb_PIP_wrap" type="cylinder" fromto="-0.05461616594594595 0.16988562297297298 -0.17331599999999943 -0.06139931675675676 0.16210981594594597 -0.17413199999999946" size="0.00625" mass="0" contype="0" conaffinity="0" group="1" rgba=".2 .2 .5 0.4"/>
+          
+
+          
+          <body name="TDP">
+            
+            
+            <joint name="joint_TDP" type="hinge" pos="-0.11086737  0.13865719 -0.15878291" axis="0.65445045 0.74797042 0.11061134"/>
+            
+            
+            <geom type="mesh" mesh="TDP_mesh" class="visual"/>
+            
+            
+            <geom name="fingertip_thumb" pos="-0.07682959973144538 0.17619666535999363 -0.13119899567962005" type="sphere" size="0.0005" rgba="1 0 0 1"/>
+            
+            
+            <site name="EPL" pos="-0.08023171997070313 0.17895420386672367 -0.1378825395626756" type="sphere" size="0.0005"/>
+            
+            
+            <site name="FPL" pos="-0.072979665866941 0.17428836816474174 -0.14533831787109375" type="sphere" size="0.0005"/>
+            
+            
+            
+            <site name="TDP-0" pos="-0.0812916936232655 0.18325974032911614 -0.15524598693847656" size="0.0002" rgba="0 .7 0 1" group="1"/>
+            
+            
+            
+            <geom name="thumb_IP_wrap" type="cylinder" fromto="-0.07875700015762376 0.17482608022748778 -0.15504189521057768 -0.07223707079908536 0.18217008022748806 -0.15428229179016543" size="0.00625" mass="0" contype="0" conaffinity="0" group="1" rgba=".2 .2 .5 0.4"/>
+            
+          
+            <geom name="TDP_mesh_0" mesh="TDP_mesh_0" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_1" mesh="TDP_mesh_1" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_2" mesh="TDP_mesh_2" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_3" mesh="TDP_mesh_3" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_4" mesh="TDP_mesh_4" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_5" mesh="TDP_mesh_5" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_6" mesh="TDP_mesh_6" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_7" mesh="TDP_mesh_7" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_8" mesh="TDP_mesh_8" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_9" mesh="TDP_mesh_9" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_10" mesh="TDP_mesh_10" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_11" mesh="TDP_mesh_11" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_12" mesh="TDP_mesh_12" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_13" mesh="TDP_mesh_13" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_14" mesh="TDP_mesh_14" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_15" mesh="TDP_mesh_15" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_16" mesh="TDP_mesh_16" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_17" mesh="TDP_mesh_17" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_18" mesh="TDP_mesh_18" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_19" mesh="TDP_mesh_19" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_20" mesh="TDP_mesh_20" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_21" mesh="TDP_mesh_21" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_22" mesh="TDP_mesh_22" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_23" mesh="TDP_mesh_23" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_24" mesh="TDP_mesh_24" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_25" mesh="TDP_mesh_25" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_26" mesh="TDP_mesh_26" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_27" mesh="TDP_mesh_27" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_28" mesh="TDP_mesh_28" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_29" mesh="TDP_mesh_29" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_30" mesh="TDP_mesh_30" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_31" mesh="TDP_mesh_31" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_32" mesh="TDP_mesh_32" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_33" mesh="TDP_mesh_33" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_34" mesh="TDP_mesh_34" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_35" mesh="TDP_mesh_35" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_36" mesh="TDP_mesh_36" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_37" mesh="TDP_mesh_37" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_38" mesh="TDP_mesh_38" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_39" mesh="TDP_mesh_39" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_40" mesh="TDP_mesh_40" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_41" mesh="TDP_mesh_41" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_42" mesh="TDP_mesh_42" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_43" mesh="TDP_mesh_43" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_44" mesh="TDP_mesh_44" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_45" mesh="TDP_mesh_45" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_46" mesh="TDP_mesh_46" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_47" mesh="TDP_mesh_47" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_48" mesh="TDP_mesh_48" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_49" mesh="TDP_mesh_49" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_50" mesh="TDP_mesh_50" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_51" mesh="TDP_mesh_51" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_52" mesh="TDP_mesh_52" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_53" mesh="TDP_mesh_53" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_54" mesh="TDP_mesh_54" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_55" mesh="TDP_mesh_55" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_56" mesh="TDP_mesh_56" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_57" mesh="TDP_mesh_57" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_58" mesh="TDP_mesh_58" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_59" mesh="TDP_mesh_59" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_60" mesh="TDP_mesh_60" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_61" mesh="TDP_mesh_61" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_62" mesh="TDP_mesh_62" type="mesh" class="collision"/>
+            <geom name="TDP_mesh_63" mesh="TDP_mesh_63" type="mesh" class="collision"/>
+          </body>
+          
+        
+          <geom name="TIP_mesh_0" mesh="TIP_mesh_0" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_1" mesh="TIP_mesh_1" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_2" mesh="TIP_mesh_2" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_3" mesh="TIP_mesh_3" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_4" mesh="TIP_mesh_4" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_5" mesh="TIP_mesh_5" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_6" mesh="TIP_mesh_6" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_7" mesh="TIP_mesh_7" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_8" mesh="TIP_mesh_8" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_9" mesh="TIP_mesh_9" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_10" mesh="TIP_mesh_10" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_11" mesh="TIP_mesh_11" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_12" mesh="TIP_mesh_12" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_13" mesh="TIP_mesh_13" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_14" mesh="TIP_mesh_14" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_15" mesh="TIP_mesh_15" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_16" mesh="TIP_mesh_16" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_17" mesh="TIP_mesh_17" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_18" mesh="TIP_mesh_18" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_19" mesh="TIP_mesh_19" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_20" mesh="TIP_mesh_20" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_21" mesh="TIP_mesh_21" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_22" mesh="TIP_mesh_22" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_23" mesh="TIP_mesh_23" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_24" mesh="TIP_mesh_24" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_25" mesh="TIP_mesh_25" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_26" mesh="TIP_mesh_26" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_27" mesh="TIP_mesh_27" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_28" mesh="TIP_mesh_28" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_29" mesh="TIP_mesh_29" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_30" mesh="TIP_mesh_30" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_31" mesh="TIP_mesh_31" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_32" mesh="TIP_mesh_32" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_33" mesh="TIP_mesh_33" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_34" mesh="TIP_mesh_34" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_35" mesh="TIP_mesh_35" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_36" mesh="TIP_mesh_36" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_37" mesh="TIP_mesh_37" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_38" mesh="TIP_mesh_38" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_39" mesh="TIP_mesh_39" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_40" mesh="TIP_mesh_40" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_41" mesh="TIP_mesh_41" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_42" mesh="TIP_mesh_42" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_43" mesh="TIP_mesh_43" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_44" mesh="TIP_mesh_44" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_45" mesh="TIP_mesh_45" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_46" mesh="TIP_mesh_46" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_47" mesh="TIP_mesh_47" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_48" mesh="TIP_mesh_48" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_49" mesh="TIP_mesh_49" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_50" mesh="TIP_mesh_50" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_51" mesh="TIP_mesh_51" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_52" mesh="TIP_mesh_52" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_53" mesh="TIP_mesh_53" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_54" mesh="TIP_mesh_54" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_55" mesh="TIP_mesh_55" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_56" mesh="TIP_mesh_56" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_57" mesh="TIP_mesh_57" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_58" mesh="TIP_mesh_58" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_59" mesh="TIP_mesh_59" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_60" mesh="TIP_mesh_60" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_61" mesh="TIP_mesh_61" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_62" mesh="TIP_mesh_62" type="mesh" class="collision"/>
+          <geom name="TIP_mesh_63" mesh="TIP_mesh_63" type="mesh" class="collision"/>
+        </body>
+        
+      
+        <geom name="TPP_mesh_0" mesh="TPP_mesh_0" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_1" mesh="TPP_mesh_1" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_2" mesh="TPP_mesh_2" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_3" mesh="TPP_mesh_3" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_4" mesh="TPP_mesh_4" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_5" mesh="TPP_mesh_5" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_6" mesh="TPP_mesh_6" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_7" mesh="TPP_mesh_7" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_8" mesh="TPP_mesh_8" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_9" mesh="TPP_mesh_9" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_10" mesh="TPP_mesh_10" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_11" mesh="TPP_mesh_11" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_12" mesh="TPP_mesh_12" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_13" mesh="TPP_mesh_13" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_14" mesh="TPP_mesh_14" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_15" mesh="TPP_mesh_15" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_16" mesh="TPP_mesh_16" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_17" mesh="TPP_mesh_17" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_18" mesh="TPP_mesh_18" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_19" mesh="TPP_mesh_19" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_20" mesh="TPP_mesh_20" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_21" mesh="TPP_mesh_21" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_22" mesh="TPP_mesh_22" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_23" mesh="TPP_mesh_23" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_24" mesh="TPP_mesh_24" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_25" mesh="TPP_mesh_25" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_26" mesh="TPP_mesh_26" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_27" mesh="TPP_mesh_27" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_28" mesh="TPP_mesh_28" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_29" mesh="TPP_mesh_29" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_30" mesh="TPP_mesh_30" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_31" mesh="TPP_mesh_31" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_32" mesh="TPP_mesh_32" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_33" mesh="TPP_mesh_33" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_34" mesh="TPP_mesh_34" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_35" mesh="TPP_mesh_35" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_36" mesh="TPP_mesh_36" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_37" mesh="TPP_mesh_37" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_38" mesh="TPP_mesh_38" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_39" mesh="TPP_mesh_39" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_40" mesh="TPP_mesh_40" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_41" mesh="TPP_mesh_41" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_42" mesh="TPP_mesh_42" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_43" mesh="TPP_mesh_43" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_44" mesh="TPP_mesh_44" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_45" mesh="TPP_mesh_45" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_46" mesh="TPP_mesh_46" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_47" mesh="TPP_mesh_47" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_48" mesh="TPP_mesh_48" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_49" mesh="TPP_mesh_49" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_50" mesh="TPP_mesh_50" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_51" mesh="TPP_mesh_51" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_52" mesh="TPP_mesh_52" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_53" mesh="TPP_mesh_53" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_54" mesh="TPP_mesh_54" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_55" mesh="TPP_mesh_55" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_56" mesh="TPP_mesh_56" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_57" mesh="TPP_mesh_57" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_58" mesh="TPP_mesh_58" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_59" mesh="TPP_mesh_59" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_60" mesh="TPP_mesh_60" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_61" mesh="TPP_mesh_61" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_62" mesh="TPP_mesh_62" type="mesh" class="collision"/>
+        <geom name="TPP_mesh_63" mesh="TPP_mesh_63" type="mesh" class="collision"/>
+      </body>
+      
+      
+      <body name="slider-EI" pos="0.002151352882385254 0.12060615539550781 -0.2085814971923828">
+        
+        
+        <geom type="box" size="0.001 0.001 0.01" rgba="0 0 1 0"/>
+        
+        
+        <joint type="slide" axis="0 0 1" name="EI_slide"/>
+        
+        
+        <site name="Extensor_index_out_slide" pos="0 0 0.01" type="sphere" size="0.0005"/>
+        
+      
+      </body>
+      
+      
+      <body name="slider-ED" pos="0.002151352882385254 0.12060615539550781 -0.2085814971923828">
+        
+        
+        <geom type="box" size="0.001 0.001 0.01" rgba="1 1 0 0"/>
+        
+        
+        <joint type="slide" axis="0 0 1" name="ED_slide"/>
+        
+        
+        <site name="Extensor_index_out_slide2" pos="0 0 0.01" type="sphere" size="0.0005"/>
+        
+      
+      </body>
+      
+      
+      <body name="slider-FDP" pos="-0.008064311107477051 0.1231337334231751 -0.2100025177001953">
+        
+        
+        <geom type="box" size="0.001 0.001 0.01" rgba="0 1 1 0"/>
+        
+        
+        <joint type="slide" axis="0 0 1" name="FDP_slide"/>
+        
+        
+        <site name="Extensor_thumb_out_slide" pos="0 0 0.01" type="sphere" size="0.0005"/>
+        
+      
+      </body>
+      
+      
+      <body name="slider-FDS" pos="-0.0018225956943845831 0.12377059948013448 -0.200027587890625">
+        
+        
+        <geom type="box" size="0.001 0.001 0.01" rgba="1 0 0 0"/>
+        
+        
+        <joint type="slide" axis="0 0 1" name="FDS_slide"/>
+        
+        
+        <site name="Flexor_index_out_slide" pos="0 0 0.01" type="sphere" size="0.0005"/>
+        
+      
+      </body>
+      
+      
+      <body name="slider-EPB" pos="-0.008064311107477051 0.1231337334231751 -0.2100025177001953">
+        
+        
+        <geom type="box" size="0.001 0.001 0.01" rgba="0.3 0.5 0.8 0"/>
+        
+        
+        <joint type="slide" axis="0 0 1" name="EPB_slide"/>
+        
+        
+        <site name="Extensor_thumb_out_slide2" pos="0 0 0.01" type="sphere" size="0.0005"/>
+        
+      
+      </body>
+      
+      
+      <body name="slider-FPS" pos="-0.008064311107477051 0.1231337334231751 -0.2100025177001953">
+        
+        
+        <geom type="box" size="0.001 0.001 0.01" rgba="0.9 0.5 0.8 0"/>
+        
+        
+        <joint type="slide" axis="0 0 1" name="FPS_slide"/>
+        
+        
+        <site name="Extensor_thumb_out_slide3" pos="0 0 0.01" type="sphere" size="0.0005"/>
+        
+      
+      </body>
+      
+      
+      <body name="slider-FPL" pos="-0.008064311107477051 0.1231337334231751 -0.210025177001953">
+        
+        
+        <geom type="box" size="0.001 0.001 0.01" rgba="0.4 0.8 0.3 0"/>
+        
+        
+        <joint type="slide" axis="0 0 1" name="FPL_slide"/>
+        
+        
+        <site name="Extensor_thumb_out_slide4" pos="0 0 0.01" type="sphere" size="0.0005"/>
+        
+      
+      </body>
+      
+      
+      <body name="slider-EPL" pos="-0.008064311107477051 0.1231337334231751 -0.2100025177001953">
+        
+        
+        <geom type="box" size="0.001 0.001 0.01" rgba="1 0.8 1 0"/>
+        
+        
+        <joint type="slide" axis="0 0 1" name="EPL_slide"/>
+        
+        
+        <site name="Extensor_thumb_out_slide5" pos="0 0 0.01" type="sphere" size="0.0005"/>
+        
+      
+      </body>
+      
+    
+      <geom name="base_mesh_0" mesh="base_mesh_0" type="mesh" class="collision"/>
+      <geom name="base_mesh_1" mesh="base_mesh_1" type="mesh" class="collision"/>
+      <geom name="base_mesh_2" mesh="base_mesh_2" type="mesh" class="collision"/>
+      <geom name="base_mesh_3" mesh="base_mesh_3" type="mesh" class="collision"/>
+      <geom name="base_mesh_4" mesh="base_mesh_4" type="mesh" class="collision"/>
+      <geom name="base_mesh_5" mesh="base_mesh_5" type="mesh" class="collision"/>
+      <geom name="base_mesh_6" mesh="base_mesh_6" type="mesh" class="collision"/>
+      <geom name="base_mesh_7" mesh="base_mesh_7" type="mesh" class="collision"/>
+      <geom name="base_mesh_8" mesh="base_mesh_8" type="mesh" class="collision"/>
+      <geom name="base_mesh_9" mesh="base_mesh_9" type="mesh" class="collision"/>
+      <geom name="base_mesh_10" mesh="base_mesh_10" type="mesh" class="collision"/>
+      <geom name="base_mesh_11" mesh="base_mesh_11" type="mesh" class="collision"/>
+      <geom name="base_mesh_12" mesh="base_mesh_12" type="mesh" class="collision"/>
+      <geom name="base_mesh_13" mesh="base_mesh_13" type="mesh" class="collision"/>
+      <geom name="base_mesh_14" mesh="base_mesh_14" type="mesh" class="collision"/>
+      <geom name="base_mesh_15" mesh="base_mesh_15" type="mesh" class="collision"/>
+      <geom name="base_mesh_16" mesh="base_mesh_16" type="mesh" class="collision"/>
+      <geom name="base_mesh_17" mesh="base_mesh_17" type="mesh" class="collision"/>
+      <geom name="base_mesh_18" mesh="base_mesh_18" type="mesh" class="collision"/>
+      <geom name="base_mesh_19" mesh="base_mesh_19" type="mesh" class="collision"/>
+      <geom name="base_mesh_20" mesh="base_mesh_20" type="mesh" class="collision"/>
+      <geom name="base_mesh_21" mesh="base_mesh_21" type="mesh" class="collision"/>
+      <geom name="base_mesh_22" mesh="base_mesh_22" type="mesh" class="collision"/>
+      <geom name="base_mesh_23" mesh="base_mesh_23" type="mesh" class="collision"/>
+      <geom name="base_mesh_24" mesh="base_mesh_24" type="mesh" class="collision"/>
+      <geom name="base_mesh_25" mesh="base_mesh_25" type="mesh" class="collision"/>
+      <geom name="base_mesh_26" mesh="base_mesh_26" type="mesh" class="collision"/>
+      <geom name="base_mesh_27" mesh="base_mesh_27" type="mesh" class="collision"/>
+      <geom name="base_mesh_28" mesh="base_mesh_28" type="mesh" class="collision"/>
+      <geom name="base_mesh_29" mesh="base_mesh_29" type="mesh" class="collision"/>
+      <geom name="base_mesh_30" mesh="base_mesh_30" type="mesh" class="collision"/>
+      <geom name="base_mesh_31" mesh="base_mesh_31" type="mesh" class="collision"/>
+      <geom name="base_mesh_32" mesh="base_mesh_32" type="mesh" class="collision"/>
+      <geom name="base_mesh_33" mesh="base_mesh_33" type="mesh" class="collision"/>
+      <geom name="base_mesh_34" mesh="base_mesh_34" type="mesh" class="collision"/>
+      <geom name="base_mesh_35" mesh="base_mesh_35" type="mesh" class="collision"/>
+      <geom name="base_mesh_36" mesh="base_mesh_36" type="mesh" class="collision"/>
+      <geom name="base_mesh_37" mesh="base_mesh_37" type="mesh" class="collision"/>
+      <geom name="base_mesh_38" mesh="base_mesh_38" type="mesh" class="collision"/>
+      <geom name="base_mesh_39" mesh="base_mesh_39" type="mesh" class="collision"/>
+      <geom name="base_mesh_40" mesh="base_mesh_40" type="mesh" class="collision"/>
+      <geom name="base_mesh_41" mesh="base_mesh_41" type="mesh" class="collision"/>
+      <geom name="base_mesh_42" mesh="base_mesh_42" type="mesh" class="collision"/>
+      <geom name="base_mesh_43" mesh="base_mesh_43" type="mesh" class="collision"/>
+      <geom name="base_mesh_44" mesh="base_mesh_44" type="mesh" class="collision"/>
+      <geom name="base_mesh_45" mesh="base_mesh_45" type="mesh" class="collision"/>
+      <geom name="base_mesh_46" mesh="base_mesh_46" type="mesh" class="collision"/>
+      <geom name="base_mesh_47" mesh="base_mesh_47" type="mesh" class="collision"/>
+      <geom name="base_mesh_48" mesh="base_mesh_48" type="mesh" class="collision"/>
+      <geom name="base_mesh_49" mesh="base_mesh_49" type="mesh" class="collision"/>
+      <geom name="base_mesh_50" mesh="base_mesh_50" type="mesh" class="collision"/>
+      <geom name="base_mesh_51" mesh="base_mesh_51" type="mesh" class="collision"/>
+      <geom name="base_mesh_52" mesh="base_mesh_52" type="mesh" class="collision"/>
+      <geom name="base_mesh_53" mesh="base_mesh_53" type="mesh" class="collision"/>
+      <geom name="base_mesh_54" mesh="base_mesh_54" type="mesh" class="collision"/>
+      <geom name="base_mesh_55" mesh="base_mesh_55" type="mesh" class="collision"/>
+      <geom name="base_mesh_56" mesh="base_mesh_56" type="mesh" class="collision"/>
+      <geom name="base_mesh_57" mesh="base_mesh_57" type="mesh" class="collision"/>
+      <geom name="base_mesh_58" mesh="base_mesh_58" type="mesh" class="collision"/>
+      <geom name="base_mesh_59" mesh="base_mesh_59" type="mesh" class="collision"/>
+      <geom name="base_mesh_60" mesh="base_mesh_60" type="mesh" class="collision"/>
+      <geom name="base_mesh_61" mesh="base_mesh_61" type="mesh" class="collision"/>
+      <geom name="base_mesh_62" mesh="base_mesh_62" type="mesh" class="collision"/>
+      <geom name="base_mesh_63" mesh="base_mesh_63" type="mesh" class="collision"/>
+    </body>
+    
+  
+  </worldbody>
+  
+  
+  <tendon>
+    
+  
+    
+    <spatial name="EI" stiffness="1000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+      
+      
+      <site site="Extensor_index_out_slide"/>
+      
+      
+      <site site="Extensor_index_base"/>
+      
+      
+      <geom geom="Index_MCP_wrap" sidesite="EI-2"/>
+      
+      
+      <site site="Extensor_index_proximal"/>
+      
+
+      
+      <pulley divisor="2"/>
+      
+      
+      <site site="Extensor_index_proximal"/>
+      
+      
+      <geom geom="Index_PIP_wrap" sidesite="EI-1"/>
+      
+      
+      <site site="p_in"/>
+      
+
+      
+      <pulley divisor="2"/>
+      
+      
+      <site site="Extensor_index_proximal"/>
+      
+      
+      <geom geom="Index_PIP_wrap" sidesite="EI-1"/>
+      
+      
+      <site site="Extensor_index_intermediate"/>
+      
+      
+      <geom geom="Index_DIP_wrap" sidesite="EI-0"/>
+      
+      
+      <site site="EI"/>
+        
+    
+    </spatial>
+    
+
+    
+    <spatial name="FDP" stiffness="1000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+      
+      
+      <site site="FDP"/>
+      
+      
+      <site site="Flexor_index_distal2"/>
+      
+      
+      
+      <site site="Flexor_index_intermediate1"/>
+      
+      
+      <site site="Flexor_index_intermediate2"/>
+      
+      
+      <site site="Flexor_index_proximal1"/>
+      
+      
+      <site site="Flexor_index_proximal2"/>
+      
+      
+      <site site="Extensor_thumb_out_slide"/>
+      
+      
+    
+    </spatial>
+    
+
+    
+    <spatial name="FDS" stiffness="1000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+      
+      
+      <site site="FDS"/>
+      
+      
+      <site site="Flexor_index_intermediate2"/>
+      
+      
+      <site site="Flexor_index_proximal1"/>
+      
+      
+      <site site="Flexor_index_proximal2"/>
+      
+      
+      <geom geom="Index_MCP_wrap" sidesite="FDS-2"/>
+      
+      
+      <site site="Flexor_index_out_slide"/>
+      
+    
+    </spatial>
+    
+
+    
+    <spatial name="ED" stiffness="1000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+      
+      
+      <site site="ED"/>
+      
+      
+      <geom geom="Index_MCP_wrap" sidesite="EI-2"/>
+      
+      
+      <site site="Extensor_index_base"/>
+      
+      
+      <site site="Extensor_index_out_slide2"/>
+      
+    
+    </spatial>
+    
+
+    
+    <spatial name="EPB" stiffness="1000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+      
+      
+      <site site="EPB"/>
+      
+      
+      <site site="Extensor_thumb_EPB"/>
+      
+      
+      <geom geom="EPB_wrap" sidesite="EPB_0"/>
+      
+      
+      <site site="Extensor_thumb_out_slide2"/>
+      
+    
+    </spatial>
+    
+    
+    
+    <spatial name="FPS" stiffness="1000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+      
+      
+      <site site="FPS"/>
+      
+      
+      <site site="Flexor_thumb_intermediate2"/>
+      
+      
+      <site site="Flexor_thumb_proximal1"/>
+      
+      
+      <site site="Flexor_thumb_proximal2"/>
+      
+      
+      <site site="Flexor_thumb_base1"/>
+      
+      
+      <geom geom="FPL_wrap" sidesite="FPL_0"/>
+      
+      
+      <site site="Extensor_thumb_out1"/>
+      
+      
+      <site site="Extensor_thumb_out_slide3"/>
+      
+    
+    </spatial>
+    
+
+    
+    <spatial name="FPL" stiffness="1000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+      
+      
+      <site site="FPL"/>
+      
+      
+      <site site="Flexor_thumb_intermediate1"/>
+      
+      
+      <site site="Flexor_thumb_intermediate2"/>
+      
+      
+      <site site="Flexor_thumb_proximal1"/>
+      
+      
+      <site site="Flexor_thumb_proximal2"/>
+      
+      
+      <site site="Extensor_thumb_out1"/>
+      
+      
+      <site site="Extensor_thumb_out_slide4"/>
+      
+    
+    </spatial>
+    
+
+    
+    <spatial name="EPL" stiffness="1000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+      
+      
+      <site site="EPL"/>
+      
+      
+      <geom geom="thumb_IP_wrap" sidesite="TDP-0"/>
+      
+      
+      <site site="Extensor_thumb_intermediate"/>
+      
+      
+      <geom geom="thumb_PIP_wrap" sidesite="TIP-1"/>
+      
+      
+      <site site="Extensor_thumb_proximal"/>
+      
+      
+      <geom geom="thumb_MCP_wrap" sidesite="TPP-2"/>
+      
+      
+      <site site="Extensor_thumb_out1"/>
+      
+      
+      <site site="Extensor_thumb_out_slide5"/>
+      
+    
+    </spatial>
+    
+  
+  </tendon>
+  
+  
+  
+  <sensor>
+    
+    
+    <framepos name="index_pos_sens" objtype="geom" objname="fingertip_index"/>
+    
+    
+    <framepos name="thumb_pos_sens" objtype="geom" objname="fingertip_thumb"/>
+    
+    
+    <jointpos name="TDP_angle" joint="joint_TDP"/>
+    
+    
+    <jointpos name="TIP_angle" joint="joint_TIP"/>
+    
+    
+    <jointpos name="TPP_angle" joint="joint_TPP"/>
+    
+    
+    <jointpos name="IDP_angle" joint="joint_IDP"/>
+    
+    
+    <jointpos name="IIP_angle" joint="joint_IIP"/>
+    
+    
+    <jointpos name="IPP_angle" joint="joint_IPP"/>
+    
+  
+  </sensor>
+  
+
+  
+  <actuator>
+    
+    
+    <motor name="FDP" joint="FDP_slide" gear="30" ctrllimited="true" ctrlrange="-2 0"/>
+    
+    
+    <motor name="FDS" joint="FDS_slide" gear="30" ctrllimited="true" ctrlrange="-2 0"/>
+    
+    
+    <motor name="EI" joint="EI_slide" gear="10" ctrllimited="true" ctrlrange="-2 0"/>
+    
+    
+    <motor name="ED" joint="ED_slide" gear="10" ctrllimited="true" ctrlrange="-2 0"/>
+    
+    
+    <motor name="EPB" joint="EPB_slide" gear="5" ctrllimited="true" ctrlrange="-2 0"/>
+    
+    
+    <motor name="FPS" joint="FPS_slide" gear="50" ctrllimited="true" ctrlrange="-5 0"/>
+    
+    
+    <motor name="FPL" joint="FPL_slide" gear="30" ctrllimited="true" ctrlrange="-2 0"/>
+    
+    
+    <motor name="EPL" joint="EPL_slide" gear="10" ctrllimited="true" ctrlrange="-2 0"/>
+    
+  
+  </actuator>
+  
+
+</mujoco>

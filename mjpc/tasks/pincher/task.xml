@@ -34,5 +34,5 @@
       <framepos name="thumb_pos" objtype="geom" objname="fingertip_thumb"/>
       <framepos name="target" objtype="body" objname="target"/>
     </sensor>
-    <include file="Mesh_model_sensors.xml"/>
+    <include file="Mesh_Model_convex_sensors.xml"/>
 </mujoco>
