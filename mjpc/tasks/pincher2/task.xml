@@ -1,0 +1,39 @@
+<mujoco model="Pincher2">
+    <include file="../common.xml" />
+   
+
+    <custom>
+    <numeric name="task_risk" data="1" />
+    <numeric name="agent_planner" data="0" />
+    <numeric name="agent_horizon" data="0.5" />
+    <numeric name="agent_timestep" data="0.01" />
+    <numeric name="agent_policy_width" data="0.0015" />
+    <numeric name="sampling_spline_points" data="10" />
+    <numeric name="sampling_exploration" data="0.01" />
+    <numeric name="gradient_spline_points" data="5" />
+  </custom>
+
+  <worldbody>
+    <body name="target" mocap="true" pos="-0.04893478181070757 0.1399462331042795 0.463620666103109585">
+      <geom name="target" type="sphere" size="0.005" material="target"/>
+      <light name="target_light" diffuse=".7 .7 .7" pos="0 0 0.5"/>
+    </body>
+  </worldbody>
+    
+    <sensor>
+    <!-- cost -->
+      <user name="Control" dim="8" user="0 0.1 0 1" />
+      <user name="Distance_index" dim="3" user="2 10 0 10 0.04" />
+      <user name="Distance_thumb" dim="3" user="2 10 0 10 0.04" />
+      <!--user name="angles" dim="2" user="0 5 0 10" /-->
+
+    <!-- trace -->
+      <framepos name="index_pos_trace" objtype="site" objname="index_tip"/>
+      <framepos name="thumb_pos_trace" objtype="site" objname="thumb_tip"/>
+      <!-- residual -->
+      <framepos name="index_pos" objtype="site" objname="index_tip"/>
+      <framepos name="thumb_pos" objtype="site" objname="thumb_tip"/>
+      <framepos name="target" objtype="body" objname="target"/>
+    </sensor>
+    <include file="model.xml"/>
+</mujoco>

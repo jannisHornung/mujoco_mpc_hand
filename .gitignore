@@ -35,3 +35,4 @@ MJMODEL.TXT
 python/dist/
 #assets
 /mjpc/tasks/pincher/assets*
+/mjpc/tasks/pincher2/meshes*

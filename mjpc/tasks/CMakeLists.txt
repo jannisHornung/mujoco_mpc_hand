@@ -130,6 +130,17 @@ add_custom_target(
   COMMAND ${CMAKE_COMMAND} -E copy
           ${CMAKE_CURRENT_SOURCE_DIR}/pincher/task.xml
           ${CMAKE_CURRENT_BINARY_DIR}/pincher/task.xml
+
+
+  COMMAND ${CMAKE_COMMAND} -E copy_directory
+          ${CMAKE_CURRENT_SOURCE_DIR}/pincher2/meshes
+          ${CMAKE_CURRENT_BINARY_DIR}/pincher2/meshes
+  COMMAND ${CMAKE_COMMAND} -E copy
+          ${CMAKE_CURRENT_SOURCE_DIR}/pincher2/model.xml
+          ${CMAKE_CURRENT_BINARY_DIR}/pincher2/model.xml
+  COMMAND ${CMAKE_COMMAND} -E copy
+          ${CMAKE_CURRENT_SOURCE_DIR}/pincher2/task.xml
+          ${CMAKE_CURRENT_BINARY_DIR}/pincher2/task.xml
 # -----------------------------------------------------------------------------------------------
 
 

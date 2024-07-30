@@ -84,6 +84,8 @@ add_library(
   tasks/walker/walker.h
   tasks/pincher/pincher.cc 
   tasks/pincher/pincher.h
+  tasks/pincher2/pincher2.cc 
+  tasks/pincher2/pincher2.h
   planners/planner.cc
   planners/planner.h
   planners/policy.h
