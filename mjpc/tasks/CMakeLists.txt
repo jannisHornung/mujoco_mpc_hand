@@ -125,8 +125,8 @@ add_custom_target(
           ${CMAKE_CURRENT_SOURCE_DIR}/pincher/assets
           ${CMAKE_CURRENT_BINARY_DIR}/pincher/assets
   COMMAND ${CMAKE_COMMAND} -E copy
-          ${CMAKE_CURRENT_SOURCE_DIR}/pincher/Mesh_model_sensors.xml
-          ${CMAKE_CURRENT_BINARY_DIR}/pincher/Mesh_model_sensors.xml
+          ${CMAKE_CURRENT_SOURCE_DIR}/pincher/Mesh_Model_convex_sensors.xml
+          ${CMAKE_CURRENT_BINARY_DIR}/pincher/Mesh_Model_convex_sensors.xml
   COMMAND ${CMAKE_COMMAND} -E copy
           ${CMAKE_CURRENT_SOURCE_DIR}/pincher/task.xml
           ${CMAKE_CURRENT_BINARY_DIR}/pincher/task.xml

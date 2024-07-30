@@ -36,18 +36,18 @@ void Pincher::ResidualFn::Residual(const mjModel* model,
   counter += 3;
   // Angles 
   double* TDP = mjpc::SensorByName(model, data, "TDP_angle_s");
-  double* TIP = mjpc::SensorByName(model, data, "TIP_angle_s");
-  double* TPP = mjpc::SensorByName(model, data, "TPP_angle_s");
+  //double* TIP = mjpc::SensorByName(model, data, "TIP_angle_s");
+  //double* TPP = mjpc::SensorByName(model, data, "TPP_angle_s");
   double* IDP = mjpc::SensorByName(model, data, "IDP_angle_s");
-  double* IIP = mjpc::SensorByName(model, data, "IIP_angle_s");
-  double* IPP = mjpc::SensorByName(model, data, "IPP_angle_s");
+  //double* IIP = mjpc::SensorByName(model, data, "IIP_angle_s");
+  //double* IPP = mjpc::SensorByName(model, data, "IPP_angle_s");
 
   residual[counter++] = *TDP;
-  residual[counter++] = *TIP;
-  residual[counter++] = *TPP;
+  //residual[counter++] = *TIP;
+  //residual[counter++] = *TPP;
   residual[counter++] = *IDP;
-  residual[counter++] = *IIP;
-  residual[counter++] = *IPP;
+  //residual[counter++] = *IIP;
+  //residual[counter++] = *IPP;
   // test residual counter (recommended, optional)
   CheckSensorDim(model, counter);
 }

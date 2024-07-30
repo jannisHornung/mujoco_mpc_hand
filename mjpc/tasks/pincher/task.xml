@@ -8,7 +8,7 @@
     <numeric name="agent_horizon" data="0.5" />
     <numeric name="agent_timestep" data="0.01" />
     <numeric name="agent_policy_width" data="0.0015" />
-    <numeric name="sampling_spline_points" data="5" />
+    <numeric name="sampling_spline_points" data="10" />
     <numeric name="sampling_exploration" data="0.01" />
     <numeric name="gradient_spline_points" data="5" />
   </custom>
@@ -25,7 +25,7 @@
       <user name="Control" dim="8" user="0 0.1 0 1" />
       <user name="Distance_index" dim="3" user="2 10 0 10 0.04" />
       <user name="Distance_thumb" dim="3" user="2 10 0 10 0.04" />
-      <user name="angles" dim="6" user="0 5 0 10" />
+      <user name="angles" dim="2" user="0 5 0 10" />
 
     <!-- trace -->
       <framepos name="index_pos_trace" objtype="geom" objname="fingertip_index"/>
