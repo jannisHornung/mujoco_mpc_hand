@@ -14,7 +14,7 @@
   </custom>
 
   <worldbody>
-    <body name="target" mocap="true" pos="-0.04893478181070757 0.1399462331042795 0.463620666103109585">
+    <body name="target" mocap="true" pos="0.1765304360741342 -0.006212724687087806 0.36246523321202795">
       <geom name="target" type="sphere" size="0.005" material="target"/>
       <light name="target_light" diffuse=".7 .7 .7" pos="0 0 0.5"/>
     </body>
