@@ -1,0 +1,1313 @@
+<?xml version="1.0"?>
+<mujoco model="hand model">
+	<compiler angle="radian" autolimits="true" meshdir="./meshes" texturedir="assets" />
+	<option integrator="implicit" />
+	<default>
+		<default class="zf">
+			<geom type="mesh" contype="0" conaffinity="0" group="2" friction="0.7" solref="0.015 1" solimp="0.95 0.99 0.003" rgba="0.78 0.64 0.57 1" />
+		</default>
+		<default class="collision">
+			<geom type="mesh" contype="3" conaffinity="2" group="0" friction="0.7" solref="0.015 1" solimp="0.95 0.99 0.003" rgba="0.68 0 0.5 0.0" />
+		</default>
+		<default class="dau">
+			<geom type="mesh" contype="0" conaffinity="0" group="2" friction="0.7" solref="0.015 1" solimp="0.95 0.99 0.003" rgba="0.78 0.64 0.37 1" />
+		</default>
+		<default class="base">
+			<geom type="mesh" contype="0" conaffinity="0" group="2" friction="0.7" solref="0.015 1" solimp="0.95 0.99 0.003" rgba="0.74 0.60 0.47 0.3" />
+		</default>
+		<default class="other">
+			<geom type="mesh" contype="0" conaffinity="0" group="2" friction="0.7" solref="0.015 1" solimp="0.95 0.99 0.003" rgba="0.74 0.60 0.67 0.3" />
+		</default>
+		<default class="visual">
+			<geom type="mesh" contype="0" conaffinity="0" group="2" density="950" rgba="0.68 0.64 0.57 1" />
+		</default>
+		<default class="tracker">
+			<geom type="mesh" contype="0" conaffinity="0" group="2" rgba="0.2 0.2 1 0.2" />
+		</default>
+	</default>
+	<asset>
+		<mesh file="ZF-DIP.stl" name="ZF-DIP" scale="0.001 0.001 0.001" />
+		<mesh file="ZF-PIP1.stl" name="ZF-PIP1" scale="0.001 0.001 0.001" />
+		<mesh file="ZF-PIP2.stl" name="ZF-PIP2" scale="0.001 0.001 0.001" />
+		<mesh file="ZF-MCP.stl" name="ZF-MCP" scale="0.001 0.001 0.001" />
+		<mesh file="DAU-MCP.stl" name="DAU-MCP" scale="0.001 0.001 0.001" />
+		<mesh file="DAU-PIP.stl" name="DAU-PIP" scale="0.001 0.001 0.001" />
+		<mesh file="DAU-DIP.stl" name="DAU-DIP" scale="0.001 0.001 0.001" />
+		<mesh file="BASE.stl" name="BASE" scale="0.001 0.001 0.001" />
+		<mesh file="OTHER.stl" name="OTHER" scale="0.001 0.001 0.001" />
+		<texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="3072" />
+		<texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="1 1 1" rgb2="1 1 1" markrgb="0.8 0.8 0.8" width="300" height="300" />
+		<material name="groundplane" texture="groundplane" texuniform="true" texrepeat="10 10" reflectance="0.3" />
+		<material name="bone" reflectance="1" shininess="0" specular="0" rgba="0.68 0.64 0.57 1" />
+		<mesh name="ZF-DIP_0" file="./Convex_meshes/ZF-DIP_0.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_1" file="./Convex_meshes/ZF-DIP_1.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_2" file="./Convex_meshes/ZF-DIP_2.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_3" file="./Convex_meshes/ZF-DIP_3.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_4" file="./Convex_meshes/ZF-DIP_4.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_5" file="./Convex_meshes/ZF-DIP_5.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_6" file="./Convex_meshes/ZF-DIP_6.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_7" file="./Convex_meshes/ZF-DIP_7.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_8" file="./Convex_meshes/ZF-DIP_8.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_9" file="./Convex_meshes/ZF-DIP_9.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_10" file="./Convex_meshes/ZF-DIP_10.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_11" file="./Convex_meshes/ZF-DIP_11.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_12" file="./Convex_meshes/ZF-DIP_12.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_13" file="./Convex_meshes/ZF-DIP_13.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_14" file="./Convex_meshes/ZF-DIP_14.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_15" file="./Convex_meshes/ZF-DIP_15.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_16" file="./Convex_meshes/ZF-DIP_16.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_17" file="./Convex_meshes/ZF-DIP_17.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_18" file="./Convex_meshes/ZF-DIP_18.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_19" file="./Convex_meshes/ZF-DIP_19.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_20" file="./Convex_meshes/ZF-DIP_20.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_21" file="./Convex_meshes/ZF-DIP_21.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_22" file="./Convex_meshes/ZF-DIP_22.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_23" file="./Convex_meshes/ZF-DIP_23.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_24" file="./Convex_meshes/ZF-DIP_24.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_25" file="./Convex_meshes/ZF-DIP_25.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_26" file="./Convex_meshes/ZF-DIP_26.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_27" file="./Convex_meshes/ZF-DIP_27.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_28" file="./Convex_meshes/ZF-DIP_28.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_29" file="./Convex_meshes/ZF-DIP_29.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_30" file="./Convex_meshes/ZF-DIP_30.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_31" file="./Convex_meshes/ZF-DIP_31.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_32" file="./Convex_meshes/ZF-DIP_32.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_33" file="./Convex_meshes/ZF-DIP_33.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_34" file="./Convex_meshes/ZF-DIP_34.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_35" file="./Convex_meshes/ZF-DIP_35.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_36" file="./Convex_meshes/ZF-DIP_36.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_37" file="./Convex_meshes/ZF-DIP_37.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_38" file="./Convex_meshes/ZF-DIP_38.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_39" file="./Convex_meshes/ZF-DIP_39.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_40" file="./Convex_meshes/ZF-DIP_40.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_41" file="./Convex_meshes/ZF-DIP_41.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_42" file="./Convex_meshes/ZF-DIP_42.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_43" file="./Convex_meshes/ZF-DIP_43.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_44" file="./Convex_meshes/ZF-DIP_44.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_45" file="./Convex_meshes/ZF-DIP_45.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_46" file="./Convex_meshes/ZF-DIP_46.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_47" file="./Convex_meshes/ZF-DIP_47.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_48" file="./Convex_meshes/ZF-DIP_48.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_49" file="./Convex_meshes/ZF-DIP_49.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_50" file="./Convex_meshes/ZF-DIP_50.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_51" file="./Convex_meshes/ZF-DIP_51.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_52" file="./Convex_meshes/ZF-DIP_52.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_53" file="./Convex_meshes/ZF-DIP_53.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_54" file="./Convex_meshes/ZF-DIP_54.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_55" file="./Convex_meshes/ZF-DIP_55.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_56" file="./Convex_meshes/ZF-DIP_56.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_57" file="./Convex_meshes/ZF-DIP_57.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_58" file="./Convex_meshes/ZF-DIP_58.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_59" file="./Convex_meshes/ZF-DIP_59.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_60" file="./Convex_meshes/ZF-DIP_60.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_61" file="./Convex_meshes/ZF-DIP_61.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_62" file="./Convex_meshes/ZF-DIP_62.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-DIP_63" file="./Convex_meshes/ZF-DIP_63.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_0" file="./Convex_meshes/ZF-PIP1_0.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_1" file="./Convex_meshes/ZF-PIP1_1.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_2" file="./Convex_meshes/ZF-PIP1_2.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_3" file="./Convex_meshes/ZF-PIP1_3.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_4" file="./Convex_meshes/ZF-PIP1_4.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_5" file="./Convex_meshes/ZF-PIP1_5.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_6" file="./Convex_meshes/ZF-PIP1_6.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_7" file="./Convex_meshes/ZF-PIP1_7.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_8" file="./Convex_meshes/ZF-PIP1_8.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_9" file="./Convex_meshes/ZF-PIP1_9.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_10" file="./Convex_meshes/ZF-PIP1_10.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_11" file="./Convex_meshes/ZF-PIP1_11.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_12" file="./Convex_meshes/ZF-PIP1_12.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_13" file="./Convex_meshes/ZF-PIP1_13.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_14" file="./Convex_meshes/ZF-PIP1_14.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_15" file="./Convex_meshes/ZF-PIP1_15.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_16" file="./Convex_meshes/ZF-PIP1_16.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_17" file="./Convex_meshes/ZF-PIP1_17.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_18" file="./Convex_meshes/ZF-PIP1_18.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_19" file="./Convex_meshes/ZF-PIP1_19.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_20" file="./Convex_meshes/ZF-PIP1_20.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_21" file="./Convex_meshes/ZF-PIP1_21.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_22" file="./Convex_meshes/ZF-PIP1_22.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_23" file="./Convex_meshes/ZF-PIP1_23.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_24" file="./Convex_meshes/ZF-PIP1_24.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_25" file="./Convex_meshes/ZF-PIP1_25.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_26" file="./Convex_meshes/ZF-PIP1_26.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_27" file="./Convex_meshes/ZF-PIP1_27.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_28" file="./Convex_meshes/ZF-PIP1_28.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_29" file="./Convex_meshes/ZF-PIP1_29.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_30" file="./Convex_meshes/ZF-PIP1_30.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_31" file="./Convex_meshes/ZF-PIP1_31.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_32" file="./Convex_meshes/ZF-PIP1_32.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_33" file="./Convex_meshes/ZF-PIP1_33.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_34" file="./Convex_meshes/ZF-PIP1_34.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_35" file="./Convex_meshes/ZF-PIP1_35.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_36" file="./Convex_meshes/ZF-PIP1_36.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_37" file="./Convex_meshes/ZF-PIP1_37.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_38" file="./Convex_meshes/ZF-PIP1_38.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_39" file="./Convex_meshes/ZF-PIP1_39.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_40" file="./Convex_meshes/ZF-PIP1_40.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_41" file="./Convex_meshes/ZF-PIP1_41.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_42" file="./Convex_meshes/ZF-PIP1_42.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_43" file="./Convex_meshes/ZF-PIP1_43.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_44" file="./Convex_meshes/ZF-PIP1_44.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_45" file="./Convex_meshes/ZF-PIP1_45.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_46" file="./Convex_meshes/ZF-PIP1_46.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_47" file="./Convex_meshes/ZF-PIP1_47.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_48" file="./Convex_meshes/ZF-PIP1_48.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_49" file="./Convex_meshes/ZF-PIP1_49.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_50" file="./Convex_meshes/ZF-PIP1_50.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_51" file="./Convex_meshes/ZF-PIP1_51.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_52" file="./Convex_meshes/ZF-PIP1_52.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_53" file="./Convex_meshes/ZF-PIP1_53.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_54" file="./Convex_meshes/ZF-PIP1_54.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_55" file="./Convex_meshes/ZF-PIP1_55.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_56" file="./Convex_meshes/ZF-PIP1_56.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_57" file="./Convex_meshes/ZF-PIP1_57.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_58" file="./Convex_meshes/ZF-PIP1_58.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_59" file="./Convex_meshes/ZF-PIP1_59.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_60" file="./Convex_meshes/ZF-PIP1_60.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_61" file="./Convex_meshes/ZF-PIP1_61.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_62" file="./Convex_meshes/ZF-PIP1_62.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP1_63" file="./Convex_meshes/ZF-PIP1_63.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_0" file="./Convex_meshes/ZF-PIP2_0.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_1" file="./Convex_meshes/ZF-PIP2_1.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_2" file="./Convex_meshes/ZF-PIP2_2.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_3" file="./Convex_meshes/ZF-PIP2_3.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_4" file="./Convex_meshes/ZF-PIP2_4.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_5" file="./Convex_meshes/ZF-PIP2_5.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_6" file="./Convex_meshes/ZF-PIP2_6.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_7" file="./Convex_meshes/ZF-PIP2_7.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_8" file="./Convex_meshes/ZF-PIP2_8.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_9" file="./Convex_meshes/ZF-PIP2_9.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_10" file="./Convex_meshes/ZF-PIP2_10.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_11" file="./Convex_meshes/ZF-PIP2_11.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_12" file="./Convex_meshes/ZF-PIP2_12.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_13" file="./Convex_meshes/ZF-PIP2_13.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_14" file="./Convex_meshes/ZF-PIP2_14.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_15" file="./Convex_meshes/ZF-PIP2_15.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_16" file="./Convex_meshes/ZF-PIP2_16.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_17" file="./Convex_meshes/ZF-PIP2_17.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_18" file="./Convex_meshes/ZF-PIP2_18.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_19" file="./Convex_meshes/ZF-PIP2_19.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_20" file="./Convex_meshes/ZF-PIP2_20.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_21" file="./Convex_meshes/ZF-PIP2_21.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_22" file="./Convex_meshes/ZF-PIP2_22.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_23" file="./Convex_meshes/ZF-PIP2_23.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_24" file="./Convex_meshes/ZF-PIP2_24.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_25" file="./Convex_meshes/ZF-PIP2_25.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_26" file="./Convex_meshes/ZF-PIP2_26.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_27" file="./Convex_meshes/ZF-PIP2_27.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_28" file="./Convex_meshes/ZF-PIP2_28.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_29" file="./Convex_meshes/ZF-PIP2_29.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_30" file="./Convex_meshes/ZF-PIP2_30.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_31" file="./Convex_meshes/ZF-PIP2_31.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_32" file="./Convex_meshes/ZF-PIP2_32.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_33" file="./Convex_meshes/ZF-PIP2_33.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_34" file="./Convex_meshes/ZF-PIP2_34.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_35" file="./Convex_meshes/ZF-PIP2_35.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_36" file="./Convex_meshes/ZF-PIP2_36.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_37" file="./Convex_meshes/ZF-PIP2_37.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_38" file="./Convex_meshes/ZF-PIP2_38.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_39" file="./Convex_meshes/ZF-PIP2_39.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_40" file="./Convex_meshes/ZF-PIP2_40.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_41" file="./Convex_meshes/ZF-PIP2_41.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_42" file="./Convex_meshes/ZF-PIP2_42.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_43" file="./Convex_meshes/ZF-PIP2_43.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_44" file="./Convex_meshes/ZF-PIP2_44.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_45" file="./Convex_meshes/ZF-PIP2_45.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_46" file="./Convex_meshes/ZF-PIP2_46.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_47" file="./Convex_meshes/ZF-PIP2_47.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_48" file="./Convex_meshes/ZF-PIP2_48.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_49" file="./Convex_meshes/ZF-PIP2_49.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_50" file="./Convex_meshes/ZF-PIP2_50.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_51" file="./Convex_meshes/ZF-PIP2_51.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_52" file="./Convex_meshes/ZF-PIP2_52.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_53" file="./Convex_meshes/ZF-PIP2_53.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_54" file="./Convex_meshes/ZF-PIP2_54.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_55" file="./Convex_meshes/ZF-PIP2_55.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_56" file="./Convex_meshes/ZF-PIP2_56.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_57" file="./Convex_meshes/ZF-PIP2_57.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_58" file="./Convex_meshes/ZF-PIP2_58.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_59" file="./Convex_meshes/ZF-PIP2_59.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_60" file="./Convex_meshes/ZF-PIP2_60.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_61" file="./Convex_meshes/ZF-PIP2_61.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_62" file="./Convex_meshes/ZF-PIP2_62.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-PIP2_63" file="./Convex_meshes/ZF-PIP2_63.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_0" file="./Convex_meshes/ZF-MCP_0.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_1" file="./Convex_meshes/ZF-MCP_1.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_2" file="./Convex_meshes/ZF-MCP_2.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_3" file="./Convex_meshes/ZF-MCP_3.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_4" file="./Convex_meshes/ZF-MCP_4.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_5" file="./Convex_meshes/ZF-MCP_5.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_6" file="./Convex_meshes/ZF-MCP_6.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_7" file="./Convex_meshes/ZF-MCP_7.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_8" file="./Convex_meshes/ZF-MCP_8.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_9" file="./Convex_meshes/ZF-MCP_9.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_10" file="./Convex_meshes/ZF-MCP_10.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_11" file="./Convex_meshes/ZF-MCP_11.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_12" file="./Convex_meshes/ZF-MCP_12.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_13" file="./Convex_meshes/ZF-MCP_13.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_14" file="./Convex_meshes/ZF-MCP_14.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_15" file="./Convex_meshes/ZF-MCP_15.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_16" file="./Convex_meshes/ZF-MCP_16.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_17" file="./Convex_meshes/ZF-MCP_17.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_18" file="./Convex_meshes/ZF-MCP_18.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_19" file="./Convex_meshes/ZF-MCP_19.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_20" file="./Convex_meshes/ZF-MCP_20.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_21" file="./Convex_meshes/ZF-MCP_21.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_22" file="./Convex_meshes/ZF-MCP_22.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_23" file="./Convex_meshes/ZF-MCP_23.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_24" file="./Convex_meshes/ZF-MCP_24.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_25" file="./Convex_meshes/ZF-MCP_25.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_26" file="./Convex_meshes/ZF-MCP_26.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_27" file="./Convex_meshes/ZF-MCP_27.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_28" file="./Convex_meshes/ZF-MCP_28.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_29" file="./Convex_meshes/ZF-MCP_29.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_30" file="./Convex_meshes/ZF-MCP_30.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_31" file="./Convex_meshes/ZF-MCP_31.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_32" file="./Convex_meshes/ZF-MCP_32.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_33" file="./Convex_meshes/ZF-MCP_33.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_34" file="./Convex_meshes/ZF-MCP_34.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_35" file="./Convex_meshes/ZF-MCP_35.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_36" file="./Convex_meshes/ZF-MCP_36.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_37" file="./Convex_meshes/ZF-MCP_37.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_38" file="./Convex_meshes/ZF-MCP_38.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_39" file="./Convex_meshes/ZF-MCP_39.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_40" file="./Convex_meshes/ZF-MCP_40.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_41" file="./Convex_meshes/ZF-MCP_41.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_42" file="./Convex_meshes/ZF-MCP_42.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_43" file="./Convex_meshes/ZF-MCP_43.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_44" file="./Convex_meshes/ZF-MCP_44.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_45" file="./Convex_meshes/ZF-MCP_45.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_46" file="./Convex_meshes/ZF-MCP_46.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_47" file="./Convex_meshes/ZF-MCP_47.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_48" file="./Convex_meshes/ZF-MCP_48.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_49" file="./Convex_meshes/ZF-MCP_49.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_50" file="./Convex_meshes/ZF-MCP_50.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_51" file="./Convex_meshes/ZF-MCP_51.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_52" file="./Convex_meshes/ZF-MCP_52.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_53" file="./Convex_meshes/ZF-MCP_53.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_54" file="./Convex_meshes/ZF-MCP_54.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_55" file="./Convex_meshes/ZF-MCP_55.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_56" file="./Convex_meshes/ZF-MCP_56.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_57" file="./Convex_meshes/ZF-MCP_57.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_58" file="./Convex_meshes/ZF-MCP_58.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_59" file="./Convex_meshes/ZF-MCP_59.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_60" file="./Convex_meshes/ZF-MCP_60.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_61" file="./Convex_meshes/ZF-MCP_61.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_62" file="./Convex_meshes/ZF-MCP_62.stl" scale="0.001 0.001 0.001" />
+		<mesh name="ZF-MCP_63" file="./Convex_meshes/ZF-MCP_63.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_0" file="./Convex_meshes/DAU-MCP_0.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_1" file="./Convex_meshes/DAU-MCP_1.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_2" file="./Convex_meshes/DAU-MCP_2.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_3" file="./Convex_meshes/DAU-MCP_3.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_4" file="./Convex_meshes/DAU-MCP_4.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_5" file="./Convex_meshes/DAU-MCP_5.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_6" file="./Convex_meshes/DAU-MCP_6.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_7" file="./Convex_meshes/DAU-MCP_7.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_8" file="./Convex_meshes/DAU-MCP_8.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_9" file="./Convex_meshes/DAU-MCP_9.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_10" file="./Convex_meshes/DAU-MCP_10.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_11" file="./Convex_meshes/DAU-MCP_11.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_12" file="./Convex_meshes/DAU-MCP_12.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_13" file="./Convex_meshes/DAU-MCP_13.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_14" file="./Convex_meshes/DAU-MCP_14.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_15" file="./Convex_meshes/DAU-MCP_15.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_16" file="./Convex_meshes/DAU-MCP_16.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_17" file="./Convex_meshes/DAU-MCP_17.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_18" file="./Convex_meshes/DAU-MCP_18.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_19" file="./Convex_meshes/DAU-MCP_19.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_20" file="./Convex_meshes/DAU-MCP_20.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_21" file="./Convex_meshes/DAU-MCP_21.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_22" file="./Convex_meshes/DAU-MCP_22.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_23" file="./Convex_meshes/DAU-MCP_23.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_24" file="./Convex_meshes/DAU-MCP_24.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_25" file="./Convex_meshes/DAU-MCP_25.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_26" file="./Convex_meshes/DAU-MCP_26.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_27" file="./Convex_meshes/DAU-MCP_27.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_28" file="./Convex_meshes/DAU-MCP_28.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_29" file="./Convex_meshes/DAU-MCP_29.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_30" file="./Convex_meshes/DAU-MCP_30.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_31" file="./Convex_meshes/DAU-MCP_31.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_32" file="./Convex_meshes/DAU-MCP_32.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_33" file="./Convex_meshes/DAU-MCP_33.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_34" file="./Convex_meshes/DAU-MCP_34.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_35" file="./Convex_meshes/DAU-MCP_35.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_36" file="./Convex_meshes/DAU-MCP_36.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_37" file="./Convex_meshes/DAU-MCP_37.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_38" file="./Convex_meshes/DAU-MCP_38.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_39" file="./Convex_meshes/DAU-MCP_39.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_40" file="./Convex_meshes/DAU-MCP_40.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_41" file="./Convex_meshes/DAU-MCP_41.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_42" file="./Convex_meshes/DAU-MCP_42.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_43" file="./Convex_meshes/DAU-MCP_43.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_44" file="./Convex_meshes/DAU-MCP_44.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_45" file="./Convex_meshes/DAU-MCP_45.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_46" file="./Convex_meshes/DAU-MCP_46.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_47" file="./Convex_meshes/DAU-MCP_47.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_48" file="./Convex_meshes/DAU-MCP_48.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_49" file="./Convex_meshes/DAU-MCP_49.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_50" file="./Convex_meshes/DAU-MCP_50.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_51" file="./Convex_meshes/DAU-MCP_51.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_52" file="./Convex_meshes/DAU-MCP_52.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_53" file="./Convex_meshes/DAU-MCP_53.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_54" file="./Convex_meshes/DAU-MCP_54.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_55" file="./Convex_meshes/DAU-MCP_55.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_56" file="./Convex_meshes/DAU-MCP_56.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_57" file="./Convex_meshes/DAU-MCP_57.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_58" file="./Convex_meshes/DAU-MCP_58.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_59" file="./Convex_meshes/DAU-MCP_59.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_60" file="./Convex_meshes/DAU-MCP_60.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_61" file="./Convex_meshes/DAU-MCP_61.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_62" file="./Convex_meshes/DAU-MCP_62.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-MCP_63" file="./Convex_meshes/DAU-MCP_63.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_0" file="./Convex_meshes/DAU-PIP_0.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_1" file="./Convex_meshes/DAU-PIP_1.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_2" file="./Convex_meshes/DAU-PIP_2.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_3" file="./Convex_meshes/DAU-PIP_3.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_4" file="./Convex_meshes/DAU-PIP_4.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_5" file="./Convex_meshes/DAU-PIP_5.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_6" file="./Convex_meshes/DAU-PIP_6.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_7" file="./Convex_meshes/DAU-PIP_7.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_8" file="./Convex_meshes/DAU-PIP_8.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_9" file="./Convex_meshes/DAU-PIP_9.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_10" file="./Convex_meshes/DAU-PIP_10.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_11" file="./Convex_meshes/DAU-PIP_11.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_12" file="./Convex_meshes/DAU-PIP_12.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_13" file="./Convex_meshes/DAU-PIP_13.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_14" file="./Convex_meshes/DAU-PIP_14.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_15" file="./Convex_meshes/DAU-PIP_15.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_16" file="./Convex_meshes/DAU-PIP_16.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_17" file="./Convex_meshes/DAU-PIP_17.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_18" file="./Convex_meshes/DAU-PIP_18.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_19" file="./Convex_meshes/DAU-PIP_19.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_20" file="./Convex_meshes/DAU-PIP_20.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_21" file="./Convex_meshes/DAU-PIP_21.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_22" file="./Convex_meshes/DAU-PIP_22.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_23" file="./Convex_meshes/DAU-PIP_23.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_24" file="./Convex_meshes/DAU-PIP_24.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_25" file="./Convex_meshes/DAU-PIP_25.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_26" file="./Convex_meshes/DAU-PIP_26.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_27" file="./Convex_meshes/DAU-PIP_27.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_28" file="./Convex_meshes/DAU-PIP_28.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_29" file="./Convex_meshes/DAU-PIP_29.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_30" file="./Convex_meshes/DAU-PIP_30.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_31" file="./Convex_meshes/DAU-PIP_31.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_32" file="./Convex_meshes/DAU-PIP_32.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_33" file="./Convex_meshes/DAU-PIP_33.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_34" file="./Convex_meshes/DAU-PIP_34.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_35" file="./Convex_meshes/DAU-PIP_35.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_36" file="./Convex_meshes/DAU-PIP_36.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_37" file="./Convex_meshes/DAU-PIP_37.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_38" file="./Convex_meshes/DAU-PIP_38.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_39" file="./Convex_meshes/DAU-PIP_39.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_40" file="./Convex_meshes/DAU-PIP_40.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_41" file="./Convex_meshes/DAU-PIP_41.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_42" file="./Convex_meshes/DAU-PIP_42.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_43" file="./Convex_meshes/DAU-PIP_43.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_44" file="./Convex_meshes/DAU-PIP_44.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_45" file="./Convex_meshes/DAU-PIP_45.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_46" file="./Convex_meshes/DAU-PIP_46.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_47" file="./Convex_meshes/DAU-PIP_47.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_48" file="./Convex_meshes/DAU-PIP_48.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_49" file="./Convex_meshes/DAU-PIP_49.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_50" file="./Convex_meshes/DAU-PIP_50.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_51" file="./Convex_meshes/DAU-PIP_51.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_52" file="./Convex_meshes/DAU-PIP_52.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_53" file="./Convex_meshes/DAU-PIP_53.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_54" file="./Convex_meshes/DAU-PIP_54.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_55" file="./Convex_meshes/DAU-PIP_55.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_56" file="./Convex_meshes/DAU-PIP_56.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_57" file="./Convex_meshes/DAU-PIP_57.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_58" file="./Convex_meshes/DAU-PIP_58.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_59" file="./Convex_meshes/DAU-PIP_59.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_60" file="./Convex_meshes/DAU-PIP_60.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_61" file="./Convex_meshes/DAU-PIP_61.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_62" file="./Convex_meshes/DAU-PIP_62.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-PIP_63" file="./Convex_meshes/DAU-PIP_63.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_0" file="./Convex_meshes/DAU-DIP_0.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_1" file="./Convex_meshes/DAU-DIP_1.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_2" file="./Convex_meshes/DAU-DIP_2.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_3" file="./Convex_meshes/DAU-DIP_3.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_4" file="./Convex_meshes/DAU-DIP_4.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_5" file="./Convex_meshes/DAU-DIP_5.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_6" file="./Convex_meshes/DAU-DIP_6.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_7" file="./Convex_meshes/DAU-DIP_7.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_8" file="./Convex_meshes/DAU-DIP_8.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_9" file="./Convex_meshes/DAU-DIP_9.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_10" file="./Convex_meshes/DAU-DIP_10.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_11" file="./Convex_meshes/DAU-DIP_11.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_12" file="./Convex_meshes/DAU-DIP_12.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_13" file="./Convex_meshes/DAU-DIP_13.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_14" file="./Convex_meshes/DAU-DIP_14.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_15" file="./Convex_meshes/DAU-DIP_15.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_16" file="./Convex_meshes/DAU-DIP_16.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_17" file="./Convex_meshes/DAU-DIP_17.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_18" file="./Convex_meshes/DAU-DIP_18.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_19" file="./Convex_meshes/DAU-DIP_19.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_20" file="./Convex_meshes/DAU-DIP_20.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_21" file="./Convex_meshes/DAU-DIP_21.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_22" file="./Convex_meshes/DAU-DIP_22.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_23" file="./Convex_meshes/DAU-DIP_23.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_24" file="./Convex_meshes/DAU-DIP_24.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_25" file="./Convex_meshes/DAU-DIP_25.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_26" file="./Convex_meshes/DAU-DIP_26.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_27" file="./Convex_meshes/DAU-DIP_27.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_28" file="./Convex_meshes/DAU-DIP_28.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_29" file="./Convex_meshes/DAU-DIP_29.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_30" file="./Convex_meshes/DAU-DIP_30.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_31" file="./Convex_meshes/DAU-DIP_31.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_32" file="./Convex_meshes/DAU-DIP_32.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_33" file="./Convex_meshes/DAU-DIP_33.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_34" file="./Convex_meshes/DAU-DIP_34.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_35" file="./Convex_meshes/DAU-DIP_35.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_36" file="./Convex_meshes/DAU-DIP_36.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_37" file="./Convex_meshes/DAU-DIP_37.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_38" file="./Convex_meshes/DAU-DIP_38.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_39" file="./Convex_meshes/DAU-DIP_39.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_40" file="./Convex_meshes/DAU-DIP_40.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_41" file="./Convex_meshes/DAU-DIP_41.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_42" file="./Convex_meshes/DAU-DIP_42.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_43" file="./Convex_meshes/DAU-DIP_43.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_44" file="./Convex_meshes/DAU-DIP_44.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_45" file="./Convex_meshes/DAU-DIP_45.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_46" file="./Convex_meshes/DAU-DIP_46.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_47" file="./Convex_meshes/DAU-DIP_47.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_48" file="./Convex_meshes/DAU-DIP_48.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_49" file="./Convex_meshes/DAU-DIP_49.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_50" file="./Convex_meshes/DAU-DIP_50.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_51" file="./Convex_meshes/DAU-DIP_51.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_52" file="./Convex_meshes/DAU-DIP_52.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_53" file="./Convex_meshes/DAU-DIP_53.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_54" file="./Convex_meshes/DAU-DIP_54.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_55" file="./Convex_meshes/DAU-DIP_55.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_56" file="./Convex_meshes/DAU-DIP_56.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_57" file="./Convex_meshes/DAU-DIP_57.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_58" file="./Convex_meshes/DAU-DIP_58.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_59" file="./Convex_meshes/DAU-DIP_59.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_60" file="./Convex_meshes/DAU-DIP_60.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_61" file="./Convex_meshes/DAU-DIP_61.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_62" file="./Convex_meshes/DAU-DIP_62.stl" scale="0.001 0.001 0.001" />
+		<mesh name="DAU-DIP_63" file="./Convex_meshes/DAU-DIP_63.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_0" file="./Convex_meshes/BASE_0.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_1" file="./Convex_meshes/BASE_1.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_2" file="./Convex_meshes/BASE_2.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_3" file="./Convex_meshes/BASE_3.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_4" file="./Convex_meshes/BASE_4.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_5" file="./Convex_meshes/BASE_5.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_6" file="./Convex_meshes/BASE_6.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_7" file="./Convex_meshes/BASE_7.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_8" file="./Convex_meshes/BASE_8.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_9" file="./Convex_meshes/BASE_9.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_10" file="./Convex_meshes/BASE_10.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_11" file="./Convex_meshes/BASE_11.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_12" file="./Convex_meshes/BASE_12.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_13" file="./Convex_meshes/BASE_13.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_14" file="./Convex_meshes/BASE_14.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_15" file="./Convex_meshes/BASE_15.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_16" file="./Convex_meshes/BASE_16.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_17" file="./Convex_meshes/BASE_17.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_18" file="./Convex_meshes/BASE_18.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_19" file="./Convex_meshes/BASE_19.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_20" file="./Convex_meshes/BASE_20.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_21" file="./Convex_meshes/BASE_21.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_22" file="./Convex_meshes/BASE_22.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_23" file="./Convex_meshes/BASE_23.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_24" file="./Convex_meshes/BASE_24.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_25" file="./Convex_meshes/BASE_25.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_26" file="./Convex_meshes/BASE_26.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_27" file="./Convex_meshes/BASE_27.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_28" file="./Convex_meshes/BASE_28.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_29" file="./Convex_meshes/BASE_29.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_30" file="./Convex_meshes/BASE_30.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_31" file="./Convex_meshes/BASE_31.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_32" file="./Convex_meshes/BASE_32.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_33" file="./Convex_meshes/BASE_33.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_34" file="./Convex_meshes/BASE_34.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_35" file="./Convex_meshes/BASE_35.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_36" file="./Convex_meshes/BASE_36.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_37" file="./Convex_meshes/BASE_37.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_38" file="./Convex_meshes/BASE_38.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_39" file="./Convex_meshes/BASE_39.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_40" file="./Convex_meshes/BASE_40.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_41" file="./Convex_meshes/BASE_41.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_42" file="./Convex_meshes/BASE_42.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_43" file="./Convex_meshes/BASE_43.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_44" file="./Convex_meshes/BASE_44.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_45" file="./Convex_meshes/BASE_45.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_46" file="./Convex_meshes/BASE_46.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_47" file="./Convex_meshes/BASE_47.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_48" file="./Convex_meshes/BASE_48.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_49" file="./Convex_meshes/BASE_49.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_50" file="./Convex_meshes/BASE_50.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_51" file="./Convex_meshes/BASE_51.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_52" file="./Convex_meshes/BASE_52.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_53" file="./Convex_meshes/BASE_53.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_54" file="./Convex_meshes/BASE_54.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_55" file="./Convex_meshes/BASE_55.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_56" file="./Convex_meshes/BASE_56.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_57" file="./Convex_meshes/BASE_57.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_58" file="./Convex_meshes/BASE_58.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_59" file="./Convex_meshes/BASE_59.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_60" file="./Convex_meshes/BASE_60.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_61" file="./Convex_meshes/BASE_61.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_62" file="./Convex_meshes/BASE_62.stl" scale="0.001 0.001 0.001" />
+		<mesh name="BASE_63" file="./Convex_meshes/BASE_63.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_0" file="./Convex_meshes/OTHER_0.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_1" file="./Convex_meshes/OTHER_1.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_2" file="./Convex_meshes/OTHER_2.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_3" file="./Convex_meshes/OTHER_3.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_4" file="./Convex_meshes/OTHER_4.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_5" file="./Convex_meshes/OTHER_5.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_6" file="./Convex_meshes/OTHER_6.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_7" file="./Convex_meshes/OTHER_7.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_8" file="./Convex_meshes/OTHER_8.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_9" file="./Convex_meshes/OTHER_9.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_10" file="./Convex_meshes/OTHER_10.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_11" file="./Convex_meshes/OTHER_11.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_12" file="./Convex_meshes/OTHER_12.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_13" file="./Convex_meshes/OTHER_13.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_14" file="./Convex_meshes/OTHER_14.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_15" file="./Convex_meshes/OTHER_15.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_16" file="./Convex_meshes/OTHER_16.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_17" file="./Convex_meshes/OTHER_17.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_18" file="./Convex_meshes/OTHER_18.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_19" file="./Convex_meshes/OTHER_19.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_20" file="./Convex_meshes/OTHER_20.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_21" file="./Convex_meshes/OTHER_21.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_22" file="./Convex_meshes/OTHER_22.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_23" file="./Convex_meshes/OTHER_23.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_24" file="./Convex_meshes/OTHER_24.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_25" file="./Convex_meshes/OTHER_25.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_26" file="./Convex_meshes/OTHER_26.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_27" file="./Convex_meshes/OTHER_27.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_28" file="./Convex_meshes/OTHER_28.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_29" file="./Convex_meshes/OTHER_29.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_30" file="./Convex_meshes/OTHER_30.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_31" file="./Convex_meshes/OTHER_31.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_32" file="./Convex_meshes/OTHER_32.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_33" file="./Convex_meshes/OTHER_33.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_34" file="./Convex_meshes/OTHER_34.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_35" file="./Convex_meshes/OTHER_35.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_36" file="./Convex_meshes/OTHER_36.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_37" file="./Convex_meshes/OTHER_37.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_38" file="./Convex_meshes/OTHER_38.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_39" file="./Convex_meshes/OTHER_39.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_40" file="./Convex_meshes/OTHER_40.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_41" file="./Convex_meshes/OTHER_41.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_42" file="./Convex_meshes/OTHER_42.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_43" file="./Convex_meshes/OTHER_43.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_44" file="./Convex_meshes/OTHER_44.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_45" file="./Convex_meshes/OTHER_45.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_46" file="./Convex_meshes/OTHER_46.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_47" file="./Convex_meshes/OTHER_47.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_48" file="./Convex_meshes/OTHER_48.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_49" file="./Convex_meshes/OTHER_49.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_50" file="./Convex_meshes/OTHER_50.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_51" file="./Convex_meshes/OTHER_51.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_52" file="./Convex_meshes/OTHER_52.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_53" file="./Convex_meshes/OTHER_53.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_54" file="./Convex_meshes/OTHER_54.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_55" file="./Convex_meshes/OTHER_55.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_56" file="./Convex_meshes/OTHER_56.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_57" file="./Convex_meshes/OTHER_57.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_58" file="./Convex_meshes/OTHER_58.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_59" file="./Convex_meshes/OTHER_59.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_60" file="./Convex_meshes/OTHER_60.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_61" file="./Convex_meshes/OTHER_61.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_62" file="./Convex_meshes/OTHER_62.stl" scale="0.001 0.001 0.001" />
+		<mesh name="OTHER_63" file="./Convex_meshes/OTHER_63.stl" scale="0.001 0.001 0.001" />
+	</asset>
+	<worldbody>
+		<body name="ZF_MCP" pos="0.1765304360741342 -0.006212724687087806 0.36246523321202795" quat="0.9493391655149379 0.2596204789151585 0.14900580594456567 -0.09565367500559206">
+			<geom class="zf" mesh="ZF-MCP" type="mesh" />
+			<geom class="base" mesh="BASE" type="mesh" />
+			<geom class="other" mesh="OTHER" type="mesh" />
+			<body name="DAU_MCP" pos="-0.0051996219024619565 -0.017297986154240306 0.012909056180496493" quat="0.9963707275955191 0.024422273740191274 0.04402933783707002 0.06863193969111356">
+				<geom class="dau" mesh="DAU-MCP" type="mesh" />
+				<joint armature="0.001" axis="0.40901004102379035 0.7919085320270741 -0.4534221688938945" limited="true" name="ZF_MCP_to_DAU_CMC" pos="0.05845392354053609 -0.1978745892757368 -0.21942211755720506" range="-1 1" type="hinge" />
+				<joint armature="0.001" axis="0.4967753211376007 -0.7419451851751502 -0.45025728478731575" limited="true" name="DAU_CMC_to_DAU_MCP" pos="0.052724838369525476 -0.19935575512856935 -0.22408553449262406" range="-0.2 1" type="hinge" />
+				<geom class="visual" fromto="0.04805550124843744 -0.19238199446143817 -0.21985343405518026 0.0573941754906135 -0.20632951579570052 -0.22831763493006785" name="DAU_CMC_to_DAU_MCP_wrap" rgba=".2 .2 .5 0.4" size="0.005639576189568419" type="cylinder" density="0" contype="0" conaffinity="0" />
+				<body name="DAU_PIP" pos="-0.004148970988564202 0.001735805600735077 -0.004146285024367472" quat="0.9982758293388541 0.009285212244582869 -0.04837647336581254 -0.03191974649152252">
+					<geom class="dau" mesh="DAU-PIP" type="mesh" />
+					<joint armature="0.001" axis="0.4006067326531987 -0.8774106652423261 -0.2639408461605503" limited="true" name="DAU_MCP_to_DAU_PIP" pos="0.0727821255956078 -0.20351842063086995 -0.1853582338288163" range="-0.2 1" type="hinge" />
+					<geom class="visual" fromto="0.06986512094763302 -0.19712958394871122 -0.1834363573043216 0.0756991302435826 -0.2099072573130287 -0.18728011035331105" name="DAU_MCP_to_DAU_PIP_wrap" rgba=".2 .2 .5 0.4" size="0.004368880116400853" type="cylinder" density="0" contype="0" conaffinity="0" />
+					<body name="DAU_DIP" pos="-0.00433924131526193 -0.0003637396778127311 -0.0020970245100165245" quat="0.9744341224117706 0.06503579821584744 -0.18094432561059517 -0.11622236041036497">
+						<geom class="dau" mesh="DAU-DIP" type="mesh" />
+						<joint armature="0.001" axis="0.31367467587006415 -0.8580231765623447 -0.40669942980003426" limited="true" name="DAU_PIP_to_DAU_DIP" pos="0.0796331707328216 -0.21237495949690408 -0.15234864770253553" range="-0.2 1" type="hinge" />
+						<geom class="visual" fromto="0.07790014026037166 -0.2076344419306508 -0.15010166202217595 0.08136620120527151 -0.21711547706315734 -0.15459563338289517" name="DAU_PIP_to_DAU_DIP_wrap" rgba=".2 .2 .5 0.4" size="0.003314957704461596" type="cylinder" density="0" contype="0" conaffinity="0" />
+						<body name="DAU_TIP" />
+						<site name="FPL-1" pos="0.07617986335228798 -0.2164349065612825 -0.14549392680675224" type="sphere" size="0.0005" />
+						<site name="EPL-1" pos="0.08278454435532315 -0.2128481996245333 -0.1451938607295752" type="sphere" size="0.0005" />
+						<site name="thumb_tip" pos="0.082587 -0.22134 -0.128934" type="sphere" size="0.0005" />
+						<geom name="DAU-DIP_0" mesh="DAU-DIP_0" type="mesh" class="collision" />
+						<geom name="DAU-DIP_1" mesh="DAU-DIP_1" type="mesh" class="collision" />
+						<geom name="DAU-DIP_2" mesh="DAU-DIP_2" type="mesh" class="collision" />
+						<geom name="DAU-DIP_3" mesh="DAU-DIP_3" type="mesh" class="collision" />
+						<geom name="DAU-DIP_4" mesh="DAU-DIP_4" type="mesh" class="collision" />
+						<geom name="DAU-DIP_5" mesh="DAU-DIP_5" type="mesh" class="collision" />
+						<geom name="DAU-DIP_6" mesh="DAU-DIP_6" type="mesh" class="collision" />
+						<geom name="DAU-DIP_7" mesh="DAU-DIP_7" type="mesh" class="collision" />
+						<geom name="DAU-DIP_8" mesh="DAU-DIP_8" type="mesh" class="collision" />
+						<geom name="DAU-DIP_9" mesh="DAU-DIP_9" type="mesh" class="collision" />
+						<geom name="DAU-DIP_10" mesh="DAU-DIP_10" type="mesh" class="collision" />
+						<geom name="DAU-DIP_11" mesh="DAU-DIP_11" type="mesh" class="collision" />
+						<geom name="DAU-DIP_12" mesh="DAU-DIP_12" type="mesh" class="collision" />
+						<geom name="DAU-DIP_13" mesh="DAU-DIP_13" type="mesh" class="collision" />
+						<geom name="DAU-DIP_14" mesh="DAU-DIP_14" type="mesh" class="collision" />
+						<geom name="DAU-DIP_15" mesh="DAU-DIP_15" type="mesh" class="collision" />
+						<geom name="DAU-DIP_16" mesh="DAU-DIP_16" type="mesh" class="collision" />
+						<geom name="DAU-DIP_17" mesh="DAU-DIP_17" type="mesh" class="collision" />
+						<geom name="DAU-DIP_18" mesh="DAU-DIP_18" type="mesh" class="collision" />
+						<geom name="DAU-DIP_19" mesh="DAU-DIP_19" type="mesh" class="collision" />
+						<geom name="DAU-DIP_20" mesh="DAU-DIP_20" type="mesh" class="collision" />
+						<geom name="DAU-DIP_21" mesh="DAU-DIP_21" type="mesh" class="collision" />
+						<geom name="DAU-DIP_22" mesh="DAU-DIP_22" type="mesh" class="collision" />
+						<geom name="DAU-DIP_23" mesh="DAU-DIP_23" type="mesh" class="collision" />
+						<geom name="DAU-DIP_24" mesh="DAU-DIP_24" type="mesh" class="collision" />
+						<geom name="DAU-DIP_25" mesh="DAU-DIP_25" type="mesh" class="collision" />
+						<geom name="DAU-DIP_26" mesh="DAU-DIP_26" type="mesh" class="collision" />
+						<geom name="DAU-DIP_27" mesh="DAU-DIP_27" type="mesh" class="collision" />
+						<geom name="DAU-DIP_28" mesh="DAU-DIP_28" type="mesh" class="collision" />
+						<geom name="DAU-DIP_29" mesh="DAU-DIP_29" type="mesh" class="collision" />
+						<geom name="DAU-DIP_30" mesh="DAU-DIP_30" type="mesh" class="collision" />
+						<geom name="DAU-DIP_31" mesh="DAU-DIP_31" type="mesh" class="collision" />
+						<geom name="DAU-DIP_32" mesh="DAU-DIP_32" type="mesh" class="collision" />
+						<geom name="DAU-DIP_33" mesh="DAU-DIP_33" type="mesh" class="collision" />
+						<geom name="DAU-DIP_34" mesh="DAU-DIP_34" type="mesh" class="collision" />
+						<geom name="DAU-DIP_35" mesh="DAU-DIP_35" type="mesh" class="collision" />
+						<geom name="DAU-DIP_36" mesh="DAU-DIP_36" type="mesh" class="collision" />
+						<geom name="DAU-DIP_37" mesh="DAU-DIP_37" type="mesh" class="collision" />
+						<geom name="DAU-DIP_38" mesh="DAU-DIP_38" type="mesh" class="collision" />
+						<geom name="DAU-DIP_39" mesh="DAU-DIP_39" type="mesh" class="collision" />
+						<geom name="DAU-DIP_40" mesh="DAU-DIP_40" type="mesh" class="collision" />
+						<geom name="DAU-DIP_41" mesh="DAU-DIP_41" type="mesh" class="collision" />
+						<geom name="DAU-DIP_42" mesh="DAU-DIP_42" type="mesh" class="collision" />
+						<geom name="DAU-DIP_43" mesh="DAU-DIP_43" type="mesh" class="collision" />
+						<geom name="DAU-DIP_44" mesh="DAU-DIP_44" type="mesh" class="collision" />
+						<geom name="DAU-DIP_45" mesh="DAU-DIP_45" type="mesh" class="collision" />
+						<geom name="DAU-DIP_46" mesh="DAU-DIP_46" type="mesh" class="collision" />
+						<geom name="DAU-DIP_47" mesh="DAU-DIP_47" type="mesh" class="collision" />
+						<geom name="DAU-DIP_48" mesh="DAU-DIP_48" type="mesh" class="collision" />
+						<geom name="DAU-DIP_49" mesh="DAU-DIP_49" type="mesh" class="collision" />
+						<geom name="DAU-DIP_50" mesh="DAU-DIP_50" type="mesh" class="collision" />
+						<geom name="DAU-DIP_51" mesh="DAU-DIP_51" type="mesh" class="collision" />
+						<geom name="DAU-DIP_52" mesh="DAU-DIP_52" type="mesh" class="collision" />
+						<geom name="DAU-DIP_53" mesh="DAU-DIP_53" type="mesh" class="collision" />
+						<geom name="DAU-DIP_54" mesh="DAU-DIP_54" type="mesh" class="collision" />
+						<geom name="DAU-DIP_55" mesh="DAU-DIP_55" type="mesh" class="collision" />
+						<geom name="DAU-DIP_56" mesh="DAU-DIP_56" type="mesh" class="collision" />
+						<geom name="DAU-DIP_57" mesh="DAU-DIP_57" type="mesh" class="collision" />
+						<geom name="DAU-DIP_58" mesh="DAU-DIP_58" type="mesh" class="collision" />
+						<geom name="DAU-DIP_59" mesh="DAU-DIP_59" type="mesh" class="collision" />
+						<geom name="DAU-DIP_60" mesh="DAU-DIP_60" type="mesh" class="collision" />
+						<geom name="DAU-DIP_61" mesh="DAU-DIP_61" type="mesh" class="collision" />
+						<geom name="DAU-DIP_62" mesh="DAU-DIP_62" type="mesh" class="collision" />
+						<geom name="DAU-DIP_63" mesh="DAU-DIP_63" type="mesh" class="collision" />
+					</body>
+					<site name="EPL-2" pos="0.08224218866195501 -0.20837251280284236 -0.1535216694360387" type="sphere" size="0.0005" />
+					<site name="EPL-3" pos="0.07222064685788276 -0.1999198568883619 -0.17396908771381936" type="sphere" size="0.0005" />
+					<site name="EPB-1" pos="0.07847651865637922 -0.20413769959702835 -0.17347872119119845" type="sphere" size="0.0005" />
+					<site name="FPL-2" pos="0.0760290359377246 -0.21216055303307393 -0.15563567738304457" type="sphere" size="0.0005" />
+					<site name="FPL-3" pos="0.07029319124008324 -0.20946988827796797 -0.17189978841948889" type="sphere" size="0.0005" />
+					<site name="sidesite_thumb_DIP" pos="0.08503206968161976 -0.21067935180664063 -0.15216500873460927" type="sphere" size="0.00005" />
+					<geom name="DAU-PIP_0" mesh="DAU-PIP_0" type="mesh" class="collision" />
+					<geom name="DAU-PIP_1" mesh="DAU-PIP_1" type="mesh" class="collision" />
+					<geom name="DAU-PIP_2" mesh="DAU-PIP_2" type="mesh" class="collision" />
+					<geom name="DAU-PIP_3" mesh="DAU-PIP_3" type="mesh" class="collision" />
+					<geom name="DAU-PIP_4" mesh="DAU-PIP_4" type="mesh" class="collision" />
+					<geom name="DAU-PIP_5" mesh="DAU-PIP_5" type="mesh" class="collision" />
+					<geom name="DAU-PIP_6" mesh="DAU-PIP_6" type="mesh" class="collision" />
+					<geom name="DAU-PIP_7" mesh="DAU-PIP_7" type="mesh" class="collision" />
+					<geom name="DAU-PIP_8" mesh="DAU-PIP_8" type="mesh" class="collision" />
+					<geom name="DAU-PIP_9" mesh="DAU-PIP_9" type="mesh" class="collision" />
+					<geom name="DAU-PIP_10" mesh="DAU-PIP_10" type="mesh" class="collision" />
+					<geom name="DAU-PIP_11" mesh="DAU-PIP_11" type="mesh" class="collision" />
+					<geom name="DAU-PIP_12" mesh="DAU-PIP_12" type="mesh" class="collision" />
+					<geom name="DAU-PIP_13" mesh="DAU-PIP_13" type="mesh" class="collision" />
+					<geom name="DAU-PIP_14" mesh="DAU-PIP_14" type="mesh" class="collision" />
+					<geom name="DAU-PIP_15" mesh="DAU-PIP_15" type="mesh" class="collision" />
+					<geom name="DAU-PIP_16" mesh="DAU-PIP_16" type="mesh" class="collision" />
+					<geom name="DAU-PIP_17" mesh="DAU-PIP_17" type="mesh" class="collision" />
+					<geom name="DAU-PIP_18" mesh="DAU-PIP_18" type="mesh" class="collision" />
+					<geom name="DAU-PIP_19" mesh="DAU-PIP_19" type="mesh" class="collision" />
+					<geom name="DAU-PIP_20" mesh="DAU-PIP_20" type="mesh" class="collision" />
+					<geom name="DAU-PIP_21" mesh="DAU-PIP_21" type="mesh" class="collision" />
+					<geom name="DAU-PIP_22" mesh="DAU-PIP_22" type="mesh" class="collision" />
+					<geom name="DAU-PIP_23" mesh="DAU-PIP_23" type="mesh" class="collision" />
+					<geom name="DAU-PIP_24" mesh="DAU-PIP_24" type="mesh" class="collision" />
+					<geom name="DAU-PIP_25" mesh="DAU-PIP_25" type="mesh" class="collision" />
+					<geom name="DAU-PIP_26" mesh="DAU-PIP_26" type="mesh" class="collision" />
+					<geom name="DAU-PIP_27" mesh="DAU-PIP_27" type="mesh" class="collision" />
+					<geom name="DAU-PIP_28" mesh="DAU-PIP_28" type="mesh" class="collision" />
+					<geom name="DAU-PIP_29" mesh="DAU-PIP_29" type="mesh" class="collision" />
+					<geom name="DAU-PIP_30" mesh="DAU-PIP_30" type="mesh" class="collision" />
+					<geom name="DAU-PIP_31" mesh="DAU-PIP_31" type="mesh" class="collision" />
+					<geom name="DAU-PIP_32" mesh="DAU-PIP_32" type="mesh" class="collision" />
+					<geom name="DAU-PIP_33" mesh="DAU-PIP_33" type="mesh" class="collision" />
+					<geom name="DAU-PIP_34" mesh="DAU-PIP_34" type="mesh" class="collision" />
+					<geom name="DAU-PIP_35" mesh="DAU-PIP_35" type="mesh" class="collision" />
+					<geom name="DAU-PIP_36" mesh="DAU-PIP_36" type="mesh" class="collision" />
+					<geom name="DAU-PIP_37" mesh="DAU-PIP_37" type="mesh" class="collision" />
+					<geom name="DAU-PIP_38" mesh="DAU-PIP_38" type="mesh" class="collision" />
+					<geom name="DAU-PIP_39" mesh="DAU-PIP_39" type="mesh" class="collision" />
+					<geom name="DAU-PIP_40" mesh="DAU-PIP_40" type="mesh" class="collision" />
+					<geom name="DAU-PIP_41" mesh="DAU-PIP_41" type="mesh" class="collision" />
+					<geom name="DAU-PIP_42" mesh="DAU-PIP_42" type="mesh" class="collision" />
+					<geom name="DAU-PIP_43" mesh="DAU-PIP_43" type="mesh" class="collision" />
+					<geom name="DAU-PIP_44" mesh="DAU-PIP_44" type="mesh" class="collision" />
+					<geom name="DAU-PIP_45" mesh="DAU-PIP_45" type="mesh" class="collision" />
+					<geom name="DAU-PIP_46" mesh="DAU-PIP_46" type="mesh" class="collision" />
+					<geom name="DAU-PIP_47" mesh="DAU-PIP_47" type="mesh" class="collision" />
+					<geom name="DAU-PIP_48" mesh="DAU-PIP_48" type="mesh" class="collision" />
+					<geom name="DAU-PIP_49" mesh="DAU-PIP_49" type="mesh" class="collision" />
+					<geom name="DAU-PIP_50" mesh="DAU-PIP_50" type="mesh" class="collision" />
+					<geom name="DAU-PIP_51" mesh="DAU-PIP_51" type="mesh" class="collision" />
+					<geom name="DAU-PIP_52" mesh="DAU-PIP_52" type="mesh" class="collision" />
+					<geom name="DAU-PIP_53" mesh="DAU-PIP_53" type="mesh" class="collision" />
+					<geom name="DAU-PIP_54" mesh="DAU-PIP_54" type="mesh" class="collision" />
+					<geom name="DAU-PIP_55" mesh="DAU-PIP_55" type="mesh" class="collision" />
+					<geom name="DAU-PIP_56" mesh="DAU-PIP_56" type="mesh" class="collision" />
+					<geom name="DAU-PIP_57" mesh="DAU-PIP_57" type="mesh" class="collision" />
+					<geom name="DAU-PIP_58" mesh="DAU-PIP_58" type="mesh" class="collision" />
+					<geom name="DAU-PIP_59" mesh="DAU-PIP_59" type="mesh" class="collision" />
+					<geom name="DAU-PIP_60" mesh="DAU-PIP_60" type="mesh" class="collision" />
+					<geom name="DAU-PIP_61" mesh="DAU-PIP_61" type="mesh" class="collision" />
+					<geom name="DAU-PIP_62" mesh="DAU-PIP_62" type="mesh" class="collision" />
+					<geom name="DAU-PIP_63" mesh="DAU-PIP_63" type="mesh" class="collision" />
+				</body>
+				<site name="EPB-2" pos="0.07592438175162022 -0.20122150199685507 -0.1850281625625945" type="sphere" size="0.0005" />
+				<site name="EPB-3" pos="0.060477917702416506 -0.19374199844932818 -0.21688536585851254" type="sphere" size="0.0005" />
+				<site name="FPL-4" pos="0.06711087146248366 -0.20587478164234602 -0.18830641725242808" type="sphere" size="0.0005" />
+				<site name="APL-1" pos="0.06271704076437273 -0.1977000442553416 -0.22016046175468032" type="sphere" size="0.0005" />
+				<site name="sidesite_thumb_IIP" pos="0.07790562438964844 -0.19980246577287616 -0.1836531585186521" type="sphere" size="0.00005" />
+				<geom name="DAU-MCP_0" mesh="DAU-MCP_0" type="mesh" class="collision" />
+				<geom name="DAU-MCP_1" mesh="DAU-MCP_1" type="mesh" class="collision" />
+				<geom name="DAU-MCP_2" mesh="DAU-MCP_2" type="mesh" class="collision" />
+				<geom name="DAU-MCP_3" mesh="DAU-MCP_3" type="mesh" class="collision" />
+				<geom name="DAU-MCP_4" mesh="DAU-MCP_4" type="mesh" class="collision" />
+				<geom name="DAU-MCP_5" mesh="DAU-MCP_5" type="mesh" class="collision" />
+				<geom name="DAU-MCP_6" mesh="DAU-MCP_6" type="mesh" class="collision" />
+				<geom name="DAU-MCP_7" mesh="DAU-MCP_7" type="mesh" class="collision" />
+				<geom name="DAU-MCP_8" mesh="DAU-MCP_8" type="mesh" class="collision" />
+				<geom name="DAU-MCP_9" mesh="DAU-MCP_9" type="mesh" class="collision" />
+				<geom name="DAU-MCP_10" mesh="DAU-MCP_10" type="mesh" class="collision" />
+				<geom name="DAU-MCP_11" mesh="DAU-MCP_11" type="mesh" class="collision" />
+				<geom name="DAU-MCP_12" mesh="DAU-MCP_12" type="mesh" class="collision" />
+				<geom name="DAU-MCP_13" mesh="DAU-MCP_13" type="mesh" class="collision" />
+				<geom name="DAU-MCP_14" mesh="DAU-MCP_14" type="mesh" class="collision" />
+				<geom name="DAU-MCP_15" mesh="DAU-MCP_15" type="mesh" class="collision" />
+				<geom name="DAU-MCP_16" mesh="DAU-MCP_16" type="mesh" class="collision" />
+				<geom name="DAU-MCP_17" mesh="DAU-MCP_17" type="mesh" class="collision" />
+				<geom name="DAU-MCP_18" mesh="DAU-MCP_18" type="mesh" class="collision" />
+				<geom name="DAU-MCP_19" mesh="DAU-MCP_19" type="mesh" class="collision" />
+				<geom name="DAU-MCP_20" mesh="DAU-MCP_20" type="mesh" class="collision" />
+				<geom name="DAU-MCP_21" mesh="DAU-MCP_21" type="mesh" class="collision" />
+				<geom name="DAU-MCP_22" mesh="DAU-MCP_22" type="mesh" class="collision" />
+				<geom name="DAU-MCP_23" mesh="DAU-MCP_23" type="mesh" class="collision" />
+				<geom name="DAU-MCP_24" mesh="DAU-MCP_24" type="mesh" class="collision" />
+				<geom name="DAU-MCP_25" mesh="DAU-MCP_25" type="mesh" class="collision" />
+				<geom name="DAU-MCP_26" mesh="DAU-MCP_26" type="mesh" class="collision" />
+				<geom name="DAU-MCP_27" mesh="DAU-MCP_27" type="mesh" class="collision" />
+				<geom name="DAU-MCP_28" mesh="DAU-MCP_28" type="mesh" class="collision" />
+				<geom name="DAU-MCP_29" mesh="DAU-MCP_29" type="mesh" class="collision" />
+				<geom name="DAU-MCP_30" mesh="DAU-MCP_30" type="mesh" class="collision" />
+				<geom name="DAU-MCP_31" mesh="DAU-MCP_31" type="mesh" class="collision" />
+				<geom name="DAU-MCP_32" mesh="DAU-MCP_32" type="mesh" class="collision" />
+				<geom name="DAU-MCP_33" mesh="DAU-MCP_33" type="mesh" class="collision" />
+				<geom name="DAU-MCP_34" mesh="DAU-MCP_34" type="mesh" class="collision" />
+				<geom name="DAU-MCP_35" mesh="DAU-MCP_35" type="mesh" class="collision" />
+				<geom name="DAU-MCP_36" mesh="DAU-MCP_36" type="mesh" class="collision" />
+				<geom name="DAU-MCP_37" mesh="DAU-MCP_37" type="mesh" class="collision" />
+				<geom name="DAU-MCP_38" mesh="DAU-MCP_38" type="mesh" class="collision" />
+				<geom name="DAU-MCP_39" mesh="DAU-MCP_39" type="mesh" class="collision" />
+				<geom name="DAU-MCP_40" mesh="DAU-MCP_40" type="mesh" class="collision" />
+				<geom name="DAU-MCP_41" mesh="DAU-MCP_41" type="mesh" class="collision" />
+				<geom name="DAU-MCP_42" mesh="DAU-MCP_42" type="mesh" class="collision" />
+				<geom name="DAU-MCP_43" mesh="DAU-MCP_43" type="mesh" class="collision" />
+				<geom name="DAU-MCP_44" mesh="DAU-MCP_44" type="mesh" class="collision" />
+				<geom name="DAU-MCP_45" mesh="DAU-MCP_45" type="mesh" class="collision" />
+				<geom name="DAU-MCP_46" mesh="DAU-MCP_46" type="mesh" class="collision" />
+				<geom name="DAU-MCP_47" mesh="DAU-MCP_47" type="mesh" class="collision" />
+				<geom name="DAU-MCP_48" mesh="DAU-MCP_48" type="mesh" class="collision" />
+				<geom name="DAU-MCP_49" mesh="DAU-MCP_49" type="mesh" class="collision" />
+				<geom name="DAU-MCP_50" mesh="DAU-MCP_50" type="mesh" class="collision" />
+				<geom name="DAU-MCP_51" mesh="DAU-MCP_51" type="mesh" class="collision" />
+				<geom name="DAU-MCP_52" mesh="DAU-MCP_52" type="mesh" class="collision" />
+				<geom name="DAU-MCP_53" mesh="DAU-MCP_53" type="mesh" class="collision" />
+				<geom name="DAU-MCP_54" mesh="DAU-MCP_54" type="mesh" class="collision" />
+				<geom name="DAU-MCP_55" mesh="DAU-MCP_55" type="mesh" class="collision" />
+				<geom name="DAU-MCP_56" mesh="DAU-MCP_56" type="mesh" class="collision" />
+				<geom name="DAU-MCP_57" mesh="DAU-MCP_57" type="mesh" class="collision" />
+				<geom name="DAU-MCP_58" mesh="DAU-MCP_58" type="mesh" class="collision" />
+				<geom name="DAU-MCP_59" mesh="DAU-MCP_59" type="mesh" class="collision" />
+				<geom name="DAU-MCP_60" mesh="DAU-MCP_60" type="mesh" class="collision" />
+				<geom name="DAU-MCP_61" mesh="DAU-MCP_61" type="mesh" class="collision" />
+				<geom name="DAU-MCP_62" mesh="DAU-MCP_62" type="mesh" class="collision" />
+				<geom name="DAU-MCP_63" mesh="DAU-MCP_63" type="mesh" class="collision" />
+			</body>
+			<body name="ZF_PIP2" pos="-0.04408808485454151 0.029136911946269977 -0.06062695362072164" quat="0.9849495052526392 -0.11495860271314842 -0.12714793269015798 0.02218997470572589">
+				<geom class="zf" mesh="ZF-PIP2" type="mesh" />
+				<joint armature="0.001" axis="0.8578015621998283 0.5139723785802518 -0.0029789165972422815" limited="true" name="ZF_MCP_to_ZF_PIP2" pos="0.042434736408437625 -0.17430024141801112 -0.16782877206684857" range="-0.4 1" type="hinge" />
+				<geom class="visual" fromto="0.03721072156014954 -0.17743033520150522 -0.16781063045319158 0.04765875125672573 -0.1711701476345171 -0.16784691368050558" name="ZF_MCP_to_ZF_PIP2_wrap" rgba=".2 .2 .5 0.4" size="0.00365400233235141" type="cylinder" density="0" contype="0" conaffinity="0" />
+				<body name="ZF_PIP1" pos="0.03674525175643409 -0.10101967260373558 0.09061853552879026" quat="0.9541882720651348 0.2689936670135175 0.12690393235707081 0.03259663345018418">
+					<geom class="zf" mesh="ZF-PIP1" type="mesh" />
+					<joint armature="0.001" axis="0.8575623725180784 0.5138829572014336 0.02260715681094902" limited="true" name="ZF_PIP2_to_ZF_PIP1" pos="0.05456171314997495 -0.19423572543588488 -0.12941855504857017" range="-0.4 1" type="hinge" />
+					<geom class="visual" fromto="0.0506137946198933 -0.19660146361895323 -0.12952263052593088 0.058509631680056615 -0.1918699872528165 -0.12931447957120945" name="ZF_PIP2_to_ZF_PIP1_wrap" rgba=".2 .2 .5 0.4" size="0.002762191059168775" type="cylinder" density="0" contype="0" conaffinity="0" />
+					<body name="ZF_DIP" pos="-0.006489833313809016 -0.016887511265440566 0.023041259917669664" quat="0.9983028291442446 0.052609884024385385 0.010451067252851741 0.022681195268635695">
+						<geom class="zf" mesh="ZF-DIP" type="mesh" />
+						<joint armature="0.001" axis="0.8680880701948858 0.41376338008343677 0.27426805808779137" limited="true" name="ZF_PIP1_to_ZF_DIP" pos="0.06197243447298718 -0.2138604192329433 -0.1201704459261653" range="-0.4 1" type="hinge" />
+						<geom class="visual" fromto="0.058159880640969115 -0.21567762559074027 -0.12137500312694333 0.06578498830500523 -0.21204321287514633 -0.11896588872538726" name="ZF_PIP1_to_ZF_DIP_wrap" rgba=".2 .2 .5 0.4" size="0.0026351385046649513" type="cylinder" density="0" contype="0" conaffinity="0" />
+						<body name="ZF_TIP" />
+						<site name="ED-1" pos="0.06345094768734885 -0.218327969948429 -0.11391111976488638" type="sphere" size="0.0005" />
+						<site name="FDP-1" pos="0.06432809657963354 -0.21958941627941314 -0.12052502992735097" type="sphere" size="0.0005" />
+						<site name="index_tip" pos="0.06695 -0.230160 -0.111035" type="sphere" size="0.0005" />
+						<geom name="ZF-DIP_0" mesh="ZF-DIP_0" type="mesh" class="collision" />
+						<geom name="ZF-DIP_1" mesh="ZF-DIP_1" type="mesh" class="collision" />
+						<geom name="ZF-DIP_2" mesh="ZF-DIP_2" type="mesh" class="collision" />
+						<geom name="ZF-DIP_3" mesh="ZF-DIP_3" type="mesh" class="collision" />
+						<geom name="ZF-DIP_4" mesh="ZF-DIP_4" type="mesh" class="collision" />
+						<geom name="ZF-DIP_5" mesh="ZF-DIP_5" type="mesh" class="collision" />
+						<geom name="ZF-DIP_6" mesh="ZF-DIP_6" type="mesh" class="collision" />
+						<geom name="ZF-DIP_7" mesh="ZF-DIP_7" type="mesh" class="collision" />
+						<geom name="ZF-DIP_8" mesh="ZF-DIP_8" type="mesh" class="collision" />
+						<geom name="ZF-DIP_9" mesh="ZF-DIP_9" type="mesh" class="collision" />
+						<geom name="ZF-DIP_10" mesh="ZF-DIP_10" type="mesh" class="collision" />
+						<geom name="ZF-DIP_11" mesh="ZF-DIP_11" type="mesh" class="collision" />
+						<geom name="ZF-DIP_12" mesh="ZF-DIP_12" type="mesh" class="collision" />
+						<geom name="ZF-DIP_13" mesh="ZF-DIP_13" type="mesh" class="collision" />
+						<geom name="ZF-DIP_14" mesh="ZF-DIP_14" type="mesh" class="collision" />
+						<geom name="ZF-DIP_15" mesh="ZF-DIP_15" type="mesh" class="collision" />
+						<geom name="ZF-DIP_16" mesh="ZF-DIP_16" type="mesh" class="collision" />
+						<geom name="ZF-DIP_17" mesh="ZF-DIP_17" type="mesh" class="collision" />
+						<geom name="ZF-DIP_18" mesh="ZF-DIP_18" type="mesh" class="collision" />
+						<geom name="ZF-DIP_19" mesh="ZF-DIP_19" type="mesh" class="collision" />
+						<geom name="ZF-DIP_20" mesh="ZF-DIP_20" type="mesh" class="collision" />
+						<geom name="ZF-DIP_21" mesh="ZF-DIP_21" type="mesh" class="collision" />
+						<geom name="ZF-DIP_22" mesh="ZF-DIP_22" type="mesh" class="collision" />
+						<geom name="ZF-DIP_23" mesh="ZF-DIP_23" type="mesh" class="collision" />
+						<geom name="ZF-DIP_24" mesh="ZF-DIP_24" type="mesh" class="collision" />
+						<geom name="ZF-DIP_25" mesh="ZF-DIP_25" type="mesh" class="collision" />
+						<geom name="ZF-DIP_26" mesh="ZF-DIP_26" type="mesh" class="collision" />
+						<geom name="ZF-DIP_27" mesh="ZF-DIP_27" type="mesh" class="collision" />
+						<geom name="ZF-DIP_28" mesh="ZF-DIP_28" type="mesh" class="collision" />
+						<geom name="ZF-DIP_29" mesh="ZF-DIP_29" type="mesh" class="collision" />
+						<geom name="ZF-DIP_30" mesh="ZF-DIP_30" type="mesh" class="collision" />
+						<geom name="ZF-DIP_31" mesh="ZF-DIP_31" type="mesh" class="collision" />
+						<geom name="ZF-DIP_32" mesh="ZF-DIP_32" type="mesh" class="collision" />
+						<geom name="ZF-DIP_33" mesh="ZF-DIP_33" type="mesh" class="collision" />
+						<geom name="ZF-DIP_34" mesh="ZF-DIP_34" type="mesh" class="collision" />
+						<geom name="ZF-DIP_35" mesh="ZF-DIP_35" type="mesh" class="collision" />
+						<geom name="ZF-DIP_36" mesh="ZF-DIP_36" type="mesh" class="collision" />
+						<geom name="ZF-DIP_37" mesh="ZF-DIP_37" type="mesh" class="collision" />
+						<geom name="ZF-DIP_38" mesh="ZF-DIP_38" type="mesh" class="collision" />
+						<geom name="ZF-DIP_39" mesh="ZF-DIP_39" type="mesh" class="collision" />
+						<geom name="ZF-DIP_40" mesh="ZF-DIP_40" type="mesh" class="collision" />
+						<geom name="ZF-DIP_41" mesh="ZF-DIP_41" type="mesh" class="collision" />
+						<geom name="ZF-DIP_42" mesh="ZF-DIP_42" type="mesh" class="collision" />
+						<geom name="ZF-DIP_43" mesh="ZF-DIP_43" type="mesh" class="collision" />
+						<geom name="ZF-DIP_44" mesh="ZF-DIP_44" type="mesh" class="collision" />
+						<geom name="ZF-DIP_45" mesh="ZF-DIP_45" type="mesh" class="collision" />
+						<geom name="ZF-DIP_46" mesh="ZF-DIP_46" type="mesh" class="collision" />
+						<geom name="ZF-DIP_47" mesh="ZF-DIP_47" type="mesh" class="collision" />
+						<geom name="ZF-DIP_48" mesh="ZF-DIP_48" type="mesh" class="collision" />
+						<geom name="ZF-DIP_49" mesh="ZF-DIP_49" type="mesh" class="collision" />
+						<geom name="ZF-DIP_50" mesh="ZF-DIP_50" type="mesh" class="collision" />
+						<geom name="ZF-DIP_51" mesh="ZF-DIP_51" type="mesh" class="collision" />
+						<geom name="ZF-DIP_52" mesh="ZF-DIP_52" type="mesh" class="collision" />
+						<geom name="ZF-DIP_53" mesh="ZF-DIP_53" type="mesh" class="collision" />
+						<geom name="ZF-DIP_54" mesh="ZF-DIP_54" type="mesh" class="collision" />
+						<geom name="ZF-DIP_55" mesh="ZF-DIP_55" type="mesh" class="collision" />
+						<geom name="ZF-DIP_56" mesh="ZF-DIP_56" type="mesh" class="collision" />
+						<geom name="ZF-DIP_57" mesh="ZF-DIP_57" type="mesh" class="collision" />
+						<geom name="ZF-DIP_58" mesh="ZF-DIP_58" type="mesh" class="collision" />
+						<geom name="ZF-DIP_59" mesh="ZF-DIP_59" type="mesh" class="collision" />
+						<geom name="ZF-DIP_60" mesh="ZF-DIP_60" type="mesh" class="collision" />
+						<geom name="ZF-DIP_61" mesh="ZF-DIP_61" type="mesh" class="collision" />
+						<geom name="ZF-DIP_62" mesh="ZF-DIP_62" type="mesh" class="collision" />
+						<geom name="ZF-DIP_63" mesh="ZF-DIP_63" type="mesh" class="collision" />
+					</body>
+					<site name="ED-2" pos="0.06038826107850061 -0.21250561966377626 -0.11736054732022588" type="sphere" size="0.0005" />
+					<site name="ED-3" pos="0.05471142759653134 -0.19707721985011575 -0.12131885210865372" type="sphere" size="0.0005" />
+					<site name="FDP-2" pos="0.061807446257681316 -0.21267466607793398 -0.12254198149482397" type="sphere" size="0.0005" />
+					<site name="FDP-3" pos="0.05761489709455216 -0.2020984636701569 -0.1270854409206569" type="sphere" size="0.0005" />
+					<site name="EI-1" pos="0.05573732126240647 -0.1973502605018254 -0.12135900273168795" type="sphere" size="0.0005" />
+					<site name="FDS-1" pos="0.05787033711811481 -0.2039381208446886 -0.12468581669061948" type="sphere" size="0.0005" />
+					<site name="sidesite_index_DIP" pos="0.06015908276523618 -0.212850566091886 -0.1144658620728954" type="sphere" size="0.00005" />
+					<geom name="ZF-PIP1_0" mesh="ZF-PIP1_0" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_1" mesh="ZF-PIP1_1" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_2" mesh="ZF-PIP1_2" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_3" mesh="ZF-PIP1_3" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_4" mesh="ZF-PIP1_4" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_5" mesh="ZF-PIP1_5" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_6" mesh="ZF-PIP1_6" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_7" mesh="ZF-PIP1_7" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_8" mesh="ZF-PIP1_8" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_9" mesh="ZF-PIP1_9" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_10" mesh="ZF-PIP1_10" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_11" mesh="ZF-PIP1_11" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_12" mesh="ZF-PIP1_12" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_13" mesh="ZF-PIP1_13" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_14" mesh="ZF-PIP1_14" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_15" mesh="ZF-PIP1_15" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_16" mesh="ZF-PIP1_16" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_17" mesh="ZF-PIP1_17" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_18" mesh="ZF-PIP1_18" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_19" mesh="ZF-PIP1_19" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_20" mesh="ZF-PIP1_20" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_21" mesh="ZF-PIP1_21" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_22" mesh="ZF-PIP1_22" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_23" mesh="ZF-PIP1_23" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_24" mesh="ZF-PIP1_24" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_25" mesh="ZF-PIP1_25" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_26" mesh="ZF-PIP1_26" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_27" mesh="ZF-PIP1_27" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_28" mesh="ZF-PIP1_28" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_29" mesh="ZF-PIP1_29" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_30" mesh="ZF-PIP1_30" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_31" mesh="ZF-PIP1_31" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_32" mesh="ZF-PIP1_32" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_33" mesh="ZF-PIP1_33" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_34" mesh="ZF-PIP1_34" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_35" mesh="ZF-PIP1_35" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_36" mesh="ZF-PIP1_36" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_37" mesh="ZF-PIP1_37" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_38" mesh="ZF-PIP1_38" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_39" mesh="ZF-PIP1_39" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_40" mesh="ZF-PIP1_40" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_41" mesh="ZF-PIP1_41" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_42" mesh="ZF-PIP1_42" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_43" mesh="ZF-PIP1_43" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_44" mesh="ZF-PIP1_44" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_45" mesh="ZF-PIP1_45" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_46" mesh="ZF-PIP1_46" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_47" mesh="ZF-PIP1_47" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_48" mesh="ZF-PIP1_48" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_49" mesh="ZF-PIP1_49" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_50" mesh="ZF-PIP1_50" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_51" mesh="ZF-PIP1_51" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_52" mesh="ZF-PIP1_52" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_53" mesh="ZF-PIP1_53" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_54" mesh="ZF-PIP1_54" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_55" mesh="ZF-PIP1_55" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_56" mesh="ZF-PIP1_56" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_57" mesh="ZF-PIP1_57" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_58" mesh="ZF-PIP1_58" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_59" mesh="ZF-PIP1_59" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_60" mesh="ZF-PIP1_60" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_61" mesh="ZF-PIP1_61" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_62" mesh="ZF-PIP1_62" type="mesh" class="collision" />
+					<geom name="ZF-PIP1_63" mesh="ZF-PIP1_63" type="mesh" class="collision" />
+				</body>
+				<site name="ED-4" pos="0.05244191360473633 -0.190090072631836 -0.1292928497314453" type="sphere" size="0.0005" />
+				<site name="ED-5" pos="0.0443320541381836 -0.1725892333984375 -0.15278924865722657" type="sphere" size="0.0005" />
+				<site name="EI-2" pos="0.05301815032958984 -0.19127139282226563 -0.12737398834228517" type="sphere" size="0.0005" />
+				<site name="EI-3" pos="0.04377632522583008 -0.17302584838867188 -0.1525018341064453" type="sphere" size="0.0005" />
+				<site name="FDS-2" pos="0.053851776123046875 -0.1911654510498047 -0.13596832580566406" type="sphere" size="0.0005" />
+				<site name="FDP-4" pos="0.05540545654296875 -0.19265214538574219 -0.13388643188476562" type="sphere" size="0.0005" />
+				<site name="FDP-5" pos="0.046552120208740236 -0.18246701049804687 -0.15747040100097656" type="sphere" size="0.0005" />
+				<site name="FDS-3" pos="0.048047260284423826 -0.1837753448486328 -0.15370108337402344" type="sphere" size="0.0005" />
+				<site name="sidesite_index_IIP" pos="0.0540436897277832 -0.1937238372328371 -0.12349134858581108" type="sphere" size="0.00005" />
+				<geom name="ZF-PIP2_0" mesh="ZF-PIP2_0" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_1" mesh="ZF-PIP2_1" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_2" mesh="ZF-PIP2_2" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_3" mesh="ZF-PIP2_3" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_4" mesh="ZF-PIP2_4" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_5" mesh="ZF-PIP2_5" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_6" mesh="ZF-PIP2_6" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_7" mesh="ZF-PIP2_7" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_8" mesh="ZF-PIP2_8" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_9" mesh="ZF-PIP2_9" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_10" mesh="ZF-PIP2_10" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_11" mesh="ZF-PIP2_11" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_12" mesh="ZF-PIP2_12" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_13" mesh="ZF-PIP2_13" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_14" mesh="ZF-PIP2_14" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_15" mesh="ZF-PIP2_15" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_16" mesh="ZF-PIP2_16" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_17" mesh="ZF-PIP2_17" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_18" mesh="ZF-PIP2_18" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_19" mesh="ZF-PIP2_19" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_20" mesh="ZF-PIP2_20" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_21" mesh="ZF-PIP2_21" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_22" mesh="ZF-PIP2_22" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_23" mesh="ZF-PIP2_23" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_24" mesh="ZF-PIP2_24" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_25" mesh="ZF-PIP2_25" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_26" mesh="ZF-PIP2_26" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_27" mesh="ZF-PIP2_27" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_28" mesh="ZF-PIP2_28" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_29" mesh="ZF-PIP2_29" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_30" mesh="ZF-PIP2_30" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_31" mesh="ZF-PIP2_31" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_32" mesh="ZF-PIP2_32" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_33" mesh="ZF-PIP2_33" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_34" mesh="ZF-PIP2_34" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_35" mesh="ZF-PIP2_35" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_36" mesh="ZF-PIP2_36" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_37" mesh="ZF-PIP2_37" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_38" mesh="ZF-PIP2_38" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_39" mesh="ZF-PIP2_39" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_40" mesh="ZF-PIP2_40" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_41" mesh="ZF-PIP2_41" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_42" mesh="ZF-PIP2_42" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_43" mesh="ZF-PIP2_43" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_44" mesh="ZF-PIP2_44" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_45" mesh="ZF-PIP2_45" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_46" mesh="ZF-PIP2_46" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_47" mesh="ZF-PIP2_47" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_48" mesh="ZF-PIP2_48" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_49" mesh="ZF-PIP2_49" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_50" mesh="ZF-PIP2_50" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_51" mesh="ZF-PIP2_51" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_52" mesh="ZF-PIP2_52" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_53" mesh="ZF-PIP2_53" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_54" mesh="ZF-PIP2_54" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_55" mesh="ZF-PIP2_55" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_56" mesh="ZF-PIP2_56" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_57" mesh="ZF-PIP2_57" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_58" mesh="ZF-PIP2_58" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_59" mesh="ZF-PIP2_59" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_60" mesh="ZF-PIP2_60" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_61" mesh="ZF-PIP2_61" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_62" mesh="ZF-PIP2_62" type="mesh" class="collision" />
+				<geom name="ZF-PIP2_63" mesh="ZF-PIP2_63" type="mesh" class="collision" />
+			</body>
+			<site name="ED-6" pos="0.04068317413330078 -0.1683495330810547 -0.16356614990234375" type="sphere" size="0.0005" />
+			<site name="ED-7" pos="0.02870635032653809 -0.1841443328857422 -0.21635090942382812" type="sphere" size="0.0005" />
+			<site name="ED-8" pos="0.032556884765625 -0.21127896118164066 -0.2505441009521484" type="sphere" size="0.0005" />
+			<site name="EI-4" pos="0.0404731674194336 -0.16725772094726565 -0.16589578552246095" type="sphere" size="0.0005" />
+			<site name="EI-5" pos="0.028191236495971682 -0.1843002166748047 -0.2169537841796875" type="sphere" size="0.0005" />
+			<site name="EI-6" pos="0.03293711471557617 -0.21202293395996097 -0.24852492065429688" type="sphere" size="0.0005" />
+			<site name="FDS-4" pos="0.04311767196655274 -0.1799432830810547 -0.17614850158691406" type="sphere" size="0.0005" />
+			<site name="FDP-6" pos="0.04354349517822266 -0.17979544067382813 -0.1719917785644531" type="sphere" size="0.0005" />
+			<site name="FDP-7" pos="0.0329781494140625 -0.20735281372070313 -0.22346496887207032" type="sphere" size="0.0005" />
+			<site name="FDP-8" pos="0.03201940536499023 -0.21800865173339845 -0.24317700500488282" type="sphere" size="0.0005" />
+			<site name="EPB-4" pos="0.03757329177856445 -0.20120518493652345 -0.24805575866699217" type="sphere" size="0.0005" />
+			<site name="EPL-4" pos="0.041398563385009766 -0.18813050842285156 -0.2281511871337891" type="sphere" size="0.0005" />
+			<site name="EPL-5" pos="0.04651138687133789 -0.20301907348632814 -0.24295352478027343" type="sphere" size="0.0005" />
+			<site name="APL-2" pos="0.0483392333984375 -0.20248985290527344 -0.24085289306640625" type="sphere" size="0.0005" />
+			<site name="FPL-5" pos="0.040508323669433605 -0.20416598510742187 -0.22414621276855468" type="sphere" size="0.0005" />
+			<site name="FPL-6" pos="0.04095455169677734 -0.21076040649414066 -0.2438369171142578" type="sphere" size="0.0005" />
+			<site name="FDS-5" pos="0.039476860046386716 -0.19787861633300782 -0.21464696044921874" type="sphere" size="0.0005" />
+			<site name="sidesite_index_PIP" pos="0.0378094596862793 -0.16973449304158626 -0.15805434978903003" type="sphere" size="0.00005" />
+			<body name="slider-EI" pos="0.03293711471557617 -0.21202293395996097 -0.26852492065429688">
+				<geom class="visual" type="box" size="0.001 0.001 0.01" rgba="0 0 1 0" />
+				<joint type="slide" axis="0 0 1" name="EI_slide" />
+				<site name="EI-7" pos="0 0 0.01" type="sphere" size="0.0005" />
+			</body>
+			<body name="slider-FDP" pos="0.03201940536499023 -0.21800865173339845 -0.26317700500488282">
+				<geom class="visual" type="box" size="0.001 0.001 0.01" rgba="0 0 1 0" />
+				<joint type="slide" axis="0 0 1" name="FDP_slide" />
+				<site name="FDP-9" pos="0 0 0.01" type="sphere" size="0.0005" />
+			</body>
+			<body name="slider-EPB" pos="0.03757329177856445 -0.20120518493652345 -0.26805575866699217">
+				<geom class="visual" type="box" size="0.001 0.001 0.01" rgba="0 0 1 0" />
+				<joint type="slide" axis="0 0 1" name="EPB_slide" />
+				<site name="EPB-5" pos="0 0 0.01" type="sphere" size="0.0005" />
+			</body>
+			<body name="slider-ED" pos="0.032556884765625 -0.21127896118164066 -0.2705441009521484">
+				<geom class="visual" type="box" size="0.001 0.001 0.01" rgba="0 0 1 0" />
+				<joint type="slide" axis="0 0 1" name="ED_slide" />
+				<site name="ED-9" pos="0 0 0.01" type="sphere" size="0.0005" />
+			</body>
+			<body name="slider-FDS" pos="0.039476860046386716 -0.19787861633300782 -0.23464696044921874">
+				<geom class="visual" type="box" size="0.001 0.001 0.01" rgba="0 0 1 0" />
+				<joint type="slide" axis="0 0 1" name="FDS_slide" />
+				<site name="FDS-6" pos="0 0 0.01" type="sphere" size="0.0005" />
+			</body>
+			<body name="slider-EPL" pos="00.04651138687133789 -0.20301907348632814 -0.26295352478027343">
+				<geom class="visual" type="box" size="0.001 0.001 0.01" rgba="0 0 1 0" />
+				<joint type="slide" axis="0 0 1" name="EPL_slide" />
+				<site name="EPL-6" pos="0 0 0.01" type="sphere" size="0.0005" />
+			</body>
+			<body name="slider-FPL" pos="0.04095455169677734 -0.21076040649414066 -0.2638369171142578">
+				<geom class="visual" type="box" size="0.001 0.001 0.01" rgba="0 0 1 0" />
+				<joint type="slide" axis="0 0 1" name="FPL_slide" />
+				<site name="FPL-7" pos="0 0 0.01" type="sphere" size="0.0005" />
+			</body>
+			<body name="slider-APL" pos="0.0483392333984375 -0.20248985290527344 -0.26085289306640625">
+				<geom class="visual" type="box" size="0.001 0.001 0.01" rgba="0 0 1 0" />
+				<joint type="slide" axis="0 0 1" name="APL_slide" />
+				<site name="APL-3" pos="0 0 0.01" type="sphere" size="0.0005" />
+			</body>
+			<geom name="ZF-MCP_0" mesh="ZF-MCP_0" type="mesh" class="collision" />
+			<geom name="ZF-MCP_1" mesh="ZF-MCP_1" type="mesh" class="collision" />
+			<geom name="ZF-MCP_2" mesh="ZF-MCP_2" type="mesh" class="collision" />
+			<geom name="ZF-MCP_3" mesh="ZF-MCP_3" type="mesh" class="collision" />
+			<geom name="ZF-MCP_4" mesh="ZF-MCP_4" type="mesh" class="collision" />
+			<geom name="ZF-MCP_5" mesh="ZF-MCP_5" type="mesh" class="collision" />
+			<geom name="ZF-MCP_6" mesh="ZF-MCP_6" type="mesh" class="collision" />
+			<geom name="ZF-MCP_7" mesh="ZF-MCP_7" type="mesh" class="collision" />
+			<geom name="ZF-MCP_8" mesh="ZF-MCP_8" type="mesh" class="collision" />
+			<geom name="ZF-MCP_9" mesh="ZF-MCP_9" type="mesh" class="collision" />
+			<geom name="ZF-MCP_10" mesh="ZF-MCP_10" type="mesh" class="collision" />
+			<geom name="ZF-MCP_11" mesh="ZF-MCP_11" type="mesh" class="collision" />
+			<geom name="ZF-MCP_12" mesh="ZF-MCP_12" type="mesh" class="collision" />
+			<geom name="ZF-MCP_13" mesh="ZF-MCP_13" type="mesh" class="collision" />
+			<geom name="ZF-MCP_14" mesh="ZF-MCP_14" type="mesh" class="collision" />
+			<geom name="ZF-MCP_15" mesh="ZF-MCP_15" type="mesh" class="collision" />
+			<geom name="ZF-MCP_16" mesh="ZF-MCP_16" type="mesh" class="collision" />
+			<geom name="ZF-MCP_17" mesh="ZF-MCP_17" type="mesh" class="collision" />
+			<geom name="ZF-MCP_18" mesh="ZF-MCP_18" type="mesh" class="collision" />
+			<geom name="ZF-MCP_19" mesh="ZF-MCP_19" type="mesh" class="collision" />
+			<geom name="ZF-MCP_20" mesh="ZF-MCP_20" type="mesh" class="collision" />
+			<geom name="ZF-MCP_21" mesh="ZF-MCP_21" type="mesh" class="collision" />
+			<geom name="ZF-MCP_22" mesh="ZF-MCP_22" type="mesh" class="collision" />
+			<geom name="ZF-MCP_23" mesh="ZF-MCP_23" type="mesh" class="collision" />
+			<geom name="ZF-MCP_24" mesh="ZF-MCP_24" type="mesh" class="collision" />
+			<geom name="ZF-MCP_25" mesh="ZF-MCP_25" type="mesh" class="collision" />
+			<geom name="ZF-MCP_26" mesh="ZF-MCP_26" type="mesh" class="collision" />
+			<geom name="ZF-MCP_27" mesh="ZF-MCP_27" type="mesh" class="collision" />
+			<geom name="ZF-MCP_28" mesh="ZF-MCP_28" type="mesh" class="collision" />
+			<geom name="ZF-MCP_29" mesh="ZF-MCP_29" type="mesh" class="collision" />
+			<geom name="ZF-MCP_30" mesh="ZF-MCP_30" type="mesh" class="collision" />
+			<geom name="ZF-MCP_31" mesh="ZF-MCP_31" type="mesh" class="collision" />
+			<geom name="ZF-MCP_32" mesh="ZF-MCP_32" type="mesh" class="collision" />
+			<geom name="ZF-MCP_33" mesh="ZF-MCP_33" type="mesh" class="collision" />
+			<geom name="ZF-MCP_34" mesh="ZF-MCP_34" type="mesh" class="collision" />
+			<geom name="ZF-MCP_35" mesh="ZF-MCP_35" type="mesh" class="collision" />
+			<geom name="ZF-MCP_36" mesh="ZF-MCP_36" type="mesh" class="collision" />
+			<geom name="ZF-MCP_37" mesh="ZF-MCP_37" type="mesh" class="collision" />
+			<geom name="ZF-MCP_38" mesh="ZF-MCP_38" type="mesh" class="collision" />
+			<geom name="ZF-MCP_39" mesh="ZF-MCP_39" type="mesh" class="collision" />
+			<geom name="ZF-MCP_40" mesh="ZF-MCP_40" type="mesh" class="collision" />
+			<geom name="ZF-MCP_41" mesh="ZF-MCP_41" type="mesh" class="collision" />
+			<geom name="ZF-MCP_42" mesh="ZF-MCP_42" type="mesh" class="collision" />
+			<geom name="ZF-MCP_43" mesh="ZF-MCP_43" type="mesh" class="collision" />
+			<geom name="ZF-MCP_44" mesh="ZF-MCP_44" type="mesh" class="collision" />
+			<geom name="ZF-MCP_45" mesh="ZF-MCP_45" type="mesh" class="collision" />
+			<geom name="ZF-MCP_46" mesh="ZF-MCP_46" type="mesh" class="collision" />
+			<geom name="ZF-MCP_47" mesh="ZF-MCP_47" type="mesh" class="collision" />
+			<geom name="ZF-MCP_48" mesh="ZF-MCP_48" type="mesh" class="collision" />
+			<geom name="ZF-MCP_49" mesh="ZF-MCP_49" type="mesh" class="collision" />
+			<geom name="ZF-MCP_50" mesh="ZF-MCP_50" type="mesh" class="collision" />
+			<geom name="ZF-MCP_51" mesh="ZF-MCP_51" type="mesh" class="collision" />
+			<geom name="ZF-MCP_52" mesh="ZF-MCP_52" type="mesh" class="collision" />
+			<geom name="ZF-MCP_53" mesh="ZF-MCP_53" type="mesh" class="collision" />
+			<geom name="ZF-MCP_54" mesh="ZF-MCP_54" type="mesh" class="collision" />
+			<geom name="ZF-MCP_55" mesh="ZF-MCP_55" type="mesh" class="collision" />
+			<geom name="ZF-MCP_56" mesh="ZF-MCP_56" type="mesh" class="collision" />
+			<geom name="ZF-MCP_57" mesh="ZF-MCP_57" type="mesh" class="collision" />
+			<geom name="ZF-MCP_58" mesh="ZF-MCP_58" type="mesh" class="collision" />
+			<geom name="ZF-MCP_59" mesh="ZF-MCP_59" type="mesh" class="collision" />
+			<geom name="ZF-MCP_60" mesh="ZF-MCP_60" type="mesh" class="collision" />
+			<geom name="ZF-MCP_61" mesh="ZF-MCP_61" type="mesh" class="collision" />
+			<geom name="ZF-MCP_62" mesh="ZF-MCP_62" type="mesh" class="collision" />
+			<geom name="ZF-MCP_63" mesh="ZF-MCP_63" type="mesh" class="collision" />
+		</body>
+		<body name="target" mocap="true" pos=" 0.14481255 -0.1309229   0.108073">
+			<geom name="target" class="visual" type="sphere" size="0.005" />
+			<light name="target_light" diffuse=".7 .7 .7" pos="0 0 0.5" />
+		</body>
+		<camera name="camera0" pos="0.411 0.093 0.213" xyaxes="-0.539 0.842 0.000 -0.231 -0.148 0.962" />
+		<camera name="camera0." pos="0.375 0.069 0.146" xyaxes="-0.581 0.814 0.000 -0.114 -0.081 0.990" />
+		<camera name="camera1" pos="0.461 0.120 0.252" xyaxes="-0.593 0.805 -0.000 -0.358 -0.264 0.896" />
+		<camera name="camera2" pos="0.617 -0.002 0.149" xyaxes="-0.249 0.968 0.000 0.018 0.005 1.000" />
+	</worldbody>
+	<actuator>
+		<motor name="FDP" joint="FDP_slide" gear="10" ctrllimited="true" ctrlrange="-2 0" />
+		<motor name="FDS" joint="FDS_slide" gear="10" ctrllimited="true" ctrlrange="-2 0" />
+		<motor name="EI" joint="EI_slide" gear="10" ctrllimited="true" ctrlrange="-2 0" />
+		<motor name="ED" joint="ED_slide" gear="10" ctrllimited="true" ctrlrange="-2 0" />
+		<motor name="EPB" joint="EPB_slide" gear="80" ctrllimited="true" ctrlrange="-5 0" />
+		<motor name="APL" joint="APL_slide" gear="10" ctrllimited="true" ctrlrange="-2 0" />
+		<motor name="FPL" joint="FPL_slide" gear="10" ctrllimited="true" ctrlrange="-2 0" />
+		<motor name="EPL" joint="EPL_slide" gear="80" ctrllimited="true" ctrlrange="-5 0" />
+	</actuator>
+	<tendon>
+		<spatial name="FDP" stiffness="10000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+			<site site="FDP-1" />
+			<geom geom="ZF_PIP1_to_ZF_DIP_wrap" />
+			<site site="FDP-2" />
+			<geom geom="ZF_PIP2_to_ZF_PIP1_wrap" />
+			<site site="FDP-3" />
+			<geom geom="ZF_PIP2_to_ZF_PIP1_wrap" />
+			<site site="FDP-4" />
+			<geom geom="ZF_MCP_to_ZF_PIP2_wrap" />
+			<site site="FDP-5" />
+			<geom geom="ZF_MCP_to_ZF_PIP2_wrap" />
+			<site site="FDP-6" />
+			<site site="FDP-7" />
+			<site site="FDP-8" />
+			<site site="FDP-9" />
+		</spatial>
+		<spatial name="EPB" stiffness="10000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+			<site site="EPB-1" />
+			<geom geom="DAU_MCP_to_DAU_PIP_wrap" sidesite="sidesite_thumb_IIP" />
+			<site site="EPB-2" />
+			<geom geom="DAU_CMC_to_DAU_MCP_wrap" />
+			<site site="EPB-3" />
+			<geom geom="DAU_CMC_to_DAU_MCP_wrap" />
+			<site site="EPB-4" />
+			<site site="EPB-5" />
+		</spatial>
+		<spatial name="ED" stiffness="10000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+			<site site="ED-1" />
+			<geom geom="ZF_PIP1_to_ZF_DIP_wrap" sidesite="sidesite_index_DIP" />
+			<site site="ED-2" />
+			<geom geom="ZF_PIP2_to_ZF_PIP1_wrap" />
+			<site site="ED-3" />
+			<geom geom="ZF_PIP2_to_ZF_PIP1_wrap" />
+			<site site="ED-4" />
+			<geom geom="ZF_MCP_to_ZF_PIP2_wrap" />
+			<site site="ED-5" />
+			<geom geom="ZF_MCP_to_ZF_PIP2_wrap" />
+			<site site="ED-6" />
+			<site site="ED-7" />
+			<site site="ED-8" />
+			<site site="ED-9" />
+		</spatial>
+		<spatial name="FDS" stiffness="10000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+			<site site="FDS-1" />
+			<geom geom="ZF_PIP2_to_ZF_PIP1_wrap" />
+			<site site="FDS-2" />
+			<geom geom="ZF_MCP_to_ZF_PIP2_wrap" />
+			<site site="FDS-3" />
+			<geom geom="ZF_MCP_to_ZF_PIP2_wrap" />
+			<site site="FDS-4" />
+			<site site="FDS-5" />
+			<site site="FDS-6" />
+		</spatial>
+		<spatial name="EPL" stiffness="10000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+			<site site="EPL-1" />
+			<geom geom="DAU_PIP_to_DAU_DIP_wrap" sidesite="sidesite_thumb_DIP" />
+			<site site="EPL-2" />
+			<geom geom="DAU_MCP_to_DAU_PIP_wrap" />
+			<site site="EPL-3" />
+			<geom geom="DAU_MCP_to_DAU_PIP_wrap" />
+			<site site="EPL-4" />
+			<site site="EPL-5" />
+			<site site="EPL-6" />
+		</spatial>
+		<spatial name="FPL" stiffness="10000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+			<site site="FPL-1" />
+			<geom geom="DAU_PIP_to_DAU_DIP_wrap" />
+			<site site="FPL-2" />
+			<geom geom="DAU_MCP_to_DAU_PIP_wrap" />
+			<site site="FPL-3" />
+			<geom geom="DAU_MCP_to_DAU_PIP_wrap" />
+			<site site="FPL-4" />
+			<geom geom="DAU_CMC_to_DAU_MCP_wrap" />
+			<site site="FPL-5" />
+			<site site="FPL-6" />
+			<site site="FPL-7" />
+		</spatial>
+		<spatial name="EI" stiffness="10000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+			<site site="EI-1" />
+			<geom geom="ZF_PIP2_to_ZF_PIP1_wrap" sidesite="sidesite_index_IIP" />
+			<site site="EI-2" />
+			<geom geom="ZF_MCP_to_ZF_PIP2_wrap" />
+			<site site="EI-3" />
+			<geom geom="ZF_MCP_to_ZF_PIP2_wrap" />
+			<site site="EI-4" />
+			<site site="EI-5" />
+			<site site="EI-6" />
+			<site site="EI-7" />
+		</spatial>
+		<spatial name="APL" stiffness="10000.0" damping="200" width="0.0005" rgba="0.9 0.2 0.2 0.3">
+			<site site="APL-1" />
+			<geom geom="DAU_CMC_to_DAU_MCP_wrap" />
+			<site site="APL-2" />
+			<site site="APL-3" />
+		</spatial>
+	</tendon>
+</mujoco>

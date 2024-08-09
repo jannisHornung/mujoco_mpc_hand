@@ -13,13 +13,7 @@
     <numeric name="gradient_spline_points" data="5" />
   </custom>
 
-  <worldbody>
-    <body name="target" mocap="true" pos="0.1765304360741342 -0.006212724687087806 0.36246523321202795">
-      <geom name="target" type="sphere" size="0.005" material="target"/>
-      <light name="target_light" diffuse=".7 .7 .7" pos="0 0 0.5"/>
-    </body>
-  </worldbody>
-    
+  
     <sensor>
     <!-- cost -->
       <user name="Control" dim="8" user="0 0.1 0 1" />
@@ -35,5 +29,5 @@
       <framepos name="thumb_pos" objtype="site" objname="thumb_tip"/>
       <framepos name="target" objtype="body" objname="target"/>
     </sensor>
-    <include file="model.xml"/>
+    <include file="model_convex.xml"/>
 </mujoco>
