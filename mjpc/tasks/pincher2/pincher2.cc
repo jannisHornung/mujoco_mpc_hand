@@ -67,6 +67,48 @@ void Pincher2::ResidualFn::Residual(const mjModel* model,
   mju_sub(residual + counter, thumb_tip, target, 3);
   counter += 3;
 
+  // Angle velocities
+  double* joint1_v = mjpc::SensorByName(model, data, "ZF_MCP_to_DAU_CMC_angle_v");
+  double* joint2_v = mjpc::SensorByName(model, data, "DAU_CMC_to_DAU_MCP_angle_v");
+  double* joint3_v = mjpc::SensorByName(model, data, "DAU_MCP_to_DAU_PIP_angle_v");
+  double* joint4_v = mjpc::SensorByName(model, data, "DAU_PIP_to_DAU_DIP_angle_v");
+  double* joint5_v = mjpc::SensorByName(model, data, "ZF_MCP_to_ZF_PIP2_angle_v");
+  double* joint6_v = mjpc::SensorByName(model, data, "ZF_PIP2_to_ZF_PIP1_angle_v");
+  double* joint7_v = mjpc::SensorByName(model, data, "ZF_PIP1_to_ZF_DIP_angle_v");
+
+  double angle_velo = *joint1_v+*joint2_v+*joint3_v+*joint4_v+*joint5_v+*joint6_v+*joint7_v;
+  residual[counter++] = angle_velo;
+
+  // get orientation
+  double* thumb_tip_2 = mjpc::SensorByName(model, data, "thumb_pos2");
+  double* index_tip_2 = mjpc::SensorByName(model, data, "index_pos2");
+
+  double thumb_orientation[3], index_orientation[3];
+  mju_sub(thumb_orientation, thumb_tip_2, thumb_tip, 3);
+  mju_sub(index_orientation, index_tip_2, index_tip, 3);
+
+  // Normalize the orientation vectors
+  mju_normalize(thumb_orientation, 3);
+  mju_normalize(index_orientation, 3);
+  
+  // Compute direction vectors from fingertips to the target
+  double thumb_to_target[3], index_to_target[3];
+  mju_sub(thumb_to_target, thumb_tip, target, 3);
+  mju_sub(index_to_target, index_tip, target, 3);
+
+  // Normalize direction vectors
+  mju_normalize(thumb_to_target, 3);
+  mju_normalize(index_to_target, 3);
+
+  // Calculate dot products to determine alignment
+  double thumb_alignment = mju_dot3(thumb_orientation, thumb_to_target);
+  double index_alignment = mju_dot3(index_orientation, index_to_target);
+
+  // Residuals should approach 1 when aligned perfectly (dot product = 1)
+  residual[counter++] = 1.0 - thumb_alignment;
+  residual[counter++] = 1.0 - index_alignment;
+
+
   CheckSensorDim(model, counter);
 
   const Pincher2* task = dynamic_cast<const Pincher2*>(this->task_);

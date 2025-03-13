@@ -25,7 +25,7 @@
       <user name="Control" dim="8" user="0 0.1 0 1" />
       <user name="Distance_index" dim="3" user="2 10 0 10 0.04" />
       <user name="Distance_thumb" dim="3" user="2 10 0 10 0.04" />
-      <user name="angles" dim="2" user="0 5 0 10" />
+      <user name="angle_velo" dim="1" user="0  1.0 0 10.0"/>
 
     <!-- trace -->
       <framepos name="index_pos_trace" objtype="geom" objname="fingertip_index"/>
@@ -40,6 +40,12 @@
 		  <jointpos name="IDP_angle_s" joint="joint_IDP" />
 		  <jointpos name="IIP_angle_s" joint="joint_IIP" />
 		  <jointpos name="IPP_angle_s" joint="joint_IPP" />
+      <jointvel name="TDP_angle_v" joint="joint_TDP" />
+		  <jointvel name="TIP_angle_v" joint="joint_TIP" />
+		  <jointvel name="TPP_angle_v" joint="joint_TPP" />
+		  <jointvel name="IDP_angle_v" joint="joint_IDP" />
+		  <jointvel name="IIP_angle_v" joint="joint_IIP" />
+		  <jointvel name="IPP_angle_v" joint="joint_IPP" />
     </sensor>
     <include file="Mesh_Model_convex_sensors.xml"/>
 </mujoco>

@@ -17,8 +17,11 @@
     <sensor>
     <!-- cost -->
       <user name="Control" dim="8" user="0 0.1 0 1" />
-      <user name="Distance_index" dim="3" user="2 10 0 10 0.04" />
-      <user name="Distance_thumb" dim="3" user="2 10 0 10 0.04" />
+      <user name="Distance_index" dim="3" user="0 7 0 10" />
+      <user name="Distance_thumb" dim="3" user="0 7 0 10" />
+      <user name="angle_velo" dim="1" user="0  1.0 0 3.0"/>
+      <user name="alignment_cost_thumb" dim="1" user="0 10 0 10" />
+      <user name="alignment_cost_index" dim="1" user="0 10 0 10" />
       <!--user name="angles" dim="2" user="0 5 0 10" /-->
 
     <!-- trace -->
@@ -26,8 +29,17 @@
       <framepos name="thumb_pos_trace" objtype="site" objname="thumb_tip"/>
       <!-- residual -->
       <framepos name="index_pos" objtype="site" objname="index_tip"/>
+      <framepos name="index_pos2" objtype="site" objname="FDP-1"/>
       <framepos name="thumb_pos" objtype="site" objname="thumb_tip"/>
+      <framepos name="thumb_pos2" objtype="site" objname="FPL-1"/>
       <framepos name="target" objtype="body" objname="target"/>
+      <jointvel name="ZF_MCP_to_DAU_CMC_angle_v" joint="ZF_MCP_to_DAU_CMC" />
+		  <jointvel name="DAU_CMC_to_DAU_MCP_angle_v" joint="DAU_CMC_to_DAU_MCP" />
+		  <jointvel name="DAU_MCP_to_DAU_PIP_angle_v" joint="DAU_MCP_to_DAU_PIP" />
+		  <jointvel name="DAU_PIP_to_DAU_DIP_angle_v" joint="DAU_PIP_to_DAU_DIP" />
+		  <jointvel name="ZF_MCP_to_ZF_PIP2_angle_v" joint="ZF_MCP_to_ZF_PIP2" />
+		  <jointvel name="ZF_PIP2_to_ZF_PIP1_angle_v" joint="ZF_PIP2_to_ZF_PIP1" />
+      <jointvel name="ZF_PIP1_to_ZF_DIP_angle_v" joint="ZF_PIP1_to_ZF_DIP" />
     </sensor>
     <include file="model_convex.xml"/>
 </mujoco>
