@@ -110,7 +110,10 @@ class Agent(contextlib.AbstractContextManager):
 
     self.server_addr = connect_to or f"localhost:{self.port}"
     credentials = grpc.local_channel_credentials(grpc.LocalConnectionType.LOCAL_TCP)
-    self.channel = grpc.secure_channel(self.server_addr, credentials)
+    self.channel = grpc.secure_channel(self.server_addr, credentials,options=[       ######################################################### new
+        ('grpc.max_send_message_length', 100 * 1024 * 1024),  # 100 MB
+        ('grpc.max_receive_message_length', 100 * 1024 * 1024) # 100 MB
+    ])
     grpc.channel_ready_future(self.channel).result(timeout=30)
     self.stub = agent_pb2_grpc.AgentStub(self.channel)
 

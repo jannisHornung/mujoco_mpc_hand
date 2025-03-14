@@ -45,10 +45,12 @@ int main(int argc, char** argv) {
       grpc::experimental::LocalServerCredentials(LOCAL_TCP);
   grpc::ServerBuilder builder;
   builder.AddListeningPort(server_address, server_credentials);
-
+  //builder.SetMaxReceiveMessageSize(100 * 1024 * 1024);  // Increase the maximum receive message size ######################################NEW
+  builder.SetMaxSendMessageSize(100 * 1024 * 1024);     // Increase the maximum send message size
+  
   mjpc::agent_grpc::AgentService service(mjpc::GetTasks(),
                                          absl::GetFlag(FLAGS_mjpc_workers));
-  builder.SetMaxReceiveMessageSize(40 * 1024 * 1024);
+  builder.SetMaxReceiveMessageSize(100 * 1024 * 1024); // previosly set to 40 * 1024 * 1024
   builder.RegisterService(&service);
 
   std::unique_ptr<grpc::Server> server(builder.BuildAndStart());

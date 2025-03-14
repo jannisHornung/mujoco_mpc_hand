@@ -19,9 +19,9 @@
       <user name="Control" dim="8" user="0 0.1 0 1" />
       <user name="Distance_index" dim="3" user="0 7 0 10" />
       <user name="Distance_thumb" dim="3" user="0 7 0 10" />
-      <user name="angle_velo" dim="1" user="0  1.0 0 3.0"/>
-      <user name="alignment_cost_thumb" dim="1" user="0 10 0 10" />
-      <user name="alignment_cost_index" dim="1" user="0 10 0 10" />
+      <user name="angle_velo" dim="1" user="0  0.1 0 3.0"/>
+      <user name="alignment_cost_thumb" dim="1" user="0 3 0 10" />
+      <user name="alignment_cost_index" dim="1" user="0 3 0 10" />
       <!--user name="angles" dim="2" user="0 5 0 10" /-->
 
     <!-- trace -->
