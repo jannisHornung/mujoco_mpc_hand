@@ -31,6 +31,8 @@ project(
 
 enable_language(C)
 enable_language(CXX)
+#set(CMAKE_CXX_STANDARD 17)
+#Sset(CMAKE_CXX_STANDARD_REQUIRED ON)
 if(APPLE)
   enable_language(OBJC)
   enable_language(OBJCXX)

@@ -22,6 +22,7 @@
       <user name="angle_velo" dim="1" user="0  0.1 0 3.0"/>
       <user name="alignment_cost_thumb" dim="1" user="0 3 0 10" />
       <user name="alignment_cost_index" dim="1" user="0 3 0 10" />
+
       <!--user name="angles" dim="2" user="0 5 0 10" /-->
 
     <!-- trace -->

@@ -25,7 +25,9 @@
       <user name="Control" dim="8" user="0 0.1 0 1" />
       <user name="Distance_index" dim="3" user="2 10 0 10 0.04" />
       <user name="Distance_thumb" dim="3" user="2 10 0 10 0.04" />
-      <user name="angle_velo" dim="1" user="0  1.0 0 10.0"/>
+      <user name="angle_velo" dim="1" user="0  1.0 0 3"/>
+      <user name="alignment_thumb" dim="1" user="0 10 0 10" />
+      <user name="alignment_index" dim="1" user="0 10 0 10" />
 
     <!-- trace -->
       <framepos name="index_pos_trace" objtype="geom" objname="fingertip_index"/>
