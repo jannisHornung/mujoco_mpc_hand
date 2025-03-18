@@ -61,7 +61,7 @@ void Pincher2::ResidualFn::Residual(const mjModel* model,
 
   double* thumb_tip = mjpc::SensorByName(model, data, "thumb_pos");
   double* index_tip = mjpc::SensorByName(model, data, "index_pos");
-  double* target = SensorByName(model, data, "target");
+  double* target = SensorByName(model, data, "target_2");
   mju_sub(residual + counter, index_tip, target, 3);
   counter += 3;
   mju_sub(residual + counter, thumb_tip, target, 3);

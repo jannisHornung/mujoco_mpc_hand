@@ -34,7 +34,9 @@
       <framepos name="thumb_pos_trace" objtype="geom" objname="fingertip_thumb"/>
       <!-- residual -->
       <framepos name="index_pos" objtype="geom" objname="fingertip_index"/>
+      <framepos name="index_pos2" objtype="site" objname="Flexor_index_distal2"/>
       <framepos name="thumb_pos" objtype="geom" objname="fingertip_thumb"/>
+      <framepos name="thumb_pos2" objtype="site" objname="FPL"/>
       <framepos name="target" objtype="body" objname="target"/>
       <jointpos name="TDP_angle_s" joint="joint_TDP" />
 		  <jointpos name="TIP_angle_s" joint="joint_TIP" />

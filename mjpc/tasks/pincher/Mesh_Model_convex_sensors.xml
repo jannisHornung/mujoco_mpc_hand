@@ -742,6 +742,7 @@
 						<site name="FPL" pos="-0.072979665866941 0.17428836816474174 -0.14533831787109375" type="sphere" size="0.0005" />
 						<site name="TDP-0" pos="-0.0812916936232655 0.18325974032911614 -0.15524598693847656" size="0.0002" rgba="0 .7 0 1" group="1" />
 						<geom name="thumb_IP_wrap" type="cylinder" fromto="-0.07875700015762376 0.17482608022748778 -0.15504189521057768 -0.07223707079908536 0.18217008022748806 -0.15428229179016543" size="0.00625" mass="0" contype="0" conaffinity="0" group="1" rgba=".2 .2 .5 0.4" />
+						<site name="Thumb-pos2" pos="-0.0755 0.1785 -0.1547" size="0.0002" rgba="0 .7 0 1" group="1" />
 						<geom name="TDP_mesh_0" mesh="TDP_mesh_0" type="mesh" class="collision" />
 						<geom name="TDP_mesh_1" mesh="TDP_mesh_1" type="mesh" class="collision" />
 						<geom name="TDP_mesh_2" mesh="TDP_mesh_2" type="mesh" class="collision" />

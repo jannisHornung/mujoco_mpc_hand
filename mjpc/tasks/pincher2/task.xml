@@ -33,7 +33,7 @@
       <framepos name="index_pos2" objtype="site" objname="FDP-1"/>
       <framepos name="thumb_pos" objtype="site" objname="thumb_tip"/>
       <framepos name="thumb_pos2" objtype="site" objname="FPL-1"/>
-      <framepos name="target" objtype="body" objname="target"/>
+      <framepos name="target_2" objtype="body" objname="target"/>
       <jointvel name="ZF_MCP_to_DAU_CMC_angle_v" joint="ZF_MCP_to_DAU_CMC" />
 		  <jointvel name="DAU_CMC_to_DAU_MCP_angle_v" joint="DAU_CMC_to_DAU_MCP" />
 		  <jointvel name="DAU_MCP_to_DAU_PIP_angle_v" joint="DAU_MCP_to_DAU_PIP" />
