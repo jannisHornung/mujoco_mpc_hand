@@ -5,6 +5,9 @@ import numpy as np
 import pathlib
 import sys
 import os
+import cProfile
+import pstats
+import datetime
   
 # set current directory: mujoco_mpc/python/mujoco_mpc
 from mujoco_mpc import agent as agent_lib
@@ -27,7 +30,7 @@ print("Cost weights:", agent.get_cost_weights())
 print("Parameters:", agent.get_task_parameters())
 
 # rollout horizon
-T = 1000
+T = 100
 frames = [None] * (T-1)
 
 # trajectories
@@ -46,8 +49,8 @@ mujoco.mj_resetData(model, data)
 # cache initial state
 time[0] = data.time
 
-# First, get the ID of the "target" body using mj_name2id
-#target_body_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, "target")
+pr = cProfile.Profile()
+pr.enable()
 
 # simulate
 for t in range(T - 1):
@@ -97,10 +100,23 @@ agent.reset()
 
 renderer.close()
 
+pr.disable()
+#%%
+output_folder = "profiling_results"
+os.makedirs(output_folder, exist_ok=True)
+timestamp = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+profile_file = f"{output_folder}/profiling_{timestamp}.prof"
+pr.dump_stats(profile_file)
+
+# ✅ Display filtered results directly
+stats = pstats.Stats(pr)
+stats.sort_stats("tottime")  # or "cumtime"
+stats.print_stats(20)  # Show the top 20 slowest functions
+
 #%%
 fps = round(T / (time[-1] - time[0]))
 
-import datetime
+
 
 # Get current date and time
 now = datetime.datetime.now()
@@ -108,7 +124,7 @@ now = datetime.datetime.now()
 # Format the date and time as YYYY-MM-DD_HH-MM-SS
 timestamp = now.strftime("%Y-%m-%d_%H-%M-%S")
 
-save_directory = 'home/jannishornung/mujoco_mpc_hand/mujoco_mpc/pinching_for_freedom/videos'
+save_directory = '/home/jannishornung/mujoco_mpc_hand/python/mujoco_mpc/pinching_for_freedom/videos'
 
 # Construct the file name with the timestamp
 output_file = os.path.join(save_directory,f"simulation_{timestamp}.mp4")

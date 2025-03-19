@@ -36,4 +36,4 @@ python/dist/
 #assets
 /mjpc/tasks/pincher/assets*
 /mjpc/tasks/pincher2/meshes*
-simulation.mp4
+/python/mujoco_mpc/pinching_for_freedom/videos
